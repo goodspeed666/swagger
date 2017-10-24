@@ -12,7 +12,7 @@
     "description" : "Operations about user"
   }, {
     "name" : "customer",
-    "description" : "Operations about user"
+    "description" : "Operations about customer"
   } ],
   "schemes" : [ "https" ],
   "paths" : {
