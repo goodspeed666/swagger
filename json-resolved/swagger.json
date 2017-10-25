@@ -137,9 +137,7 @@
             "description" : "User not found"
           }
         }
-      }
-    },
-    "/user/{userid}/edit" : {
+      },
       "put" : {
         "tags" : [ "user" ],
         "summary" : "Updated user",
@@ -168,9 +166,7 @@
             "description" : "User not found"
           }
         }
-      }
-    },
-    "/user/{userid}/delete" : {
+      },
       "delete" : {
         "tags" : [ "user" ],
         "summary" : "Delete user",
