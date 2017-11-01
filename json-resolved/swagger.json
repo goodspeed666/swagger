@@ -23,6 +23,11 @@
         "description" : "This can only be done by the logged in user.",
         "produces" : [ "application/json" ],
         "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
           "name" : "account",
           "in" : "query",
           "description" : "帳號",
@@ -93,8 +98,11 @@
           "200" : {
             "description" : "successful operation"
           },
-          "400" : {
-            "description" : "Invalid username/password supplied"
+          "401" : {
+            "description" : "Email or password is wrong"
+          },
+          "404" : {
+            "description" : "Account does not exist"
           }
         }
       }
