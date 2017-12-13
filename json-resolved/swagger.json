@@ -13,6 +13,9 @@
   }, {
     "name" : "customer",
     "description" : "Operations about customer"
+  }, {
+    "name" : "common",
+    "description" : "Operations about common service"
   } ],
   "schemes" : [ "https" ],
   "paths" : {
