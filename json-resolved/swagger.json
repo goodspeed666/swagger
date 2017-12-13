@@ -345,6 +345,33 @@
           }
         }
       }
+    },
+    "/common/get_type" : {
+      "post" : {
+        "tags" : [ "common" ],
+        "summary" : "Get data of the specific type",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "type",
+          "in" : "query",
+          "description" : "The type which you want",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "404" : {
+            "description" : "The type does not exist"
+          }
+        }
+      }
     }
   },
   "securityDefinitions" : {
