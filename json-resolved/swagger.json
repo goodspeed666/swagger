@@ -445,20 +445,14 @@
         }
       }
     },
-    "/common/get_type" : {
+    "/common/get_type/hospital" : {
       "post" : {
         "tags" : [ "common" ],
-        "summary" : "Get data of the specific type",
+        "summary" : "取得醫院列表",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
           "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "type",
-          "in" : "query",
-          "description" : "The type which you want",
           "required" : true,
           "type" : "string"
         } ],
