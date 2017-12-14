@@ -346,7 +346,7 @@
         }
       }
     },
-    "/customer/{userid}/birth_order" : {
+    "/customer/{userid}/birth" : {
       "post" : {
         "tags" : [ "customer" ],
         "summary" : "建立胎次資料",
