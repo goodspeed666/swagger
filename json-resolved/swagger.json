@@ -600,15 +600,22 @@
           "type" : "string"
         },
         "hospital" : {
-          "type" : "string",
-          "description" : "pet status in the store",
-          "enum" : [ "id", "hospital_name" ]
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Get_hospital_hospital"
+          }
         }
       },
       "example" : {
         "city_name" : "city_name",
         "id" : 0,
-        "hospital" : "id"
+        "hospital" : [ {
+          "hospital_id" : 6,
+          "hospital_name" : "hospital_name"
+        }, {
+          "hospital_id" : 6,
+          "hospital_name" : "hospital_name"
+        } ]
       },
       "xml" : {
         "name" : "Get_hospital"
@@ -672,6 +679,20 @@
         "message" : {
           "type" : "string"
         }
+      }
+    },
+    "Get_hospital_hospital" : {
+      "properties" : {
+        "hospital_id" : {
+          "type" : "integer"
+        },
+        "hospital_name" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "hospital_id" : 6,
+        "hospital_name" : "hospital_name"
       }
     }
   }
