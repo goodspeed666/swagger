@@ -458,7 +458,10 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "successful operation"
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Get_hospital"
+            }
           },
           "404" : {
             "description" : "The type does not exist"
@@ -601,6 +604,11 @@
           "description" : "pet status in the store",
           "enum" : [ "id", "hospital_name" ]
         }
+      },
+      "example" : {
+        "city_name" : "city_name",
+        "id" : 0,
+        "hospital" : "id"
       },
       "xml" : {
         "name" : "Get_hospital"
