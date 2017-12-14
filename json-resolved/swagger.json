@@ -346,6 +346,111 @@
         }
       }
     },
+    "/customer/add/{userid}" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "建立胎次資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "cid",
+          "in" : "query",
+          "description" : "客戶編號",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "客戶姓名",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "email",
+          "in" : "query",
+          "description" : "email",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "mobile_phone",
+          "in" : "query",
+          "description" : "手機號碼",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "home_phone",
+          "in" : "query",
+          "description" : "家裡電話",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "pos",
+          "in" : "query",
+          "description" : "郵遞區號",
+          "required" : false,
+          "type" : "integer"
+        }, {
+          "name" : "address",
+          "in" : "query",
+          "description" : "地址",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "id_num",
+          "in" : "query",
+          "description" : "身分證字號",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "birth",
+          "in" : "query",
+          "description" : "生日",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "howto_know",
+          "in" : "query",
+          "description" : "如何得知",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "plate_num",
+          "in" : "query",
+          "description" : "車牌號碼及顏色",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "emergency_contact",
+          "in" : "query",
+          "description" : "緊急聯絡人",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "emergency_phone",
+          "in" : "query",
+          "description" : "緊急聯絡電話",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "emergency_addr",
+          "in" : "query",
+          "description" : "緊急聯絡處所",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Some fields are not completed"
+          }
+        }
+      }
+    },
     "/common/get_type" : {
       "post" : {
         "tags" : [ "common" ],
