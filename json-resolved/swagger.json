@@ -586,6 +586,26 @@
         "name" : "Tag"
       }
     },
+    "Get_hospital" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "city_name" : {
+          "type" : "string"
+        },
+        "hospital" : {
+          "type" : "string",
+          "description" : "pet status in the store",
+          "enum" : [ "id", "hospital_name" ]
+        }
+      },
+      "xml" : {
+        "name" : "Get_hospital"
+      }
+    },
     "Pet" : {
       "type" : "object",
       "required" : [ "name", "photoUrls" ],
