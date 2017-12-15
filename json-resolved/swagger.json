@@ -255,7 +255,7 @@
           "name" : "cid",
           "in" : "query",
           "description" : "客戶編號",
-          "required" : true,
+          "required" : false,
           "type" : "string"
         }, {
           "name" : "name",
@@ -279,7 +279,7 @@
           "name" : "home_phone",
           "in" : "query",
           "description" : "家裡電話",
-          "required" : true,
+          "required" : false,
           "type" : "string"
         }, {
           "name" : "pos",
@@ -321,13 +321,13 @@
           "name" : "emergency_contact",
           "in" : "query",
           "description" : "緊急聯絡人",
-          "required" : true,
+          "required" : false,
           "type" : "string"
         }, {
           "name" : "emergency_phone",
           "in" : "query",
           "description" : "緊急聯絡電話",
-          "required" : true,
+          "required" : false,
           "type" : "string"
         }, {
           "name" : "emergency_addr",
@@ -468,6 +468,30 @@
           }
         }
       }
+    },
+    "/common/get_type/care_point" : {
+      "post" : {
+        "tags" : [ "common" ],
+        "summary" : "取得關心重點列表",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Get_common_type"
+            }
+          },
+          "404" : {
+            "description" : "The type does not exist"
+          }
+        }
+      }
     }
   },
   "securityDefinitions" : {
@@ -589,7 +613,7 @@
         "name" : "Tag"
       }
     },
-    "Get_hospital" : {
+    "GetHospitals" : {
       "type" : "object",
       "properties" : {
         "id" : {
@@ -599,26 +623,30 @@
         "city_name" : {
           "type" : "string"
         },
-        "hospital" : {
+        "hospitals" : {
           "type" : "array",
           "items" : {
-            "$ref" : "#/definitions/Get_hospital_hospital"
+            "$ref" : "#/definitions/GetHospitals_hospitals"
           }
         }
       },
-      "example" : {
-        "city_name" : "city_name",
-        "id" : 0,
-        "hospital" : [ {
-          "hospital_id" : 6,
-          "hospital_name" : "hospital_name"
-        }, {
-          "hospital_id" : 6,
-          "hospital_name" : "hospital_name"
-        } ]
+      "xml" : {
+        "name" : "GetHospitals"
+      }
+    },
+    "GetCommonType" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "city_name" : {
+          "type" : "string"
+        }
       },
       "xml" : {
-        "name" : "Get_hospital"
+        "name" : "GetCommonType"
       }
     },
     "Pet" : {
@@ -681,7 +709,7 @@
         }
       }
     },
-    "Get_hospital_hospital" : {
+    "GetHospitals_hospitals" : {
       "properties" : {
         "hospital_id" : {
           "type" : "integer"
@@ -689,10 +717,6 @@
         "hospital_name" : {
           "type" : "string"
         }
-      },
-      "example" : {
-        "hospital_id" : 6,
-        "hospital_name" : "hospital_name"
       }
     }
   }
