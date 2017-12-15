@@ -460,7 +460,7 @@
           "200" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/Get_hospital"
+              "$ref" : "#/definitions/GetHospitals"
             }
           },
           "404" : {
@@ -484,7 +484,7 @@
           "200" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/Get_common_type"
+              "$ref" : "#/definitions/GetCommonType"
             }
           },
           "404" : {
@@ -630,6 +630,17 @@
           }
         }
       },
+      "example" : {
+        "hospitals" : [ {
+          "hospital_id" : 6,
+          "hospital_name" : "hospital_name"
+        }, {
+          "hospital_id" : 6,
+          "hospital_name" : "hospital_name"
+        } ],
+        "city_name" : "city_name",
+        "id" : 0
+      },
       "xml" : {
         "name" : "GetHospitals"
       }
@@ -644,6 +655,10 @@
         "city_name" : {
           "type" : "string"
         }
+      },
+      "example" : {
+        "city_name" : "city_name",
+        "id" : 0
       },
       "xml" : {
         "name" : "GetCommonType"
@@ -717,6 +732,10 @@
         "hospital_name" : {
           "type" : "string"
         }
+      },
+      "example" : {
+        "hospital_id" : 6,
+        "hospital_name" : "hospital_name"
       }
     }
   }
