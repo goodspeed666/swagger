@@ -241,6 +241,43 @@
       }
     },
     "/customer/{userid}" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "新增預約單（新增客戶資料）",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "userid",
+          "in" : "path",
+          "description" : "UserID",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "客戶姓名",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "mobile_phone",
+          "in" : "query",
+          "description" : "手機號碼",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Some fields are not completed"
+          }
+        }
+      },
       "put" : {
         "tags" : [ "customer" ],
         "summary" : "修改客戶資料",
@@ -248,6 +285,12 @@
         "parameters" : [ {
           "name" : "token",
           "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "userid",
+          "in" : "path",
+          "description" : "UserID",
           "required" : true,
           "type" : "string"
         }, {
