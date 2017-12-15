@@ -240,11 +240,10 @@
         }
       }
     },
-    "/customer/add" : {
-      "post" : {
+    "/customer/{userid}/edit" : {
+      "put" : {
         "tags" : [ "customer" ],
-        "summary" : "Create customer",
-        "description" : "Create customer",
+        "summary" : "修改客戶資料",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -446,7 +445,7 @@
       }
     },
     "/common/get_type/hospital" : {
-      "post" : {
+      "get" : {
         "tags" : [ "common" ],
         "summary" : "取得醫院列表",
         "produces" : [ "application/json" ],
