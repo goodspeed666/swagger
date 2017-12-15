@@ -470,7 +470,7 @@
       }
     },
     "/common/get_type/care_point" : {
-      "post" : {
+      "get" : {
         "tags" : [ "common" ],
         "summary" : "取得關心重點列表",
         "produces" : [ "application/json" ],
