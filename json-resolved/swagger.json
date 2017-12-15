@@ -268,6 +268,30 @@
           "description" : "手機號碼",
           "required" : true,
           "type" : "string"
+        }, {
+          "name" : "dad_name",
+          "in" : "query",
+          "description" : "爸爸姓名",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dad_mobile",
+          "in" : "query",
+          "description" : "爸爸的手機",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "care_point",
+          "in" : "query",
+          "description" : "關心重點",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "comment",
+          "in" : "query",
+          "description" : "備註",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "default" : {
