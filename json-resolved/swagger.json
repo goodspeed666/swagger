@@ -652,12 +652,12 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "city_name" : {
+        "name" : {
           "type" : "string"
         }
       },
       "example" : {
-        "city_name" : "city_name",
+        "name" : "name",
         "id" : 0
       },
       "xml" : {
