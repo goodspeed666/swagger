@@ -354,6 +354,30 @@
           "required" : false,
           "type" : "string"
         }, {
+          "name" : "dad_name",
+          "in" : "query",
+          "description" : "爸爸姓名",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dad_mobile",
+          "in" : "query",
+          "description" : "爸爸的手機",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dad_email",
+          "in" : "query",
+          "description" : "爸爸的Email",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dad_birth",
+          "in" : "query",
+          "description" : "爸爸的生日",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "plate_num",
           "in" : "query",
           "description" : "車牌號碼及顏色",
