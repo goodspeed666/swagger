@@ -240,7 +240,7 @@
         }
       }
     },
-    "/customer/{userid}/edit" : {
+    "/customer/{userid}" : {
       "put" : {
         "tags" : [ "customer" ],
         "summary" : "修改客戶資料",
