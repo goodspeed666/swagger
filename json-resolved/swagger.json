@@ -453,31 +453,31 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "name",
+          "name" : "due_date",
           "in" : "query",
           "description" : "預產期",
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "email",
+          "name" : "give_birth_date",
           "in" : "query",
           "description" : "實際生產日期",
           "required" : false,
           "type" : "string"
         }, {
-          "name" : "mobile_phone",
+          "name" : "give_birth_area",
           "in" : "query",
           "description" : "生產地區",
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "home_phone",
+          "name" : "give_birth_hospital",
           "in" : "query",
           "description" : "生產醫院",
           "required" : true,
-          "type" : "string"
+          "type" : "integer"
         }, {
-          "name" : "pos",
+          "name" : "give_birth_type",
           "in" : "query",
           "description" : "生產方式",
           "required" : false,
@@ -505,7 +505,7 @@
           "in" : "query",
           "description" : "參觀接待人",
           "required" : true,
-          "type" : "boolean"
+          "type" : "integer"
         }, {
           "name" : "visit_date",
           "in" : "query",
@@ -517,13 +517,13 @@
           "in" : "query",
           "description" : "簽約接待人",
           "required" : false,
-          "type" : "boolean"
+          "type" : "integer"
         }, {
           "name" : "signing_date",
           "in" : "query",
           "description" : "簽約日期",
           "required" : false,
-          "type" : "boolean"
+          "type" : "string"
         } ],
         "responses" : {
           "default" : {
