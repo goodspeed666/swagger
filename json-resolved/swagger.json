@@ -240,20 +240,14 @@
         }
       }
     },
-    "/customer/{userid}" : {
+    "/customer/booking" : {
       "post" : {
         "tags" : [ "customer" ],
-        "summary" : "新增預約單（新增客戶資料）",
+        "summary" : "新增預約單",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
           "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "userid",
-          "in" : "path",
-          "description" : "UserID",
           "required" : true,
           "type" : "string"
         }, {
@@ -292,6 +286,18 @@
           "description" : "備註",
           "required" : false,
           "type" : "string"
+        }, {
+          "name" : "booking_time",
+          "in" : "query",
+          "description" : "預約時間",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "booking_cs",
+          "in" : "query",
+          "description" : "預約客服",
+          "required" : true,
+          "type" : "string"
         } ],
         "responses" : {
           "default" : {
@@ -301,20 +307,16 @@
             "description" : "Some fields are not completed"
           }
         }
-      },
-      "put" : {
+      }
+    },
+    "/customer/add" : {
+      "post" : {
         "tags" : [ "customer" ],
-        "summary" : "修改客戶資料",
+        "summary" : "新增客戶資料",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
           "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "userid",
-          "in" : "path",
-          "description" : "UserID",
           "required" : true,
           "type" : "string"
         }, {
@@ -422,6 +424,135 @@
         }, {
           "name" : "emergency_addr",
           "in" : "query",
+          "description" : "緊急聯絡地址",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "身分證格式錯誤"
+          }
+        }
+      }
+    },
+    "/customer/{userid}" : {
+      "put" : {
+        "tags" : [ "customer" ],
+        "summary" : "修改客戶資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "userid",
+          "in" : "path",
+          "description" : "UserID",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "cid",
+          "in" : "query",
+          "description" : "客戶編號",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "客戶姓名",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "email",
+          "in" : "query",
+          "description" : "email",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "mobile_phone",
+          "in" : "query",
+          "description" : "手機號碼",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "home_phone",
+          "in" : "query",
+          "description" : "家裡電話",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "pos",
+          "in" : "query",
+          "description" : "郵遞區號",
+          "required" : false,
+          "type" : "integer"
+        }, {
+          "name" : "address",
+          "in" : "query",
+          "description" : "地址",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "birth",
+          "in" : "query",
+          "description" : "生日",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "howto_know",
+          "in" : "query",
+          "description" : "如何得知",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dad_name",
+          "in" : "query",
+          "description" : "爸爸姓名",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dad_mobile",
+          "in" : "query",
+          "description" : "爸爸的手機",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dad_email",
+          "in" : "query",
+          "description" : "爸爸的Email",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dad_birth",
+          "in" : "query",
+          "description" : "爸爸的生日",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "plate_num",
+          "in" : "query",
+          "description" : "車牌號碼及顏色",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "emergency_contact",
+          "in" : "query",
+          "description" : "緊急聯絡人",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "emergency_phone",
+          "in" : "query",
+          "description" : "緊急聯絡電話",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "emergency_addr",
+          "in" : "query",
           "description" : "緊急聯絡處所",
           "required" : false,
           "type" : "string"
@@ -469,7 +600,7 @@
           "in" : "query",
           "description" : "生產地區",
           "required" : true,
-          "type" : "string"
+          "type" : "integer"
         }, {
           "name" : "give_birth_hospital",
           "in" : "query",
@@ -497,9 +628,23 @@
         }, {
           "name" : "bring_children",
           "in" : "query",
-          "description" : "是否會帶小孩入住？",
+          "description" : "帶幾個小孩入住",
           "required" : false,
-          "type" : "boolean"
+          "type" : "integer"
+        }, {
+          "name" : "how_much_bady",
+          "in" : "query",
+          "description" : "幾胞胎",
+          "required" : true,
+          "type" : "integer",
+          "maximum" : 5,
+          "minimum" : 1
+        }, {
+          "name" : "stay_with",
+          "in" : "query",
+          "description" : "留宿者",
+          "required" : false,
+          "type" : "integer"
         }, {
           "name" : "visit_receptionist",
           "in" : "query",
@@ -563,6 +708,30 @@
       "get" : {
         "tags" : [ "common" ],
         "summary" : "取得關心重點列表",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCommonType"
+            }
+          },
+          "404" : {
+            "description" : "The type is empty or does not exist"
+          }
+        }
+      }
+    },
+    "/common/get_type/relation_ship" : {
+      "get" : {
+        "tags" : [ "common" ],
+        "summary" : "取得關係列表",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
