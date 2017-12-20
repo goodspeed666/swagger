@@ -354,7 +354,8 @@
           "in" : "query",
           "description" : "郵遞區號",
           "required" : false,
-          "type" : "integer"
+          "type" : "integer",
+          "maxLength" : 5
         }, {
           "name" : "address",
           "in" : "query",
@@ -366,13 +367,15 @@
           "in" : "query",
           "description" : "身分證字號",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "maxLength" : 10
         }, {
           "name" : "birth",
           "in" : "query",
           "description" : "生日",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "maxLength" : 10
         }, {
           "name" : "howto_know",
           "in" : "query",
@@ -433,7 +436,10 @@
             "description" : "successful operation"
           },
           "400" : {
-            "description" : "身分證格式錯誤"
+            "description" : "Some fields are not completed"
+          },
+          "401" : {
+            "description" : "Customized Error Message"
           }
         }
       }
@@ -489,7 +495,8 @@
           "in" : "query",
           "description" : "郵遞區號",
           "required" : false,
-          "type" : "integer"
+          "type" : "integer",
+          "maxLength" : 5
         }, {
           "name" : "address",
           "in" : "query",
@@ -497,11 +504,19 @@
           "required" : true,
           "type" : "string"
         }, {
+          "name" : "id_num",
+          "in" : "query",
+          "description" : "身分證字號",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 10
+        }, {
           "name" : "birth",
           "in" : "query",
           "description" : "生日",
           "required" : true,
-          "type" : "string"
+          "type" : "string",
+          "maxLength" : 10
         }, {
           "name" : "howto_know",
           "in" : "query",
