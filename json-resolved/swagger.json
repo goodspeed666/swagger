@@ -365,10 +365,17 @@
         }, {
           "name" : "id_num",
           "in" : "query",
-          "description" : "身分證字號",
-          "required" : true,
+          "description" : "身分證字號（與統一證號擇一輸入）",
+          "required" : false,
           "type" : "string",
           "maxLength" : 10
+        }, {
+          "name" : "unified_num",
+          "in" : "query",
+          "description" : "統一證號（與身分證字號擇一輸入）",
+          "required" : false,
+          "type" : "string",
+          "maxLength" : 15
         }, {
           "name" : "birth",
           "in" : "query",
