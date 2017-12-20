@@ -405,7 +405,8 @@
           "in" : "query",
           "description" : "爸爸的生日",
           "required" : false,
-          "type" : "string"
+          "type" : "string",
+          "maxLength" : 10
         }, {
           "name" : "plate_num",
           "in" : "query",
@@ -507,9 +508,16 @@
           "name" : "id_num",
           "in" : "query",
           "description" : "身分證字號",
-          "required" : true,
+          "required" : false,
           "type" : "string",
           "maxLength" : 10
+        }, {
+          "name" : "unified_num",
+          "in" : "query",
+          "description" : "統一證號",
+          "required" : false,
+          "type" : "string",
+          "maxLength" : 15
         }, {
           "name" : "birth",
           "in" : "query",
