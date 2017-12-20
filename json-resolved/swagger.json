@@ -446,7 +446,7 @@
           "400" : {
             "description" : "Some fields are not completed"
           },
-          "401" : {
+          "405" : {
             "description" : "Customized Error Message"
           }
         }
