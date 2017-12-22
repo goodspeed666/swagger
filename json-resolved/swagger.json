@@ -240,6 +240,27 @@
         }
       }
     },
+    "/customers" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得客戶清單",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCustomers"
+            }
+          }
+        }
+      }
+    },
     "/customers/booking" : {
       "post" : {
         "tags" : [ "customer" ],
@@ -900,6 +921,44 @@
       },
       "xml" : {
         "name" : "Tag"
+      }
+    },
+    "GetCustomers" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "cid" : {
+          "type" : "string"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "home_phone" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "integer"
+        },
+        "due_date" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "home_phone" : "home_phone",
+        "mobile_phone" : "mobile_phone",
+        "name" : "name",
+        "due_date" : "due_date",
+        "id" : 0,
+        "cid" : "cid",
+        "status" : 6
+      },
+      "xml" : {
+        "name" : "GetCustomers"
       }
     },
     "GetHospitals" : {
