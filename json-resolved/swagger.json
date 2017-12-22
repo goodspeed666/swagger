@@ -943,16 +943,12 @@
         },
         "status" : {
           "type" : "integer"
-        },
-        "due_date" : {
-          "type" : "string"
         }
       },
       "example" : {
         "home_phone" : "home_phone",
         "mobile_phone" : "mobile_phone",
         "name" : "name",
-        "due_date" : "due_date",
         "id" : 0,
         "cid" : "cid",
         "status" : 6
