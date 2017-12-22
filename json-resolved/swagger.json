@@ -89,7 +89,7 @@
         }
       }
     },
-    "/user/add" : {
+    "/user/store" : {
       "post" : {
         "tags" : [ "user" ],
         "summary" : "Create user",
@@ -139,7 +139,7 @@
           "enum" : [ "Administrator", "Manager", "Employee" ]
         } ],
         "responses" : {
-          "default" : {
+          "201" : {
             "description" : "successful operation"
           },
           "400" : {
@@ -309,7 +309,7 @@
         }
       }
     },
-    "/customer/add" : {
+    "/customer/store" : {
       "post" : {
         "tags" : [ "customer" ],
         "summary" : "新增客戶資料",
@@ -453,7 +453,7 @@
       }
     },
     "/customer/{userid}" : {
-      "put" : {
+      "post" : {
         "tags" : [ "customer" ],
         "summary" : "修改客戶資料",
         "produces" : [ "application/json" ],
