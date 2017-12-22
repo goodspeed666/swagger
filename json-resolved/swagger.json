@@ -179,7 +179,7 @@
           }
         }
       },
-      "put" : {
+      "post" : {
         "tags" : [ "user" ],
         "summary" : "Updated user",
         "description" : "This can only be done by the logged in user.",
@@ -300,7 +300,7 @@
           "type" : "string"
         } ],
         "responses" : {
-          "default" : {
+          "201" : {
             "description" : "successful operation"
           },
           "400" : {
@@ -440,7 +440,7 @@
           "type" : "string"
         } ],
         "responses" : {
-          "default" : {
+          "201" : {
             "description" : "successful operation"
           },
           "400" : {
