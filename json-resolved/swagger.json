@@ -19,7 +19,7 @@
   } ],
   "schemes" : [ "https" ],
   "paths" : {
-    "/user/login" : {
+    "/users/login" : {
       "post" : {
         "tags" : [ "user" ],
         "summary" : "Logs user into the system",
@@ -71,7 +71,7 @@
         }
       }
     },
-    "/user/logout" : {
+    "/users/logout" : {
       "get" : {
         "tags" : [ "user" ],
         "summary" : "Logs out current logged in user session",
@@ -89,7 +89,7 @@
         }
       }
     },
-    "/user/store" : {
+    "/users/store" : {
       "post" : {
         "tags" : [ "user" ],
         "summary" : "Create user",
@@ -148,7 +148,7 @@
         }
       }
     },
-    "/user/{userid}" : {
+    "/users/{userid}" : {
       "get" : {
         "tags" : [ "user" ],
         "summary" : "Get user by userid",
@@ -240,7 +240,7 @@
         }
       }
     },
-    "/customer/booking" : {
+    "/customers/booking" : {
       "post" : {
         "tags" : [ "customer" ],
         "summary" : "新增預約單",
@@ -309,7 +309,7 @@
         }
       }
     },
-    "/customer/store" : {
+    "/customers/store" : {
       "post" : {
         "tags" : [ "customer" ],
         "summary" : "新增客戶資料",
@@ -452,7 +452,7 @@
         }
       }
     },
-    "/customer/{userid}" : {
+    "/customers/{userid}" : {
       "post" : {
         "tags" : [ "customer" ],
         "summary" : "修改客戶資料",
@@ -597,7 +597,7 @@
         }
       }
     },
-    "/customer/{userid}/birth" : {
+    "/customers/{userid}/birth" : {
       "post" : {
         "tags" : [ "customer" ],
         "summary" : "建立胎次資料",
