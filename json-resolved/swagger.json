@@ -257,6 +257,9 @@
             "schema" : {
               "$ref" : "#/definitions/GetCustomers"
             }
+          },
+          "404" : {
+            "description" : "No data"
           }
         }
       }
@@ -474,6 +477,34 @@
       }
     },
     "/customers/{userid}" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得客戶資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "userid",
+          "in" : "path",
+          "description" : "UserID",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCustomer"
+            }
+          },
+          "404" : {
+            "description" : "No data"
+          }
+        }
+      },
       "post" : {
         "tags" : [ "customer" ],
         "summary" : "修改客戶資料",
@@ -940,9 +971,6 @@
         },
         "home_phone" : {
           "type" : "string"
-        },
-        "status" : {
-          "type" : "integer"
         }
       },
       "example" : {
@@ -950,11 +978,108 @@
         "mobile_phone" : "mobile_phone",
         "name" : "name",
         "id" : 0,
-        "cid" : "cid",
-        "status" : 6
+        "cid" : "cid"
       },
       "xml" : {
         "name" : "GetCustomers"
+      }
+    },
+    "GetCustomer" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "cid" : {
+          "type" : "string"
+        },
+        "id_num" : {
+          "type" : "string"
+        },
+        "unified_num" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "home_phone" : {
+          "type" : "string"
+        },
+        "pos" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        },
+        "birth" : {
+          "type" : "string"
+        },
+        "howto_know" : {
+          "type" : "string"
+        },
+        "dad_name" : {
+          "type" : "string"
+        },
+        "dad_mobile" : {
+          "type" : "string"
+        },
+        "dad_email" : {
+          "type" : "string"
+        },
+        "dad_birth" : {
+          "type" : "string"
+        },
+        "plate_num" : {
+          "type" : "string"
+        },
+        "emergency_contact" : {
+          "type" : "string"
+        },
+        "emergency_phone" : {
+          "type" : "string"
+        },
+        "emergency_addr" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string"
+        },
+        "updated_at" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "home_phone" : "home_phone",
+        "address" : "address",
+        "dad_name" : "dad_name",
+        "plate_num" : "plate_num",
+        "howto_know" : "howto_know",
+        "dad_birth" : "dad_birth",
+        "birth" : "birth",
+        "created_at" : "created_at",
+        "unified_num" : "unified_num",
+        "emergency_addr" : "emergency_addr",
+        "emergency_phone" : "emergency_phone",
+        "dad_mobile" : "dad_mobile",
+        "updated_at" : "updated_at",
+        "pos" : "pos",
+        "mobile_phone" : "mobile_phone",
+        "name" : "name",
+        "id_num" : "id_num",
+        "id" : 0,
+        "email" : "email",
+        "cid" : "cid",
+        "dad_email" : "dad_email",
+        "emergency_contact" : "emergency_contact"
+      },
+      "xml" : {
+        "name" : "GetCustomer"
       }
     },
     "GetHospitals" : {
