@@ -210,6 +210,9 @@
           },
           "404" : {
             "description" : "User not found"
+          },
+          "500" : {
+            "description" : "Error in insert data to access database"
           }
         }
       },
