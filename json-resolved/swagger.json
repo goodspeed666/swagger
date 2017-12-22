@@ -501,7 +501,7 @@
             }
           },
           "404" : {
-            "description" : "No data"
+            "description" : "The customer is not exist"
           }
         }
       },
@@ -957,28 +957,27 @@
     "GetCustomers" : {
       "type" : "object",
       "properties" : {
-        "id" : {
-          "type" : "integer"
-        },
-        "name" : {
-          "type" : "string"
-        },
-        "cid" : {
-          "type" : "string"
-        },
-        "mobile_phone" : {
-          "type" : "string"
-        },
-        "home_phone" : {
-          "type" : "string"
+        "list" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetCustomers_list"
+          }
         }
       },
       "example" : {
-        "home_phone" : "home_phone",
-        "mobile_phone" : "mobile_phone",
-        "name" : "name",
-        "id" : 0,
-        "cid" : "cid"
+        "list" : [ {
+          "home_phone" : "home_phone",
+          "mobile_phone" : "mobile_phone",
+          "name" : "name",
+          "id" : 0,
+          "cid" : "cid"
+        }, {
+          "home_phone" : "home_phone",
+          "mobile_phone" : "mobile_phone",
+          "name" : "name",
+          "id" : 0,
+          "cid" : "cid"
+        } ]
       },
       "xml" : {
         "name" : "GetCustomers"
@@ -1191,6 +1190,32 @@
         "message" : {
           "type" : "string"
         }
+      }
+    },
+    "GetCustomers_list" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "cid" : {
+          "type" : "string"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "home_phone" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "home_phone" : "home_phone",
+        "mobile_phone" : "mobile_phone",
+        "name" : "name",
+        "id" : 0,
+        "cid" : "cid"
       }
     },
     "GetHospitals_hospitals" : {
