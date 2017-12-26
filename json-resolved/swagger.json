@@ -1167,6 +1167,35 @@
         "name" : "GetCommonType"
       }
     },
+    "GetCareType" : {
+      "type" : "object",
+      "properties" : {
+        "cares" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetCareType_cares"
+          }
+        }
+      },
+      "example" : {
+        "cares" : [ {
+          "options" : "",
+          "exernal_options" : "exernal_options",
+          "title" : "title",
+          "type" : 0,
+          "key" : "key"
+        }, {
+          "options" : "",
+          "exernal_options" : "exernal_options",
+          "title" : "title",
+          "type" : 0,
+          "key" : "key"
+        } ]
+      },
+      "xml" : {
+        "name" : "GetCareType"
+      }
+    },
     "Pet" : {
       "type" : "object",
       "required" : [ "name", "photoUrls" ],
@@ -1265,6 +1294,32 @@
       "example" : {
         "hospital_id" : 6,
         "hospital_name" : "hospital_name"
+      }
+    },
+    "GetCareType_cares" : {
+      "properties" : {
+        "key" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "integer"
+        },
+        "options" : {
+          "type" : "array"
+        },
+        "exernal_options" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "options" : "",
+        "exernal_options" : "exernal_options",
+        "title" : "title",
+        "type" : 0,
+        "key" : "key"
       }
     }
   }
