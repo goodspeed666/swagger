@@ -1302,8 +1302,7 @@
           "type" : "string"
         },
         "title" : {
-          "type" : "string",
-          "description" : "133"
+          "type" : "string"
         },
         "type" : {
           "type" : "integer"
