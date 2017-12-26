@@ -1179,13 +1179,13 @@
       },
       "example" : {
         "cares" : [ {
-          "options" : "",
+          "options" : "options",
           "exernal_options" : "exernal_options",
           "title" : "title",
           "type" : 0,
           "key" : "key"
         }, {
-          "options" : "",
+          "options" : "options",
           "exernal_options" : "exernal_options",
           "title" : "title",
           "type" : 0,
@@ -1308,14 +1308,14 @@
           "type" : "integer"
         },
         "options" : {
-          "type" : "array"
+          "type" : "string"
         },
         "exernal_options" : {
           "type" : "string"
         }
       },
       "example" : {
-        "options" : "",
+        "options" : "options",
         "exernal_options" : "exernal_options",
         "title" : "title",
         "type" : 0,
