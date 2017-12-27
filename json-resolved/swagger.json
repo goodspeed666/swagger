@@ -1189,6 +1189,76 @@
         "name" : "GetCustomer"
       }
     },
+    "GetCustomerBirth" : {
+      "type" : "object",
+      "properties" : {
+        "due_date" : {
+          "type" : "string"
+        },
+        "give_birth_date" : {
+          "type" : "string"
+        },
+        "give_birth_area" : {
+          "type" : "integer"
+        },
+        "give_birth_hospital" : {
+          "type" : "integer"
+        },
+        "give_birth_type" : {
+          "type" : "integer"
+        },
+        "birth_order" : {
+          "type" : "integer"
+        },
+        "maan_birth_order" : {
+          "type" : "integer"
+        },
+        "bring_children" : {
+          "type" : "integer"
+        },
+        "how_much_bady" : {
+          "type" : "integer"
+        },
+        "stay_with" : {
+          "type" : "integer"
+        },
+        "visit_receptionist" : {
+          "type" : "integer"
+        },
+        "visit_date" : {
+          "type" : "string"
+        },
+        "signing_receptionist" : {
+          "type" : "integer"
+        },
+        "signing_date" : {
+          "type" : "string"
+        },
+        "your_cs" : {
+          "type" : "integer"
+        }
+      },
+      "example" : {
+        "give_birth_type" : 1,
+        "stay_with" : 9,
+        "give_birth_hospital" : 6,
+        "due_date" : "due_date",
+        "signing_date" : "signing_date",
+        "birth_order" : 5,
+        "how_much_bady" : 7,
+        "bring_children" : 2,
+        "visit_receptionist" : 3,
+        "maan_birth_order" : 5,
+        "give_birth_area" : 0,
+        "your_cs" : 4,
+        "give_birth_date" : "give_birth_date",
+        "visit_date" : "visit_date",
+        "signing_receptionist" : 2
+      },
+      "xml" : {
+        "name" : "GetCustomerBirth"
+      }
+    },
     "GetHospitals" : {
       "type" : "object",
       "properties" : {
