@@ -477,7 +477,7 @@
             "description" : "Some fields are not completed"
           },
           "405" : {
-            "description" : "Customized Error Message"
+            "description" : "Customized error message"
           }
         }
       }
@@ -843,7 +843,7 @@
     "/care/get_type/{type}" : {
       "get" : {
         "tags" : [ "care" ],
-        "summary" : "取得照護類別",
+        "summary" : "取得照護類別資訊",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -865,6 +865,47 @@
           },
           "404" : {
             "description" : "The type is empty or does not exist"
+          }
+        }
+      }
+    },
+    "/care/store/{type}" : {
+      "post" : {
+        "tags" : [ "care" ],
+        "summary" : "寫入照護資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "type",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "key",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "options",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "external_options",
+          "in" : "query",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "successful operation"
+          },
+          "405" : {
+            "description" : "Customized error message"
           }
         }
       }
