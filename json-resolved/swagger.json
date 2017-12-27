@@ -70,12 +70,18 @@
             "schema" : {
               "$ref" : "#/definitions/User"
             }
+          },
+          "400" : {
+            "description" : "An error while decoding token."
+          },
+          "401" : {
+            "description" : "Provided token is expired."
           }
         }
       }
     },
     "/users/logout" : {
-      "get" : {
+      "post" : {
         "tags" : [ "user" ],
         "summary" : "Logs out current logged in user session",
         "produces" : [ "application/json" ],
@@ -885,20 +891,12 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "key",
-          "in" : "query",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "options",
-          "in" : "query",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "external_options",
-          "in" : "query",
+          "in" : "body",
+          "name" : "tickets and form",
           "required" : false,
-          "type" : "string"
+          "schema" : {
+            "$ref" : "#/definitions/tickets and form"
+          }
         } ],
         "responses" : {
           "201" : {
@@ -1293,6 +1291,20 @@
           "type" : "string"
         },
         "message" : {
+          "type" : "string"
+        }
+      }
+    },
+    "tickets and form" : {
+      "type" : "object",
+      "properties" : {
+        "key" : {
+          "type" : "string"
+        },
+        "options" : {
+          "type" : "string"
+        },
+        "external_options" : {
           "type" : "string"
         }
       }
