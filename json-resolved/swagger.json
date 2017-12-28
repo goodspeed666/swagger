@@ -808,7 +808,7 @@
         }
       }
     },
-    "/common/get_type/hospital" : {
+    "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
         "summary" : "取得醫院列表",
