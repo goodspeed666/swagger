@@ -832,7 +832,7 @@
         }
       }
     },
-    "/common/get_type/care_point" : {
+    "/common/type/care_point" : {
       "get" : {
         "tags" : [ "common" ],
         "summary" : "取得關心重點列表",
@@ -856,7 +856,7 @@
         }
       }
     },
-    "/common/get_type/relation_ship" : {
+    "/common/type/relation_ship" : {
       "get" : {
         "tags" : [ "common" ],
         "summary" : "取得關係列表",
@@ -945,7 +945,7 @@
         }
       }
     },
-    "/care/store/{type}" : {
+    "/care/store" : {
       "post" : {
         "tags" : [ "care" ],
         "summary" : "寫入照護資料",
@@ -953,11 +953,6 @@
         "parameters" : [ {
           "name" : "token",
           "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "type",
-          "in" : "path",
           "required" : true,
           "type" : "string"
         }, {
