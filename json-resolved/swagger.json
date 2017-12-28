@@ -735,7 +735,8 @@
           "in" : "query",
           "description" : "生產方式",
           "required" : false,
-          "type" : "integer"
+          "type" : "string",
+          "default" : "剖腹 or 自然產\""
         }, {
           "name" : "birth_order",
           "in" : "query",
@@ -1225,13 +1226,13 @@
           "example" : "YYYY-MM-DD"
         },
         "give_birth_area" : {
-          "type" : "integer"
+          "$ref" : "#/definitions/GetCustomerBirth_give_birth_area"
         },
         "give_birth_hospital" : {
-          "type" : "integer"
+          "$ref" : "#/definitions/GetCustomerBirth_give_birth_area"
         },
         "give_birth_type" : {
-          "type" : "integer"
+          "type" : "string"
         },
         "birth_order" : {
           "type" : "integer"
@@ -1249,21 +1250,21 @@
           "type" : "string"
         },
         "visit_receptionist" : {
-          "$ref" : "#/definitions/GetCustomerBirth_visit_receptionist"
+          "$ref" : "#/definitions/GetCustomerBirth_give_birth_area"
         },
         "visit_date" : {
           "type" : "string",
           "example" : "YYYY-MM-DD"
         },
         "signing_receptionist" : {
-          "$ref" : "#/definitions/GetCustomerBirth_visit_receptionist"
+          "$ref" : "#/definitions/GetCustomerBirth_give_birth_area"
         },
         "signing_date" : {
           "type" : "string",
           "example" : "YYYY-MM-DD"
         },
         "your_cs" : {
-          "$ref" : "#/definitions/GetCustomerBirth_visit_receptionist"
+          "$ref" : "#/definitions/GetCustomerBirth_give_birth_area"
         },
         "check_in" : {
           "type" : "string",
@@ -1275,31 +1276,37 @@
         }
       },
       "example" : {
-        "give_birth_type" : 1,
+        "give_birth_type" : "give_birth_type",
         "stay_with" : "stay_with",
-        "give_birth_hospital" : 6,
+        "give_birth_hospital" : {
+          "name" : "name",
+          "id" : 0
+        },
         "check_in" : "YYYY-MM-DD",
         "due_date" : "YYYY-MM-DD",
         "signing_date" : "YYYY-MM-DD",
-        "birth_order" : 5,
-        "how_much_bady" : 7,
-        "bring_children" : 2,
+        "birth_order" : 6,
+        "how_much_bady" : 5,
+        "bring_children" : 5,
         "visit_receptionist" : {
           "name" : "name",
-          "id" : 9
+          "id" : 0
         },
         "check_out" : "YYYY-MM-DD",
-        "maan_birth_order" : 5,
-        "give_birth_area" : 0,
+        "maan_birth_order" : 1,
+        "give_birth_area" : {
+          "name" : "name",
+          "id" : 0
+        },
         "your_cs" : {
           "name" : "name",
-          "id" : 9
+          "id" : 0
         },
         "give_birth_date" : "YYYY-MM-DD",
         "visit_date" : "YYYY-MM-DD",
         "signing_receptionist" : {
           "name" : "name",
-          "id" : 9
+          "id" : 0
         }
       },
       "xml" : {
@@ -1452,7 +1459,7 @@
         "cid" : "cid"
       }
     },
-    "GetCustomerBirth_visit_receptionist" : {
+    "GetCustomerBirth_give_birth_area" : {
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -1463,7 +1470,7 @@
       },
       "example" : {
         "name" : "name",
-        "id" : 9
+        "id" : 0
       }
     },
     "GetHospitals_hospitals" : {
