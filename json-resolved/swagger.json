@@ -812,7 +812,7 @@
     "/customers/{customer_id}/birth/{birth_id}" : {
       "post" : {
         "tags" : [ "customer" ],
-        "summary" : "更新胎次資料",
+        "summary" : "修改胎次資料",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -986,10 +986,16 @@
       "post" : {
         "tags" : [ "care" ],
         "summary" : "寫入照護資料",
+        "description" : "未完成",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
           "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "type_id",
+          "in" : "query",
           "required" : true,
           "type" : "string"
         }, {
