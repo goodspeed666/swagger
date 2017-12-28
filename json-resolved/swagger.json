@@ -1241,10 +1241,7 @@
           "example" : "YYYY-MM-DD"
         },
         "your_cs" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/GetCustomerBirth_your_cs"
-          }
+          "$ref" : "#/definitions/GetCustomerBirth_your_cs"
         },
         "check_in" : {
           "type" : "string",
@@ -1269,13 +1266,10 @@
         "check_out" : "YYYY-MM-DD",
         "maan_birth_order" : 5,
         "give_birth_area" : 0,
-        "your_cs" : [ {
+        "your_cs" : {
           "name" : "name",
           "id" : 4
-        }, {
-          "name" : "name",
-          "id" : 4
-        } ],
+        },
         "give_birth_date" : "YYYY-MM-DD",
         "visit_date" : "YYYY-MM-DD",
         "signing_receptionist" : 2
