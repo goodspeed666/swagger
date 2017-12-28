@@ -767,7 +767,7 @@
           "in" : "query",
           "description" : "留宿者",
           "required" : false,
-          "type" : "integer"
+          "type" : "string"
         }, {
           "name" : "visit_receptionist",
           "in" : "query",
@@ -1246,7 +1246,7 @@
           "type" : "integer"
         },
         "stay_with" : {
-          "type" : "integer"
+          "type" : "string"
         },
         "visit_receptionist" : {
           "$ref" : "#/definitions/GetCustomerBirth_visit_receptionist"
@@ -1276,7 +1276,7 @@
       },
       "example" : {
         "give_birth_type" : 1,
-        "stay_with" : 9,
+        "stay_with" : "stay_with",
         "give_birth_hospital" : 6,
         "check_in" : "YYYY-MM-DD",
         "due_date" : "YYYY-MM-DD",
@@ -1286,20 +1286,20 @@
         "bring_children" : 2,
         "visit_receptionist" : {
           "name" : "name",
-          "id" : 3
+          "id" : 9
         },
         "check_out" : "YYYY-MM-DD",
         "maan_birth_order" : 5,
         "give_birth_area" : 0,
         "your_cs" : {
           "name" : "name",
-          "id" : 3
+          "id" : 9
         },
         "give_birth_date" : "YYYY-MM-DD",
         "visit_date" : "YYYY-MM-DD",
         "signing_receptionist" : {
           "name" : "name",
-          "id" : 3
+          "id" : 9
         }
       },
       "xml" : {
@@ -1463,7 +1463,7 @@
       },
       "example" : {
         "name" : "name",
-        "id" : 3
+        "id" : 9
       }
     },
     "GetHospitals_hospitals" : {
