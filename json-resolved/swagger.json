@@ -1239,8 +1239,7 @@
           "properties" : { }
         },
         "check_in" : {
-          "type" : "string",
-          "example" : "2017-12-30"
+          "type" : "string"
         },
         "check_out" : {
           "type" : "string"
@@ -1250,7 +1249,7 @@
         "give_birth_type" : 1,
         "stay_with" : 9,
         "give_birth_hospital" : 6,
-        "check_in" : "2017-12-30",
+        "check_in" : "check_in",
         "due_date" : "due_date",
         "signing_date" : "signing_date",
         "birth_order" : 5,
