@@ -1243,7 +1243,8 @@
           "example" : "2017-12-30"
         },
         "check_out" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "2018-01-30"
         }
       },
       "example" : {
@@ -1257,7 +1258,7 @@
         "how_much_bady" : 7,
         "bring_children" : 2,
         "visit_receptionist" : 3,
-        "check_out" : "check_out",
+        "check_out" : "2018-01-30",
         "maan_birth_order" : 5,
         "give_birth_area" : 0,
         "your_cs" : "{}",
