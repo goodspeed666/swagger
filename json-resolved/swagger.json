@@ -733,10 +733,9 @@
         }, {
           "name" : "give_birth_type",
           "in" : "query",
-          "description" : "生產方式",
+          "description" : "剖腹 or 自然產",
           "required" : false,
-          "type" : "string",
-          "default" : "剖腹 or 自然產\""
+          "type" : "string"
         }, {
           "name" : "birth_order",
           "in" : "query",
@@ -806,6 +805,42 @@
           },
           "400" : {
             "description" : "Some fields are not completed"
+          }
+        }
+      }
+    },
+    "/customers/{customer_id}/birth/{birth_id}" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "更新胎次資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "path",
+          "description" : "The Birth ID of Customer",
+          "required" : true,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCustomerBirth"
+            }
+          },
+          "404" : {
+            "description" : "No record found"
           }
         }
       }
@@ -959,10 +994,10 @@
           "type" : "string"
         }, {
           "in" : "body",
-          "name" : "nursing care form",
-          "required" : false,
+          "name" : "macro",
+          "required" : true,
           "schema" : {
-            "$ref" : "#/definitions/nursing care form"
+            "$ref" : "#/definitions/macro"
           }
         } ],
         "responses" : {
@@ -1418,7 +1453,7 @@
         "name" : "GetCareType"
       }
     },
-    "nursing care form" : {
+    "macro" : {
       "type" : "object",
       "properties" : {
         "key" : {
@@ -1426,6 +1461,7 @@
         },
         "options" : {
           "type" : "object",
+          "example" : [ 1, 2, 3 ],
           "properties" : { }
         },
         "external_options" : {
