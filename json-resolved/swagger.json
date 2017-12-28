@@ -997,7 +997,10 @@
           "name" : "macro",
           "required" : true,
           "schema" : {
-            "$ref" : "#/definitions/macro"
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/macro"
+            }
           }
         } ],
         "responses" : {
@@ -1454,7 +1457,6 @@
       }
     },
     "macro" : {
-      "type" : "object",
       "properties" : {
         "key" : {
           "type" : "string"
