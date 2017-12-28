@@ -98,11 +98,11 @@
         }
       }
     },
-    "/users/store" : {
+    "/users" : {
       "post" : {
         "tags" : [ "user" ],
         "summary" : "Create user",
-        "description" : "This can only be done by the logged in user.",
+        "description" : "還沒做",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -161,6 +161,7 @@
       "get" : {
         "tags" : [ "user" ],
         "summary" : "Get user by userid",
+        "description" : "還沒做",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -191,7 +192,7 @@
       "post" : {
         "tags" : [ "user" ],
         "summary" : "Updated user",
-        "description" : "This can only be done by the logged in user.",
+        "description" : "還沒做",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -228,7 +229,7 @@
       "delete" : {
         "tags" : [ "user" ],
         "summary" : "Delete user",
-        "description" : "This can only be done by the logged in user.",
+        "description" : "還沒做",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -488,7 +489,7 @@
         }
       }
     },
-    "/customers/{userid}" : {
+    "/customers/{customer_id}" : {
       "get" : {
         "tags" : [ "customer" ],
         "summary" : "取得客戶資料",
@@ -499,7 +500,7 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "userid",
+          "name" : "customer_id",
           "in" : "path",
           "description" : "UserID",
           "required" : true,
@@ -661,7 +662,7 @@
         }
       }
     },
-    "/customers/{userid}/birth" : {
+    "/customers/{customer_id}/birth" : {
       "get" : {
         "tags" : [ "customer" ],
         "summary" : "取得最新胎次資料",
@@ -672,7 +673,7 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "userid",
+          "name" : "customer_id",
           "in" : "path",
           "description" : "UserID",
           "required" : true,
