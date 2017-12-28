@@ -880,6 +880,40 @@
         }
       }
     },
+    "/common/search/{role}/{keyword}" : {
+      "get" : {
+        "tags" : [ "common" ],
+        "summary" : "搜尋該role的人員",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "role",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "keyword",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/SearchRole"
+            }
+          },
+          "404" : {
+            "description" : "Not found"
+          }
+        }
+      }
+    },
     "/care/get_type/{type}" : {
       "get" : {
         "tags" : [ "care" ],
@@ -1047,21 +1081,6 @@
         "name" : "User"
       }
     },
-    "Tag" : {
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "name" : {
-          "type" : "string"
-        }
-      },
-      "xml" : {
-        "name" : "Tag"
-      }
-    },
     "GetCustomers" : {
       "type" : "object",
       "properties" : {
@@ -1104,10 +1123,12 @@
           "type" : "string"
         },
         "id_num" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "身分證字號"
         },
         "unified_num" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "統一證號（跟身份證字號則一輸入）"
         },
         "email" : {
           "type" : "string"
@@ -1119,7 +1140,8 @@
           "type" : "string"
         },
         "pos" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "郵遞區號"
         },
         "address" : {
           "type" : "string"
@@ -1157,10 +1179,12 @@
           "type" : "string"
         },
         "created_at" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:is"
         },
         "updated_at" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:is"
         }
       },
       "example" : {
@@ -1171,16 +1195,16 @@
         "howto_know" : "howto_know",
         "dad_birth" : "YYYY-MM-DD",
         "birth" : "YYYY-MM-DD",
-        "created_at" : "created_at",
-        "unified_num" : "unified_num",
+        "created_at" : "YYYY-mm-dd H:is",
+        "unified_num" : "統一證號（跟身份證字號則一輸入）",
         "emergency_addr" : "emergency_addr",
         "emergency_phone" : "emergency_phone",
         "dad_mobile" : "dad_mobile",
-        "updated_at" : "updated_at",
-        "pos" : "pos",
+        "updated_at" : "YYYY-mm-dd H:is",
+        "pos" : "郵遞區號",
         "mobile_phone" : "mobile_phone",
         "name" : "name",
-        "id_num" : "id_num",
+        "id_num" : "身分證字號",
         "id" : 0,
         "email" : "email",
         "cid" : "cid",
@@ -1227,21 +1251,21 @@
           "type" : "integer"
         },
         "visit_receptionist" : {
-          "type" : "integer"
+          "$ref" : "#/definitions/GetCustomerBirth_visit_receptionist"
         },
         "visit_date" : {
           "type" : "string",
           "example" : "YYYY-MM-DD"
         },
         "signing_receptionist" : {
-          "type" : "integer"
+          "$ref" : "#/definitions/GetCustomerBirth_visit_receptionist"
         },
         "signing_date" : {
           "type" : "string",
           "example" : "YYYY-MM-DD"
         },
         "your_cs" : {
-          "$ref" : "#/definitions/GetCustomerBirth_your_cs"
+          "$ref" : "#/definitions/GetCustomerBirth_visit_receptionist"
         },
         "check_in" : {
           "type" : "string",
@@ -1262,17 +1286,23 @@
         "birth_order" : 5,
         "how_much_bady" : 7,
         "bring_children" : 2,
-        "visit_receptionist" : 3,
+        "visit_receptionist" : {
+          "name" : "name",
+          "id" : 3
+        },
         "check_out" : "YYYY-MM-DD",
         "maan_birth_order" : 5,
         "give_birth_area" : 0,
         "your_cs" : {
           "name" : "name",
-          "id" : 4
+          "id" : 3
         },
         "give_birth_date" : "YYYY-MM-DD",
         "visit_date" : "YYYY-MM-DD",
-        "signing_receptionist" : 2
+        "signing_receptionist" : {
+          "name" : "name",
+          "id" : 3
+        }
       },
       "xml" : {
         "name" : "GetCustomerBirth"
@@ -1329,6 +1359,31 @@
         "name" : "GetCommonType"
       }
     },
+    "SearchRole" : {
+      "type" : "object",
+      "properties" : {
+        "list" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/SearchRole_list"
+          }
+        }
+      },
+      "example" : {
+        "list" : [ {
+          "name" : "name",
+          "id" : "id",
+          "status" : "0 is out, 1 is in"
+        }, {
+          "name" : "name",
+          "id" : "id",
+          "status" : "0 is out, 1 is in"
+        } ]
+      },
+      "xml" : {
+        "name" : "SearchRole"
+      }
+    },
     "GetCareType" : {
       "type" : "object",
       "properties" : {
@@ -1356,21 +1411,6 @@
       },
       "xml" : {
         "name" : "GetCareType"
-      }
-    },
-    "ApiResponse" : {
-      "type" : "object",
-      "properties" : {
-        "code" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "type" : {
-          "type" : "string"
-        },
-        "message" : {
-          "type" : "string"
-        }
       }
     },
     "nursing care form" : {
@@ -1414,7 +1454,7 @@
         "cid" : "cid"
       }
     },
-    "GetCustomerBirth_your_cs" : {
+    "GetCustomerBirth_visit_receptionist" : {
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -1425,7 +1465,7 @@
       },
       "example" : {
         "name" : "name",
-        "id" : 4
+        "id" : 3
       }
     },
     "GetHospitals_hospitals" : {
@@ -1440,6 +1480,25 @@
       "example" : {
         "hospital_id" : 6,
         "hospital_name" : "hospital_name"
+      }
+    },
+    "SearchRole_list" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "integer",
+          "example" : "0 is out, 1 is in"
+        }
+      },
+      "example" : {
+        "name" : "name",
+        "id" : "id",
+        "status" : "0 is out, 1 is in"
       }
     },
     "GetCareType_cares" : {
