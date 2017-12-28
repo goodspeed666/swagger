@@ -1235,7 +1235,11 @@
           "type" : "string"
         },
         "your_cs" : {
-          "type" : "integer"
+          "type" : "object",
+          "properties" : { }
+        },
+        "check_in" : {
+          "type" : "string"
         },
         "check_out" : {
           "type" : "string"
@@ -1245,6 +1249,7 @@
         "give_birth_type" : 1,
         "stay_with" : 9,
         "give_birth_hospital" : 6,
+        "check_in" : "check_in",
         "due_date" : "due_date",
         "signing_date" : "signing_date",
         "birth_order" : 5,
@@ -1254,7 +1259,7 @@
         "check_out" : "check_out",
         "maan_birth_order" : 5,
         "give_birth_area" : 0,
-        "your_cs" : 4,
+        "your_cs" : "{}",
         "give_birth_date" : "give_birth_date",
         "visit_date" : "visit_date",
         "signing_receptionist" : 2
@@ -1365,7 +1370,8 @@
           "type" : "string"
         },
         "options" : {
-          "type" : "string"
+          "type" : "object",
+          "properties" : { }
         },
         "external_options" : {
           "type" : "string"
