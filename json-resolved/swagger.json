@@ -880,7 +880,7 @@
         }
       }
     },
-    "/common/search/{role}/{keyword}" : {
+    "/common/search" : {
       "get" : {
         "tags" : [ "common" ],
         "summary" : "搜尋該role的人員",
@@ -893,11 +893,13 @@
         }, {
           "name" : "role",
           "in" : "query",
+          "description" : "客服是CS",
           "required" : true,
           "type" : "string"
         }, {
           "name" : "keyword",
           "in" : "query",
+          "description" : "請輸入要搜尋的姓名或帳號關鍵字",
           "required" : true,
           "type" : "string"
         } ],
@@ -914,7 +916,7 @@
         }
       }
     },
-    "/care/get_type/{type}" : {
+    "/care/type/{type_id}" : {
       "get" : {
         "tags" : [ "care" ],
         "summary" : "取得照護類別資訊",
@@ -925,7 +927,7 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "type",
+          "name" : "type_id",
           "in" : "path",
           "required" : true,
           "type" : "string"
