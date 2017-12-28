@@ -1000,15 +1000,9 @@
           "required" : true,
           "type" : "string"
         }, {
-          "in" : "body",
           "name" : "macro",
-          "required" : true,
-          "schema" : {
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/definitions/macro"
-            }
-          }
+          "in" : "query",
+          "required" : true
         } ],
         "responses" : {
           "201" : {
@@ -1461,21 +1455,6 @@
       },
       "xml" : {
         "name" : "GetCareType"
-      }
-    },
-    "macro" : {
-      "properties" : {
-        "key" : {
-          "type" : "string"
-        },
-        "options" : {
-          "type" : "object",
-          "example" : [ 1, 2, 3 ],
-          "properties" : { }
-        },
-        "external_options" : {
-          "type" : "string"
-        }
       }
     },
     "GetCustomers_list" : {
