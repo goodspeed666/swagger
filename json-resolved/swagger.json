@@ -1125,7 +1125,8 @@
           "type" : "string"
         },
         "birth" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
         },
         "howto_know" : {
           "type" : "string"
@@ -1140,7 +1141,8 @@
           "type" : "string"
         },
         "dad_birth" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
         },
         "plate_num" : {
           "type" : "string"
@@ -1167,8 +1169,8 @@
         "dad_name" : "dad_name",
         "plate_num" : "plate_num",
         "howto_know" : "howto_know",
-        "dad_birth" : "dad_birth",
-        "birth" : "birth",
+        "dad_birth" : "YYYY-MM-DD",
+        "birth" : "YYYY-MM-DD",
         "created_at" : "created_at",
         "unified_num" : "unified_num",
         "emergency_addr" : "emergency_addr",
@@ -1193,10 +1195,12 @@
       "type" : "object",
       "properties" : {
         "due_date" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
         },
         "give_birth_date" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
         },
         "give_birth_area" : {
           "type" : "integer"
@@ -1226,42 +1230,41 @@
           "type" : "integer"
         },
         "visit_date" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
         },
         "signing_receptionist" : {
           "type" : "integer"
         },
         "signing_date" : {
-          "type" : "string"
-        },
-        "your_cs" : {
-          "type" : "object",
-          "properties" : { }
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
         },
         "check_in" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
         },
         "check_out" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
         }
       },
       "example" : {
         "give_birth_type" : 1,
         "stay_with" : 9,
         "give_birth_hospital" : 6,
-        "check_in" : "check_in",
-        "due_date" : "due_date",
-        "signing_date" : "signing_date",
+        "check_in" : "YYYY-MM-DD",
+        "due_date" : "YYYY-MM-DD",
+        "signing_date" : "YYYY-MM-DD",
         "birth_order" : 5,
         "how_much_bady" : 7,
         "bring_children" : 2,
         "visit_receptionist" : 3,
-        "check_out" : "check_out",
+        "check_out" : "YYYY-MM-DD",
         "maan_birth_order" : 5,
         "give_birth_area" : 0,
-        "your_cs" : "{}",
-        "give_birth_date" : "give_birth_date",
-        "visit_date" : "visit_date",
+        "give_birth_date" : "YYYY-MM-DD",
+        "visit_date" : "YYYY-MM-DD",
         "signing_receptionist" : 2
       },
       "xml" : {
