@@ -528,9 +528,9 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "userid",
+          "name" : "customer_id",
           "in" : "path",
-          "description" : "UserID",
+          "description" : "Customer ID",
           "required" : true,
           "type" : "string"
         }, {
@@ -675,7 +675,7 @@
         }, {
           "name" : "customer_id",
           "in" : "path",
-          "description" : "UserID",
+          "description" : "Customer ID",
           "required" : true,
           "type" : "string"
         } ],
@@ -701,9 +701,9 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "userid",
+          "name" : "customer_id",
           "in" : "path",
-          "description" : "UserID",
+          "description" : "Customer ID",
           "required" : true,
           "type" : "string"
         }, {
