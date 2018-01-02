@@ -254,99 +254,6 @@
       }
     },
     "/customers" : {
-      "get" : {
-        "tags" : [ "customer" ],
-        "summary" : "取得客戶清單",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "token",
-          "in" : "header",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/GetCustomers"
-            }
-          },
-          "404" : {
-            "description" : "No data"
-          }
-        }
-      }
-    },
-    "/customers/booking" : {
-      "post" : {
-        "tags" : [ "customer" ],
-        "summary" : "新增預約單",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "token",
-          "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "客戶姓名",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "mobile_phone",
-          "in" : "query",
-          "description" : "手機號碼",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "dad_name",
-          "in" : "query",
-          "description" : "爸爸姓名",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "dad_mobile",
-          "in" : "query",
-          "description" : "爸爸的手機",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "care_point",
-          "in" : "query",
-          "description" : "關心重點",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "comment",
-          "in" : "query",
-          "description" : "備註",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "booking_time",
-          "in" : "query",
-          "description" : "預約時間",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "booking_cs",
-          "in" : "query",
-          "description" : "預約客服",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "201" : {
-            "description" : "successful operation"
-          },
-          "400" : {
-            "description" : "Some fields are not completed"
-          }
-        }
-      }
-    },
-    "/customers/store" : {
       "post" : {
         "tags" : [ "customer" ],
         "summary" : "新增客戶資料",
@@ -485,6 +392,75 @@
           },
           "405" : {
             "description" : "Customized error message"
+          }
+        }
+      }
+    },
+    "/customers/booking" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "新增預約單",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "客戶姓名",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "mobile_phone",
+          "in" : "query",
+          "description" : "手機號碼",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "dad_name",
+          "in" : "query",
+          "description" : "爸爸姓名",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "dad_mobile",
+          "in" : "query",
+          "description" : "爸爸的手機",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "care_point",
+          "in" : "query",
+          "description" : "關心重點",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "comment",
+          "in" : "query",
+          "description" : "備註",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "booking_time",
+          "in" : "query",
+          "description" : "預約時間",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "booking_cs",
+          "in" : "query",
+          "description" : "預約客服",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Some fields are not completed"
           }
         }
       }
@@ -982,7 +958,7 @@
         }
       }
     },
-    "/care/store" : {
+    "/care" : {
       "post" : {
         "tags" : [ "care" ],
         "summary" : "寫入照護資料",
@@ -1134,21 +1110,6 @@
             "$ref" : "#/definitions/GetCustomers_list"
           }
         }
-      },
-      "example" : {
-        "list" : [ {
-          "home_phone" : "home_phone",
-          "mobile_phone" : "mobile_phone",
-          "name" : "name",
-          "id" : 0,
-          "cid" : "cid"
-        }, {
-          "home_phone" : "home_phone",
-          "mobile_phone" : "mobile_phone",
-          "name" : "name",
-          "id" : 0,
-          "cid" : "cid"
-        } ]
       },
       "xml" : {
         "name" : "GetCustomers"
@@ -1495,13 +1456,6 @@
         "home_phone" : {
           "type" : "string"
         }
-      },
-      "example" : {
-        "home_phone" : "home_phone",
-        "mobile_phone" : "mobile_phone",
-        "name" : "name",
-        "id" : 0,
-        "cid" : "cid"
       }
     },
     "GetCustomerBirth_give_birth_area" : {
