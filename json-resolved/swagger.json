@@ -1252,8 +1252,9 @@
       }
     },
     "GetCustomerBirth" : {
-      "xml" : {
-        "name" : "GetCustomerBirth"
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCustomerBirth_inner"
       }
     },
     "GetHospitals" : {
@@ -1400,6 +1401,77 @@
         "name" : "name",
         "id" : 0,
         "cid" : "cid"
+      }
+    },
+    "GetCustomerBirth_inner_give_birth_area" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetCustomerBirth_inner" : {
+      "properties" : {
+        "due_date" : {
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
+        },
+        "give_birth_date" : {
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
+        },
+        "give_birth_area" : {
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+        },
+        "give_birth_hospital" : {
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+        },
+        "give_birth_type" : {
+          "type" : "string"
+        },
+        "birth_order" : {
+          "type" : "integer"
+        },
+        "maan_birth_order" : {
+          "type" : "integer"
+        },
+        "bring_children" : {
+          "type" : "integer"
+        },
+        "how_much_bady" : {
+          "type" : "integer"
+        },
+        "stay_with" : {
+          "type" : "string"
+        },
+        "visit_receptionist" : {
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+        },
+        "visit_date" : {
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
+        },
+        "signing_receptionist" : {
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+        },
+        "signing_date" : {
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
+        },
+        "your_cs" : {
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
+        },
+        "check_out" : {
+          "type" : "string",
+          "example" : "YYYY-MM-DD"
+        }
       }
     },
     "GetHospitals_hospitals" : {
