@@ -992,6 +992,12 @@
           "required" : true,
           "type" : "string"
         }, {
+          "name" : "uid",
+          "in" : "query",
+          "description" : "Customer id",
+          "required" : true,
+          "type" : "string"
+        }, {
           "in" : "body",
           "name" : "macro",
           "required" : true,
@@ -1008,6 +1014,39 @@
           },
           "405" : {
             "description" : "Customized error message"
+          }
+        }
+      }
+    },
+    "/care/{customer_id}" : {
+      "get" : {
+        "tags" : [ "care" ],
+        "summary" : "取得顧客照護資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "macro",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/macro"
+            }
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
           }
         }
       }
