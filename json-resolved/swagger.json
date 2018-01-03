@@ -1039,16 +1039,6 @@
           "description" : "mon for 產婦護理",
           "required" : true,
           "type" : "string"
-        }, {
-          "in" : "body",
-          "name" : "macro",
-          "required" : true,
-          "schema" : {
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/definitions/macro"
-            }
-          }
         } ],
         "responses" : {
           "default" : {
@@ -1413,15 +1403,15 @@
     "GetCareInfo" : {
       "type" : "object",
       "properties" : {
-        "cares" : {
+        "info" : {
           "type" : "array",
           "items" : {
-            "$ref" : "#/definitions/GetCareInfo_cares"
+            "$ref" : "#/definitions/GetCareInfo_info"
           }
         }
       },
       "example" : {
-        "cares" : [ {
+        "info" : [ {
           "options" : "options",
           "external_options" : "external_options",
           "key" : "key"
@@ -1606,7 +1596,7 @@
         "key" : "key"
       }
     },
-    "GetCareInfo_cares" : {
+    "GetCareInfo_info" : {
       "properties" : {
         "key" : {
           "type" : "string"
