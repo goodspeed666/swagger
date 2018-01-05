@@ -958,6 +958,7 @@
         }, {
           "name" : "type_id",
           "in" : "path",
+          "description" : "mon for 產婦照護",
           "required" : true,
           "type" : "string"
         } ],
