@@ -840,6 +840,38 @@
         }
       }
     },
+    "/customers/{customer_id}/care" : {
+      "get" : {
+        "tags" : [ "care" ],
+        "summary" : "取得顧客照護資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "type_id",
+          "in" : "query",
+          "description" : "mon for 產婦護理",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCareInfo"
+            }
+          }
+        }
+      }
+    },
     "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
@@ -1015,38 +1047,6 @@
           },
           "405" : {
             "description" : "Customized error message"
-          }
-        }
-      }
-    },
-    "/care/{customer_id}" : {
-      "get" : {
-        "tags" : [ "care" ],
-        "summary" : "取得顧客照護資料",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "token",
-          "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "customer_id",
-          "in" : "path",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "type_id",
-          "in" : "query",
-          "description" : "mon for 產婦護理",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "default" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/GetCareInfo"
-            }
           }
         }
       }
