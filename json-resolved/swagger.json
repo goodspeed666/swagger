@@ -407,7 +407,9 @@
         } ],
         "responses" : {
           "201" : {
-            "description" : "successful operation"
+            "schema" : {
+              "$ref" : "#/definitions/inline_response_201"
+            }
           },
           "400" : {
             "description" : "Some fields are not completed"
@@ -1424,6 +1426,16 @@
       },
       "xml" : {
         "name" : "GetCareInfo"
+      }
+    },
+    "inline_response_201" : {
+      "properties" : {
+        "customer_id" : {
+          "type" : "integer"
+        }
+      },
+      "example" : {
+        "customer_id" : 0
       }
     },
     "macro" : {
