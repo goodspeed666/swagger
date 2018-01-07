@@ -407,6 +407,7 @@
         } ],
         "responses" : {
           "201" : {
+            "description" : "successful operation",
             "schema" : {
               "$ref" : "#/definitions/inline_response_201"
             }
