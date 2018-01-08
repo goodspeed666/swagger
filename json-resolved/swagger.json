@@ -1045,7 +1045,7 @@
           "201" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/GetCareType"
+              "$ref" : "#/definitions/Care"
             }
           },
           "405" : {
@@ -1372,12 +1372,16 @@
       },
       "example" : {
         "cares" : [ {
+          "value_min" : 1,
+          "value_max" : 6,
           "options" : "options",
           "external_options" : "external_options",
           "title" : "title",
           "type" : 0,
           "key" : "key"
         }, {
+          "value_min" : 1,
+          "value_max" : 6,
           "options" : "options",
           "external_options" : "external_options",
           "title" : "title",
@@ -1420,6 +1424,9 @@
         "care_id" : {
           "type" : "integer"
         }
+      },
+      "example" : {
+        "care_id" : 0
       },
       "xml" : {
         "name" : "Care"
@@ -1586,9 +1593,17 @@
         },
         "external_options" : {
           "type" : "string"
+        },
+        "value_max" : {
+          "type" : "integer"
+        },
+        "value_min" : {
+          "type" : "integer"
         }
       },
       "example" : {
+        "value_min" : 1,
+        "value_max" : 6,
         "options" : "options",
         "external_options" : "external_options",
         "title" : "title",
