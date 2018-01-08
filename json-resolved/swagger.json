@@ -1043,7 +1043,10 @@
         } ],
         "responses" : {
           "201" : {
-            "description" : "successful operation"
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCareType"
+            }
           },
           "405" : {
             "description" : "Customized error message"
