@@ -1105,7 +1105,7 @@
     "User" : {
       "type" : "object",
       "properties" : {
-        "id" : {
+        "customer_id" : {
           "type" : "integer",
           "format" : "int32"
         },
@@ -1127,25 +1127,13 @@
           "type" : "integer",
           "format" : "int32",
           "description" : "Roles"
-        },
-        "recent" : {
-          "$ref" : "#/definitions/User_recent"
         }
       },
       "example" : {
         "role" : 1,
         "name" : "name",
-        "id" : 0,
         "dept" : 6,
-        "recent" : {
-          "list" : [ {
-            "name" : "name",
-            "id" : 5
-          }, {
-            "name" : "name",
-            "id" : 5
-          } ]
-        },
+        "customer_id" : 0,
         "account" : "account",
         "email" : "email"
       },
@@ -1438,39 +1426,6 @@
         }
       }
     },
-    "User_recent_list" : {
-      "properties" : {
-        "id" : {
-          "type" : "integer"
-        },
-        "name" : {
-          "type" : "string"
-        }
-      },
-      "example" : {
-        "name" : "name",
-        "id" : 5
-      }
-    },
-    "User_recent" : {
-      "properties" : {
-        "list" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/User_recent_list"
-          }
-        }
-      },
-      "example" : {
-        "list" : [ {
-          "name" : "name",
-          "id" : 5
-        }, {
-          "name" : "name",
-          "id" : 5
-        } ]
-      }
-    },
     "GetCustomers_list" : {
       "properties" : {
         "id" : {
@@ -1497,6 +1452,16 @@
         "cid" : "cid"
       }
     },
+    "GetCustomerBirth_inner_give_birth_area" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    },
     "GetCustomerBirth_inner" : {
       "properties" : {
         "due_date" : {
@@ -1508,10 +1473,10 @@
           "example" : "YYYY-MM-DD"
         },
         "give_birth_area" : {
-          "$ref" : "#/definitions/User_recent_list"
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
         },
         "give_birth_hospital" : {
-          "$ref" : "#/definitions/User_recent_list"
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
         },
         "give_birth_type" : {
           "type" : "string"
@@ -1532,21 +1497,21 @@
           "type" : "string"
         },
         "visit_receptionist" : {
-          "$ref" : "#/definitions/User_recent_list"
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
         },
         "visit_date" : {
           "type" : "string",
           "example" : "YYYY-MM-DD"
         },
         "signing_receptionist" : {
-          "$ref" : "#/definitions/User_recent_list"
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
         },
         "signing_date" : {
           "type" : "string",
           "example" : "YYYY-MM-DD"
         },
         "your_cs" : {
-          "$ref" : "#/definitions/User_recent_list"
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
         },
         "check_in" : {
           "type" : "string",
