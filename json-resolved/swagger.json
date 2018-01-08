@@ -1411,6 +1411,17 @@
         "name" : "GetCareInfo"
       }
     },
+    "Care" : {
+      "type" : "object",
+      "properties" : {
+        "care_id" : {
+          "type" : "integer"
+        }
+      },
+      "xml" : {
+        "name" : "Care"
+      }
+    },
     "macro" : {
       "properties" : {
         "key" : {
