@@ -1128,19 +1128,24 @@
           "format" : "int32",
           "description" : "Roles"
         },
-        "give_birth_area" : {
-          "$ref" : "#/definitions/User_give_birth_area"
+        "recent" : {
+          "$ref" : "#/definitions/User_recent"
         }
       },
       "example" : {
         "role" : 1,
         "name" : "name",
-        "give_birth_area" : {
-          "name" : "name",
-          "id" : 5
-        },
         "id" : 0,
         "dept" : 6,
+        "recent" : {
+          "list" : [ {
+            "name" : "name",
+            "id" : 5
+          }, {
+            "name" : "name",
+            "id" : 5
+          } ]
+        },
         "account" : "account",
         "email" : "email"
       },
@@ -1433,7 +1438,7 @@
         }
       }
     },
-    "User_give_birth_area" : {
+    "User_recent_list" : {
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -1445,6 +1450,25 @@
       "example" : {
         "name" : "name",
         "id" : 5
+      }
+    },
+    "User_recent" : {
+      "properties" : {
+        "list" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/User_recent_list"
+          }
+        }
+      },
+      "example" : {
+        "list" : [ {
+          "name" : "name",
+          "id" : 5
+        }, {
+          "name" : "name",
+          "id" : 5
+        } ]
       }
     },
     "GetCustomers_list" : {
@@ -1484,10 +1508,10 @@
           "example" : "YYYY-MM-DD"
         },
         "give_birth_area" : {
-          "$ref" : "#/definitions/User_give_birth_area"
+          "$ref" : "#/definitions/User_recent_list"
         },
         "give_birth_hospital" : {
-          "$ref" : "#/definitions/User_give_birth_area"
+          "$ref" : "#/definitions/User_recent_list"
         },
         "give_birth_type" : {
           "type" : "string"
@@ -1508,21 +1532,21 @@
           "type" : "string"
         },
         "visit_receptionist" : {
-          "$ref" : "#/definitions/User_give_birth_area"
+          "$ref" : "#/definitions/User_recent_list"
         },
         "visit_date" : {
           "type" : "string",
           "example" : "YYYY-MM-DD"
         },
         "signing_receptionist" : {
-          "$ref" : "#/definitions/User_give_birth_area"
+          "$ref" : "#/definitions/User_recent_list"
         },
         "signing_date" : {
           "type" : "string",
           "example" : "YYYY-MM-DD"
         },
         "your_cs" : {
-          "$ref" : "#/definitions/User_give_birth_area"
+          "$ref" : "#/definitions/User_recent_list"
         },
         "check_in" : {
           "type" : "string",
