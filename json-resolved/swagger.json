@@ -1619,12 +1619,11 @@
         "id" : {
           "type" : "integer"
         },
-        "time" : {
-          "type" : "string",
-          "example" : "YYYY-MM-DD H:i:s"
-        },
         "items" : {
-          "$ref" : "#/definitions/GetCareInfo_inner_items"
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetCareInfo_inner_items"
+          }
         }
       }
     }
