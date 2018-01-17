@@ -1619,6 +1619,10 @@
         "id" : {
           "type" : "integer"
         },
+        "time" : {
+          "type" : "integer",
+          "example" : "timestamp"
+        },
         "items" : {
           "type" : "array",
           "items" : {
