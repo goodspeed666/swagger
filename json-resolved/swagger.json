@@ -1445,6 +1445,9 @@
         },
         "external_options" : {
           "type" : "string"
+        },
+        "value" : {
+          "type" : "string"
         }
       }
     },
