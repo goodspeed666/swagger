@@ -1395,28 +1395,9 @@
       }
     },
     "GetCareInfo" : {
-      "type" : "object",
-      "properties" : {
-        "info" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/GetCareInfo_info"
-          }
-        }
-      },
-      "example" : {
-        "info" : [ {
-          "options" : "options",
-          "external_options" : "external_options",
-          "key" : "key"
-        }, {
-          "options" : "options",
-          "external_options" : "external_options",
-          "key" : "key"
-        } ]
-      },
-      "xml" : {
-        "name" : "GetCareInfo"
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCareInfo_inner"
       }
     },
     "Care" : {
@@ -1447,7 +1428,8 @@
           "type" : "string"
         },
         "value" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "for bar"
         }
       }
     },
@@ -1617,22 +1599,33 @@
         "key" : "key"
       }
     },
-    "GetCareInfo_info" : {
+    "GetCareInfo_inner_items" : {
       "properties" : {
         "key" : {
           "type" : "string"
         },
         "options" : {
-          "type" : "string"
+          "type" : "object",
+          "example" : [ 1, 2, 3 ],
+          "properties" : { }
         },
         "external_options" : {
           "type" : "string"
         }
-      },
-      "example" : {
-        "options" : "options",
-        "external_options" : "external_options",
-        "key" : "key"
+      }
+    },
+    "GetCareInfo_inner" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "time" : {
+          "type" : "string",
+          "example" : "YYYY-MM-DD H:i:s"
+        },
+        "items" : {
+          "$ref" : "#/definitions/GetCareInfo_inner_items"
+        }
       }
     }
   }
