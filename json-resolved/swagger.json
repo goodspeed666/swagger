@@ -14,6 +14,8 @@
     "name" : "customer",
     "description" : "Operations about customer"
   }, {
+    "name" : "common"
+  }, {
     "name" : "common",
     "description" : "Operations about common service"
   }, {
@@ -858,7 +860,7 @@
         }, {
           "name" : "type_id",
           "in" : "query",
-          "description" : "mon for 產婦護理",
+          "description" : "mon for 產婦, baby for 嬰兒",
           "required" : true,
           "type" : "string"
         } ],
@@ -990,7 +992,7 @@
         }, {
           "name" : "type_id",
           "in" : "path",
-          "description" : "mon for 產婦照護",
+          "description" : "mon for 產婦, baby for 嬰兒",
           "required" : true,
           "type" : "string"
         } ],
@@ -1011,7 +1013,6 @@
       "post" : {
         "tags" : [ "care" ],
         "summary" : "寫入照護資料",
-        "description" : "未完成",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -1021,7 +1022,7 @@
         }, {
           "name" : "type_id",
           "in" : "query",
-          "description" : "mon for 產婦護理",
+          "description" : "mon for 產婦, baby for 嬰兒",
           "required" : true,
           "type" : "string"
         }, {
@@ -1374,7 +1375,7 @@
         "cares" : [ {
           "value_min" : 1,
           "value_max" : 6,
-          "options" : "options",
+          "options" : "{}",
           "external_options" : "external_options",
           "title" : "title",
           "type" : 0,
@@ -1382,7 +1383,7 @@
         }, {
           "value_min" : 1,
           "value_max" : 6,
-          "options" : "options",
+          "options" : "{}",
           "external_options" : "external_options",
           "title" : "title",
           "type" : 0,
@@ -1589,7 +1590,8 @@
           "type" : "integer"
         },
         "options" : {
-          "type" : "string"
+          "type" : "object",
+          "properties" : { }
         },
         "external_options" : {
           "type" : "string"
@@ -1604,7 +1606,7 @@
       "example" : {
         "value_min" : 1,
         "value_max" : 6,
-        "options" : "options",
+        "options" : "{}",
         "external_options" : "external_options",
         "title" : "title",
         "type" : 0,
