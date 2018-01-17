@@ -1375,7 +1375,7 @@
         "cares" : [ {
           "value_min" : 1,
           "value_max" : 6,
-          "options" : "{}",
+          "options" : "",
           "external_options" : "external_options",
           "title" : "title",
           "type" : 0,
@@ -1383,7 +1383,7 @@
         }, {
           "value_min" : 1,
           "value_max" : 6,
-          "options" : "{}",
+          "options" : "",
           "external_options" : "external_options",
           "title" : "title",
           "type" : 0,
@@ -1590,8 +1590,7 @@
           "type" : "integer"
         },
         "options" : {
-          "type" : "object",
-          "properties" : { }
+          "type" : "array"
         },
         "external_options" : {
           "type" : "string"
@@ -1606,7 +1605,7 @@
       "example" : {
         "value_min" : 1,
         "value_max" : 6,
-        "options" : "{}",
+        "options" : "",
         "external_options" : "external_options",
         "title" : "title",
         "type" : 0,
