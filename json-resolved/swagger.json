@@ -920,6 +920,57 @@
         }
       }
     },
+    "/customers/{customer_id}/care/{type_id}/{id}" : {
+      "post" : {
+        "tags" : [ "care" ],
+        "summary" : "更新照護資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "type_id",
+          "in" : "path",
+          "description" : "mon for 產婦, baby for 嬰兒",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "macro",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/macro"
+            }
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Care"
+            }
+          },
+          "405" : {
+            "description" : "Customized error message"
+          }
+        }
+      }
+    },
     "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
