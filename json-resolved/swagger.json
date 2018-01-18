@@ -886,13 +886,13 @@
           "type" : "string"
         }, {
           "name" : "type_id",
-          "in" : "query",
+          "in" : "path",
           "description" : "mon for 產婦, baby for 嬰兒",
           "required" : true,
           "type" : "string"
         }, {
           "name" : "cid",
-          "in" : "query",
+          "in" : "path",
           "description" : "Customer id",
           "required" : true,
           "type" : "string"
