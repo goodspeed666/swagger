@@ -874,6 +874,52 @@
         }
       }
     },
+    "/customers/{customer_id}/care/{type_id}" : {
+      "post" : {
+        "tags" : [ "care" ],
+        "summary" : "寫入照護資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "type_id",
+          "in" : "query",
+          "description" : "mon for 產婦, baby for 嬰兒",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "cid",
+          "in" : "query",
+          "description" : "Customer id",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "macro",
+          "required" : true,
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/macro"
+            }
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Care"
+            }
+          },
+          "405" : {
+            "description" : "Customized error message"
+          }
+        }
+      }
+    },
     "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
@@ -1005,52 +1051,6 @@
           },
           "404" : {
             "description" : "The type is empty or does not exist"
-          }
-        }
-      }
-    },
-    "/care" : {
-      "post" : {
-        "tags" : [ "care" ],
-        "summary" : "寫入照護資料",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "token",
-          "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "type_id",
-          "in" : "query",
-          "description" : "mon for 產婦, baby for 嬰兒",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "cid",
-          "in" : "query",
-          "description" : "Customer id",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "in" : "body",
-          "name" : "macro",
-          "required" : true,
-          "schema" : {
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/definitions/macro"
-            }
-          }
-        } ],
-        "responses" : {
-          "201" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/Care"
-            }
-          },
-          "405" : {
-            "description" : "Customized error message"
           }
         }
       }
