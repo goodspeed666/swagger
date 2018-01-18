@@ -885,15 +885,15 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "type_id",
+          "name" : "customer_id",
           "in" : "path",
-          "description" : "mon for 產婦, baby for 嬰兒",
+          "description" : "Customer id",
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "cid",
+          "name" : "type_id",
           "in" : "path",
-          "description" : "Customer id",
+          "description" : "mon for 產婦, baby for 嬰兒",
           "required" : true,
           "type" : "string"
         }, {
