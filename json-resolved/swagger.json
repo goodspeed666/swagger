@@ -920,10 +920,10 @@
         }
       }
     },
-    "/customers/{customer_id}/care/{type_id}/{id}" : {
+    "/customers/{customer_id}/care/{type_id}/{care_id}" : {
       "post" : {
         "tags" : [ "care" ],
-        "summary" : "更新照護資料",
+        "summary" : "修改照護資料",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -943,7 +943,7 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "id",
+          "name" : "care_id",
           "in" : "path",
           "required" : true,
           "type" : "integer"
@@ -1671,8 +1671,8 @@
           "type" : "integer"
         },
         "time" : {
-          "type" : "integer",
-          "example" : "timestamp"
+          "type" : "string",
+          "example" : "YY-mm-dd H:i:s"
         },
         "items" : {
           "type" : "array",
