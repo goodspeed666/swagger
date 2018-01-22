@@ -920,7 +920,7 @@
         }
       }
     },
-    "/customers/{customer_id}/care/{care_id}" : {
+    "/customers/{customer_id}/care/{type_id}/{care_id}" : {
       "post" : {
         "tags" : [ "care" ],
         "summary" : "修改照護資料",
@@ -937,16 +937,16 @@
           "required" : true,
           "type" : "string"
         }, {
+          "name" : "type_id",
+          "in" : "path",
+          "description" : "mon for 產婦, baby for 嬰兒",
+          "required" : true,
+          "type" : "string"
+        }, {
           "name" : "care_id",
           "in" : "path",
           "required" : true,
           "type" : "integer"
-        }, {
-          "name" : "type_id",
-          "in" : "query",
-          "description" : "mon for 產婦, baby for 嬰兒",
-          "required" : true,
-          "type" : "string"
         }, {
           "in" : "body",
           "name" : "macro",
@@ -1124,39 +1124,6 @@
     }
   },
   "definitions" : {
-    "Order" : {
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "petId" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "quantity" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "shipDate" : {
-          "type" : "string",
-          "format" : "date-time"
-        },
-        "status" : {
-          "type" : "string",
-          "description" : "Order Status",
-          "enum" : [ "placed", "approved", "delivered" ]
-        },
-        "complete" : {
-          "type" : "boolean",
-          "default" : false
-        }
-      },
-      "xml" : {
-        "name" : "Order"
-      }
-    },
     "User" : {
       "type" : "object",
       "properties" : {
