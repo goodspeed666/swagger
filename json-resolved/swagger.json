@@ -920,7 +920,7 @@
         }
       }
     },
-    "/customers/{customer_id}/care/{type_id}/{care_id}" : {
+    "/customers/{customer_id}/care/{care_id}" : {
       "post" : {
         "tags" : [ "care" ],
         "summary" : "修改照護資料",
@@ -937,16 +937,15 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "type_id",
-          "in" : "path",
-          "description" : "mon for 產婦, baby for 嬰兒",
-          "required" : true,
-          "type" : "string"
-        }, {
           "name" : "care_id",
           "in" : "path",
           "required" : true,
           "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "type_id",
+          "description" : "mon for 產婦, baby for 嬰兒",
+          "required" : true
         }, {
           "in" : "body",
           "name" : "macro",
