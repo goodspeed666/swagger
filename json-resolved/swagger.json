@@ -14,8 +14,6 @@
     "name" : "customer",
     "description" : "Operations about customer"
   }, {
-    "name" : "common"
-  }, {
     "name" : "common",
     "description" : "Operations about common service"
   }, {
@@ -1127,7 +1125,7 @@
     "User" : {
       "type" : "object",
       "properties" : {
-        "customer_id" : {
+        "id" : {
           "type" : "integer",
           "format" : "int32"
         },
@@ -1141,23 +1139,45 @@
           "type" : "string"
         },
         "dept" : {
-          "type" : "integer",
-          "format" : "int32",
+          "type" : "string",
           "description" : "User Department"
         },
         "role" : {
           "type" : "integer",
           "format" : "int32",
           "description" : "Roles"
+        },
+        "organization" : {
+          "type" : "integer"
+        },
+        "status" : {
+          "type" : "integer",
+          "description" : "1: normal, 0: close"
+        },
+        "employee_id" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string",
+          "description" : "YYYY-mm-dd H:i:s"
+        },
+        "updated_at" : {
+          "type" : "string",
+          "description" : "YYYY-mm-dd H:i:s"
         }
       },
       "example" : {
-        "role" : 1,
+        "role" : 6,
+        "updated_at" : "updated_at",
+        "organization" : 1,
+        "employee_id" : "employee_id",
         "name" : "name",
-        "dept" : 6,
-        "customer_id" : 0,
+        "created_at" : "created_at",
+        "id" : 0,
+        "dept" : "dept",
         "account" : "account",
-        "email" : "email"
+        "email" : "email",
+        "status" : 5
       },
       "xml" : {
         "name" : "User"
@@ -1391,7 +1411,9 @@
       },
       "example" : {
         "cares" : [ {
+          "unit" : "unit",
           "value_min" : 1,
+          "group_id" : 5,
           "value_max" : 6,
           "options" : [ 1, 2, 3 ],
           "external_options" : "external_options",
@@ -1399,7 +1421,9 @@
           "type" : 0,
           "key" : "key"
         }, {
+          "unit" : "unit",
           "value_min" : 1,
+          "group_id" : 5,
           "value_max" : 6,
           "options" : [ 1, 2, 3 ],
           "external_options" : "external_options",
@@ -1605,10 +1629,18 @@
         },
         "value_min" : {
           "type" : "integer"
+        },
+        "unit" : {
+          "type" : "string"
+        },
+        "group_id" : {
+          "type" : "integer"
         }
       },
       "example" : {
+        "unit" : "unit",
         "value_min" : 1,
+        "group_id" : 5,
         "value_max" : 6,
         "options" : [ 1, 2, 3 ],
         "external_options" : "external_options",
