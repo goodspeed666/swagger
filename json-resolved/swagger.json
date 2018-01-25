@@ -53,7 +53,7 @@
         }
       }
     },
-    "/user/me" : {
+    "/users/me" : {
       "get" : {
         "tags" : [ "user" ],
         "summary" : "Get myself information",
@@ -1152,32 +1152,32 @@
         },
         "status" : {
           "type" : "integer",
-          "description" : "1: normal, 0: close"
+          "example" : "1: normal, 0: close"
         },
         "employee_id" : {
           "type" : "string"
         },
         "created_at" : {
           "type" : "string",
-          "description" : "YYYY-mm-dd H:i:s"
+          "example" : "YYYY-mm-dd H:i:s"
         },
         "updated_at" : {
           "type" : "string",
-          "description" : "YYYY-mm-dd H:i:s"
+          "example" : "YYYY-mm-dd H:i:s"
         }
       },
       "example" : {
         "role" : 6,
-        "updated_at" : "updated_at",
+        "updated_at" : "YYYY-mm-dd H:i:s",
         "organization" : 1,
         "employee_id" : "employee_id",
         "name" : "name",
-        "created_at" : "created_at",
+        "created_at" : "YYYY-mm-dd H:i:s",
         "id" : 0,
         "dept" : "dept",
         "account" : "account",
         "email" : "email",
-        "status" : 5
+        "status" : "1: normal, 0: close"
       },
       "xml" : {
         "name" : "User"
@@ -1282,11 +1282,11 @@
         },
         "created_at" : {
           "type" : "string",
-          "example" : "YYYY-mm-dd H:is"
+          "example" : "YYYY-MM-DD H:i:s"
         },
         "updated_at" : {
           "type" : "string",
-          "example" : "YYYY-mm-dd H:is"
+          "example" : "YYYY-MM-DD H:i:s"
         }
       },
       "example" : {
@@ -1297,12 +1297,12 @@
         "howto_know" : "howto_know",
         "dad_birth" : "YYYY-MM-DD",
         "birth" : "YYYY-MM-DD",
-        "created_at" : "YYYY-mm-dd H:is",
+        "created_at" : "YYYY-MM-DD H:i:s",
         "unified_num" : "統一證號（跟身份證字號則一輸入）",
         "emergency_addr" : "emergency_addr",
         "emergency_phone" : "emergency_phone",
         "dad_mobile" : "dad_mobile",
-        "updated_at" : "YYYY-mm-dd H:is",
+        "updated_at" : "YYYY-MM-DD H:i:s",
         "pos" : "郵遞區號",
         "mobile_phone" : "mobile_phone",
         "name" : "name",
