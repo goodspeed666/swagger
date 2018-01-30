@@ -1324,35 +1324,9 @@
       }
     },
     "GetHospitals" : {
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "city_name" : {
-          "type" : "string"
-        },
-        "hospitals" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/GetHospitals_hospitals"
-          }
-        }
-      },
-      "example" : {
-        "hospitals" : [ {
-          "hospital_id" : 6,
-          "hospital_name" : "hospital_name"
-        }, {
-          "hospital_id" : 6,
-          "hospital_name" : "hospital_name"
-        } ],
-        "city_name" : "city_name",
-        "id" : 0
-      },
-      "xml" : {
-        "name" : "GetHospitals"
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetHospitals_inner"
       }
     },
     "GetCommonType" : {
@@ -1572,7 +1546,7 @@
         }
       }
     },
-    "GetHospitals_hospitals" : {
+    "GetHospitals_inner_hospitals" : {
       "properties" : {
         "hospital_id" : {
           "type" : "integer"
@@ -1580,10 +1554,23 @@
         "hospital_name" : {
           "type" : "string"
         }
-      },
-      "example" : {
-        "hospital_id" : 6,
-        "hospital_name" : "hospital_name"
+      }
+    },
+    "GetHospitals_inner" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "city_name" : {
+          "type" : "string"
+        },
+        "hospitals" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetHospitals_inner_hospitals"
+          }
+        }
       }
     },
     "SearchRole_list" : {
@@ -1661,6 +1648,9 @@
         },
         "external_options" : {
           "type" : "string"
+        },
+        "value" : {
+          "type" : "integer"
         }
       }
     },
