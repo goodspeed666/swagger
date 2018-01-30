@@ -1330,22 +1330,9 @@
       }
     },
     "GetCommonType" : {
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "name" : {
-          "type" : "string"
-        }
-      },
-      "example" : {
-        "name" : "name",
-        "id" : 0
-      },
-      "xml" : {
-        "name" : "GetCommonType"
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCommonType_inner"
       }
     },
     "SearchRole" : {
@@ -1368,46 +1355,12 @@
           "id" : "id",
           "status" : "0 is out, 1 is in"
         } ]
-      },
-      "xml" : {
-        "name" : "SearchRole"
       }
     },
     "GetCareType" : {
-      "type" : "object",
-      "properties" : {
-        "cares" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/GetCareType_cares"
-          }
-        }
-      },
-      "example" : {
-        "cares" : [ {
-          "unit" : "unit",
-          "value_min" : 1,
-          "group_id" : 5,
-          "value_max" : 6,
-          "options" : [ 1, 2, 3 ],
-          "external_options" : "external_options",
-          "title" : "title",
-          "type" : 0,
-          "key" : "key"
-        }, {
-          "unit" : "unit",
-          "value_min" : 1,
-          "group_id" : 5,
-          "value_max" : 6,
-          "options" : [ 1, 2, 3 ],
-          "external_options" : "external_options",
-          "title" : "title",
-          "type" : 0,
-          "key" : "key"
-        } ]
-      },
-      "xml" : {
-        "name" : "GetCareType"
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCareType_inner"
       }
     },
     "GetCareInfo" : {
@@ -1573,6 +1526,17 @@
         }
       }
     },
+    "GetCommonType_inner" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    },
     "SearchRole_list" : {
       "properties" : {
         "id" : {
@@ -1592,7 +1556,7 @@
         "status" : "0 is out, 1 is in"
       }
     },
-    "GetCareType_cares" : {
+    "GetCareType_inner" : {
       "properties" : {
         "key" : {
           "type" : "string"
@@ -1623,17 +1587,6 @@
         "group_id" : {
           "type" : "integer"
         }
-      },
-      "example" : {
-        "unit" : "unit",
-        "value_min" : 1,
-        "group_id" : 5,
-        "value_max" : 6,
-        "options" : [ 1, 2, 3 ],
-        "external_options" : "external_options",
-        "title" : "title",
-        "type" : 0,
-        "key" : "key"
       }
     },
     "GetCareInfo_inner_items" : {
