@@ -191,7 +191,7 @@
       },
       "post" : {
         "tags" : [ "user" ],
-        "summary" : "Updated user",
+        "summary" : "Update user",
         "description" : "還沒做",
         "produces" : [ "application/json" ],
         "parameters" : [ {
@@ -216,7 +216,7 @@
         } ],
         "responses" : {
           "400" : {
-            "description" : "Invalid user supplied"
+            "description" : "Customized error message"
           },
           "404" : {
             "description" : "User not found"
@@ -410,9 +410,6 @@
             "description" : "successful operation"
           },
           "400" : {
-            "description" : "Some fields are not completed"
-          },
-          "405" : {
             "description" : "Customized error message"
           }
         }
@@ -482,7 +479,7 @@
             "description" : "successful operation"
           },
           "400" : {
-            "description" : "Some fields are not completed"
+            "description" : "Customized error message"
           }
         }
       }
@@ -655,7 +652,7 @@
             "description" : "successful operation"
           },
           "400" : {
-            "description" : "Some fields are not completed"
+            "description" : "Customized error message"
           }
         }
       }
@@ -799,7 +796,7 @@
             "description" : "successful operation"
           },
           "400" : {
-            "description" : "Some fields are not completed"
+            "description" : "Customized error message"
           }
         }
       }
@@ -912,7 +909,7 @@
               "$ref" : "#/definitions/Care"
             }
           },
-          "405" : {
+          "400" : {
             "description" : "Customized error message"
           }
         }
@@ -963,7 +960,7 @@
               "$ref" : "#/definitions/Care"
             }
           },
-          "405" : {
+          "400" : {
             "description" : "Customized error message"
           }
         }
@@ -1105,13 +1102,6 @@
       }
     }
   },
-  "securityDefinitions" : {
-    "api_key" : {
-      "type" : "apiKey",
-      "name" : "api_key",
-      "in" : "header"
-    }
-  },
   "definitions" : {
     "User" : {
       "type" : "object",
@@ -1142,65 +1132,46 @@
           "type" : "integer"
         },
         "status" : {
-          "type" : "integer",
-          "example" : "1: normal, 0: close"
+          "type" : "boolean"
         },
         "employee_id" : {
           "type" : "string"
         },
+        "profile" : {
+          "type" : "string",
+          "example" : "/admin_profile/1_xxxxxxxxxxx.jpg"
+        },
         "created_at" : {
           "type" : "string",
-          "example" : "YYYY-mm-dd H:i:s"
+          "example" : "YYYY-MM-DD H:i:s"
         },
         "updated_at" : {
           "type" : "string",
-          "example" : "YYYY-mm-dd H:i:s"
+          "example" : "YYYY-MM-DD H:i:s"
         }
       },
       "example" : {
         "role" : 6,
-        "updated_at" : "YYYY-mm-dd H:i:s",
+        "updated_at" : "YYYY-MM-DD H:i:s",
         "organization" : 1,
         "employee_id" : "employee_id",
+        "profile" : "/admin_profile/1_xxxxxxxxxxx.jpg",
         "name" : "name",
-        "created_at" : "YYYY-mm-dd H:i:s",
+        "created_at" : "YYYY-MM-DD H:i:s",
         "id" : 0,
         "dept" : "dept",
         "account" : "account",
         "email" : "email",
-        "status" : "1: normal, 0: close"
+        "status" : true
       },
       "xml" : {
         "name" : "User"
       }
     },
     "GetCustomers" : {
-      "type" : "object",
-      "properties" : {
-        "list" : {
-          "type" : "array",
-          "items" : {
-            "$ref" : "#/definitions/GetCustomers_list"
-          }
-        }
-      },
-      "example" : {
-        "list" : [ {
-          "home_phone" : "home_phone",
-          "mobile_phone" : "mobile_phone",
-          "name" : "name",
-          "id" : 0,
-          "cid" : "cid"
-        }, {
-          "home_phone" : "home_phone",
-          "mobile_phone" : "mobile_phone",
-          "name" : "name",
-          "id" : 0,
-          "cid" : "cid"
-        } ]
-      },
-      "xml" : {
-        "name" : "GetCustomers"
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCustomers_inner"
       }
     },
     "GetCustomer" : {
@@ -1369,12 +1340,12 @@
           "type" : "string"
         },
         "value" : {
-          "type" : "string",
+          "type" : "number",
           "example" : "for bar"
         }
       }
     },
-    "GetCustomers_list" : {
+    "GetCustomers_inner" : {
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -1391,13 +1362,6 @@
         "home_phone" : {
           "type" : "string"
         }
-      },
-      "example" : {
-        "home_phone" : "home_phone",
-        "mobile_phone" : "mobile_phone",
-        "name" : "name",
-        "id" : 0,
-        "cid" : "cid"
       }
     },
     "GetCustomerBirth_inner_give_birth_area" : {
@@ -1543,10 +1507,10 @@
           "type" : "string"
         },
         "value_max" : {
-          "type" : "integer"
+          "type" : "number"
         },
         "value_min" : {
-          "type" : "integer"
+          "type" : "number"
         },
         "unit" : {
           "type" : "string"
@@ -1570,7 +1534,7 @@
           "type" : "string"
         },
         "value" : {
-          "type" : "integer"
+          "type" : "number"
         }
       }
     },
