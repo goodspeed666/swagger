@@ -1131,15 +1131,18 @@
         "organization" : {
           "type" : "integer"
         },
+        "branch" : {
+          "type" : "integer"
+        },
         "status" : {
           "type" : "boolean"
         },
         "employee_id" : {
           "type" : "string"
         },
-        "profile" : {
+        "picture" : {
           "type" : "string",
-          "example" : "/admin_profile/1_xxxxxxxxxxx.jpg"
+          "example" : "/admin_profile/1_1517480737.jpg"
         },
         "created_at" : {
           "type" : "string",
@@ -1152,14 +1155,15 @@
       },
       "example" : {
         "role" : 6,
+        "created_at" : "YYYY-MM-DD H:i:s",
+        "dept" : "dept",
+        "branch" : 5,
+        "picture" : "/admin_profile/1_1517480737.jpg",
         "updated_at" : "YYYY-MM-DD H:i:s",
         "organization" : 1,
         "employee_id" : "employee_id",
-        "profile" : "/admin_profile/1_xxxxxxxxxxx.jpg",
         "name" : "name",
-        "created_at" : "YYYY-MM-DD H:i:s",
         "id" : 0,
-        "dept" : "dept",
         "account" : "account",
         "email" : "email",
         "status" : true
