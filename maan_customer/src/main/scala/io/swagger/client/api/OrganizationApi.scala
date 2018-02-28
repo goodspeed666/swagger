@@ -7,6 +7,7 @@ package io.swagger.client.api
 
 import io.swagger.client.model.OrganizationList
 import io.swagger.client.model.OrganizationRequest
+import io.swagger.client.model.OrganizationResponse
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -29,14 +30,44 @@ object OrganizationApi {
    * 
    * 
    * Expected answers:
-   *   code 200 : OrganizationRequest (successful operation)
+   *   code 200 : OrganizationList (successful operation)
+   * 
+   * @param token 
+   * @param id 
+   */
+  def organizationIdDelete(token: String, id: Int): ApiRequest[OrganizationList] =
+    ApiRequest[OrganizationList](ApiMethods.DELETE, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization/{id}", "application/json")
+      .withPathParam("id", id)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[OrganizationList](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 :  (successful operation)
+   * 
+   * @param token 
+   * @param id 
+   * @param body 
+   */
+  def organizationIdPost(token: String, id: Int, body: Option[OrganizationRequest] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization/{id}", "application/json")
+      .withBody(body)
+      .withPathParam("id", id)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[Unit](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 201 : OrganizationResponse (successful operation)
    * 
    * @param token 
    */
-  def organizationPost(token: String): ApiRequest[OrganizationRequest] =
-    ApiRequest[OrganizationRequest](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization", "application/json")
+  def organizationPost(token: String): ApiRequest[OrganizationResponse] =
+    ApiRequest[OrganizationResponse](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization", "application/json")
       .withHeaderParam("token", token)
-      .withSuccessResponse[OrganizationRequest](200)
+      .withSuccessResponse[OrganizationResponse](201)
       
 
 }

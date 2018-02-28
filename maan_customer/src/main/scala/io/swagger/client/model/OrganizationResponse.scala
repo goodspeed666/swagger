@@ -10,11 +10,9 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class OrganizationRequest (
+case class OrganizationResponse (
   name: Option[String],
-  path: Option[String],
-  weight: Option[Int],
-  status: Option[Boolean]
+  path: Option[String]
 ) extends ApiModel
 
 
