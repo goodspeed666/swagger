@@ -10,20 +10,7 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class JourneyInsertRequest (
-  startTime: String,
-  endTime: Option[String],
-  period: Int,
-  repeat: Option[Int],
-  repeatPeriod: Option[Int],
-  repeatPeriodUnit: Option[String],
-  repeatDay: Option[Int],
-  repeatTimes: Option[Int],
-  name: String,
-  keyman: Option[String],
-  temporarily: Option[Boolean],
-  cancel: Option[Boolean],
-  branch: Option[Int]
+case class OrganizationList (
 ) extends ApiModel
 
 

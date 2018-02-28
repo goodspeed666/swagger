@@ -22,6 +22,7 @@ case class JourneyRequest (
   name: String,
   keyman: Option[String],
   temporarily: Option[Boolean],
+  cancel: Option[Boolean],
   branch: Option[Int]
 ) extends ApiModel
 
