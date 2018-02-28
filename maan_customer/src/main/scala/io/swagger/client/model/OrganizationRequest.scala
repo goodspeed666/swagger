@@ -12,10 +12,7 @@ import java.util.UUID
 
 case class OrganizationRequest (
   name: Option[String],
-  path: Option[String],
-  depth: Option[Int],
-  weight: Option[Int],
-  status: Option[Int]
+  path: Option[String]
 ) extends ApiModel
 
 

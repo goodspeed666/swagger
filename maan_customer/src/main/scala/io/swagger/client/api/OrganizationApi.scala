@@ -6,6 +6,7 @@
 package io.swagger.client.api
 
 import io.swagger.client.model.OrganizationList
+import io.swagger.client.model.OrganizationRequest
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -28,14 +29,14 @@ object OrganizationApi {
    * 
    * 
    * Expected answers:
-   *   code 200 : OrganizationList (successful operation)
+   *   code 200 : OrganizationRequest (successful operation)
    * 
    * @param token 
    */
-  def organizationPost(token: String): ApiRequest[OrganizationList] =
-    ApiRequest[OrganizationList](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization", "application/json")
+  def organizationPost(token: String): ApiRequest[OrganizationRequest] =
+    ApiRequest[OrganizationRequest](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization", "application/json")
       .withHeaderParam("token", token)
-      .withSuccessResponse[OrganizationList](200)
+      .withSuccessResponse[OrganizationRequest](200)
       
 
 }
