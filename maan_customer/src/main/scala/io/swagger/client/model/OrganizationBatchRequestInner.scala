@@ -11,6 +11,7 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class OrganizationBatchRequestInner (
+  id: Option[Int],
   name: Option[String],
   path: Option[String],
   weight: Option[Int],
