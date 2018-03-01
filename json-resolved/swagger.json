@@ -1358,11 +1358,12 @@
       "type" : "object",
       "properties" : {
         "status" : {
-          "type" : "boolean"
+          "type" : "integer",
+          "example" : "1: open, 2: close"
         }
       },
       "example" : {
-        "status" : true
+        "status" : "1: open, 2: close"
       }
     },
     "GetCustomerBirth" : {
