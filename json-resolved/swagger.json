@@ -657,6 +657,39 @@
         }
       }
     },
+    "/customers/{customer_id}/connect" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得客戶的連接（帳號）清單",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerConnectList"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "404" : {
+            "description" : "No data"
+          }
+        }
+      }
+    },
     "/customers/{customer_id}/birth" : {
       "get" : {
         "tags" : [ "customer" ],
@@ -1278,9 +1311,12 @@
         "cid" : "cid",
         "dad_email" : "dad_email",
         "emergency_contact" : "emergency_contact"
-      },
-      "xml" : {
-        "name" : "GetCustomer"
+      }
+    },
+    "CustomerConnectList" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/CustomerConnectList_inner"
       }
     },
     "GetCustomerBirth" : {
@@ -1368,6 +1404,26 @@
         },
         "need_review" : {
           "type" : "boolean"
+        }
+      }
+    },
+    "CustomerConnectList_inner" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "from" : {
+          "type" : "string"
+        },
+        "account" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "boolean"
+        },
+        "created" : {
+          "type" : "string",
+          "example" : "YYYY-MM-DD H:i:s"
         }
       }
     },
