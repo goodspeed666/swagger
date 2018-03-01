@@ -1466,7 +1466,11 @@
           "type" : "string"
         },
         "status" : {
-          "type" : "boolean"
+          "type" : "integer",
+          "example" : "1: open, 2: close"
+        },
+        "reason" : {
+          "type" : "string"
         },
         "created" : {
           "type" : "string",
