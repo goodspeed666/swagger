@@ -5,6 +5,7 @@
  */
 package io.swagger.client.api
 
+import io.swagger.client.model.OrganizationBatchRequest
 import io.swagger.client.model.OrganizationList
 import io.swagger.client.model.OrganizationRequest
 import io.swagger.client.model.OrganizationResponse
@@ -26,6 +27,22 @@ object OrganizationApi {
     ApiRequest[OrganizationList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization", "application/json")
       .withHeaderParam("token", token)
       .withSuccessResponse[OrganizationList](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 :  (successful operation)
+   * 
+   * @param token 
+   * @param id 
+   * @param body 
+   */
+  def organizationIdBatchPost(token: String, id: Int, body: Option[OrganizationBatchRequest] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization/{id}/batch", "application/json")
+      .withBody(body)
+      .withPathParam("id", id)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[Unit](200)
         /**
    * 
    * 
