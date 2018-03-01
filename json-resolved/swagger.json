@@ -1357,15 +1357,11 @@
     "CustomerConnectListRequest" : {
       "type" : "object",
       "properties" : {
-        "id" : {
-          "type" : "integer"
-        },
         "status" : {
           "type" : "boolean"
         }
       },
       "example" : {
-        "id" : 0,
         "status" : true
       }
     },
