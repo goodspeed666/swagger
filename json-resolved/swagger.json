@@ -660,7 +660,7 @@
     "/customers/{customer_id}/connect" : {
       "get" : {
         "tags" : [ "customer" ],
-        "summary" : "取得客戶的連接（帳號）清單",
+        "summary" : "取得客戶的連接帳號清單",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -686,6 +686,41 @@
           },
           "404" : {
             "description" : "No data"
+          }
+        }
+      }
+    },
+    "/customers/{customer_id}/connect/{connect_id}" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "更新連接帳號的資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "connect_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerConnectListRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
           }
         }
       }
@@ -1319,6 +1354,21 @@
         "$ref" : "#/definitions/CustomerConnectList_inner"
       }
     },
+    "CustomerConnectListRequest" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "status" : {
+          "type" : "boolean"
+        }
+      },
+      "example" : {
+        "id" : 0,
+        "status" : true
+      }
+    },
     "GetCustomerBirth" : {
       "type" : "array",
       "items" : {
@@ -1413,7 +1463,8 @@
           "type" : "integer"
         },
         "from" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "fb, google, inside"
         },
         "account" : {
           "type" : "string"
