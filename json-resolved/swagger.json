@@ -1365,6 +1365,9 @@
         },
         "home_phone" : {
           "type" : "string"
+        },
+        "need_review" : {
+          "type" : "boolean"
         }
       }
     },
