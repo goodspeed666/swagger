@@ -12,7 +12,7 @@ import java.util.UUID
 
 case class NotificationListInner (
   id: Option[Int],
-  types: Option[String],
+  typesdddddd: Option[Int],
   message: Option[String],
   landing: Option[Int],
   target: Option[Int],
