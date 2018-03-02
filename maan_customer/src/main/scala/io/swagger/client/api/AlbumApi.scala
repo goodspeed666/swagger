@@ -13,7 +13,6 @@ import io.swagger.client.model.AlbumUpdateRequest
 import io.swagger.client.model.CourseActivityPhotoRequest
 import io.swagger.client.model.CourseActivityRearrangeRequest
 import io.swagger.client.model.InsertReturn
-import io.swagger.client.model.NotificationList
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -140,18 +139,6 @@ object AlbumApi {
       .withBody(body)
       .withHeaderParam("token", token)
       .withSuccessResponse[InsertReturn](201)
-        /**
-   * 
-   * 
-   * Expected answers:
-   *   code 200 : NotificationList (successful operation)
-   * 
-   * @param token 
-   */
-  def notificationsGet(token: String): ApiRequest[NotificationList] =
-    ApiRequest[NotificationList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/notifications", "application/json")
-      .withHeaderParam("token", token)
-      .withSuccessResponse[NotificationList](200)
       
 
 }
