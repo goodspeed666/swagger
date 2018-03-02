@@ -12,13 +12,13 @@ import java.util.UUID
 
 case class NotificationListInner (
   id: Option[Int],
-  typesdddddd: Option[Int],
+  `type`: Option[Int],
   message: Option[String],
   landing: Option[Int],
   target: Option[Int],
-  status: Option[Boolean],
   sendTime: Option[String],
-  createdUser: Option[String]
+  createdUser: Option[String],
+  status: Option[Int]
 ) extends ApiModel
 
 
