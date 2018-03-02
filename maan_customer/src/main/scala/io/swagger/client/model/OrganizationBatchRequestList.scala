@@ -10,8 +10,12 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class OrganizationBatchRequest (
-  list: Option[Seq[OrganizationBatchRequestList]]
+case class OrganizationBatchRequestList (
+  id: Option[Int],
+  name: Option[String],
+  path: Option[String],
+  weight: Option[Int],
+  status: Option[Boolean]
 ) extends ApiModel
 
 

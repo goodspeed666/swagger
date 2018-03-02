@@ -22,13 +22,11 @@ object OrganizationApi {
    *   code 200 :  (successful operation)
    * 
    * @param token 
-   * @param id 
    * @param body 
    */
-  def organizationBatchPost(token: String, id: Int, body: Option[OrganizationBatchRequest] = None): ApiRequest[Unit] =
+  def organizationBatchPost(token: String, body: Option[OrganizationBatchRequest] = None): ApiRequest[Unit] =
     ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization/batch", "application/json")
       .withBody(body)
-      .withPathParam("id", id)
       .withHeaderParam("token", token)
       .withSuccessResponse[Unit](200)
         /**
