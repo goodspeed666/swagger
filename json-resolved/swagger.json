@@ -1360,9 +1360,13 @@
         "status" : {
           "type" : "integer",
           "example" : "1: open, 2: close"
+        },
+        "reason" : {
+          "type" : "string"
         }
       },
       "example" : {
+        "reason" : "reason",
         "status" : "1: open, 2: close"
       }
     },
