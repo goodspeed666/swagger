@@ -14,8 +14,6 @@ case class UserDataRequest (
   account: Option[String],
   name: Option[String],
   email: Option[String],
-  /* User Department */
-  dept: Option[String],
   role: Option[Any],
   organization: Option[Any],
   branch: Option[Any],

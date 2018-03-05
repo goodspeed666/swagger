@@ -14,8 +14,6 @@ case class UserData (
   account: Option[String],
   name: Option[String],
   email: Option[String],
-  /* User Department */
-  dept: Option[String],
   /* Roles */
   role: Option[Int],
   organization: Option[Int],
