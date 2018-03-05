@@ -21,7 +21,7 @@ case class UserData (
   organization: Option[Int],
   branch: Option[Int],
   status: Option[Boolean],
-  employeeId: Option[String]
+  employeeId: Option[Int]
 ) extends ApiModel
 
 

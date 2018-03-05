@@ -14,13 +14,13 @@ case class CourseDataRequest (
   formId: String,
   courseName: Int,
   description: Option[String],
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   classTime: String,
   duration: String,
   quota: Int,
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   startTime: String,
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   endTime: String,
   teacher: Option[String],
   location: String,

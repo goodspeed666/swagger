@@ -16,9 +16,9 @@ case class CourseActivityResponse (
   courseName: Option[CourseListInnerCourseName],
   classTime: Option[String],
   duration: Option[String],
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   startTime: Option[String],
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   endTime: Option[String],
   quota: Option[Int],
   appliedPeople: Option[CourseRollcallResponse],

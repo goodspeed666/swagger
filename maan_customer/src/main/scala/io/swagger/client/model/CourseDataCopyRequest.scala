@@ -11,7 +11,7 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class CourseDataCopyRequest (
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   classTime: Option[String],
   teacher: Option[String]
 ) extends ApiModel

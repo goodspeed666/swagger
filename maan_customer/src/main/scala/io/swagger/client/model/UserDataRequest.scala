@@ -10,10 +10,18 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class JourneyCopyRequest (
-  /* Y-m-d H:i */
-  classTime: Option[String],
-  keyman: Option[String]
+case class UserDataRequest (
+  account: Option[String],
+  name: Option[String],
+  email: Option[String],
+  /* User Department */
+  dept: Option[String],
+  role: Option[Any],
+  organization: Option[Any],
+  branch: Option[Any],
+  status: Option[Boolean],
+  employeeId: Option[Int],
+  updatedTime: Option[String]
 ) extends ApiModel
 
 

@@ -16,9 +16,9 @@ case class CourseDataResponse (
   courseName: CourseListInnerCourseName,
   classTime: String,
   duration: String,
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   startTime: String,
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   endTime: String,
   quota: Int,
   teacher: Option[String],

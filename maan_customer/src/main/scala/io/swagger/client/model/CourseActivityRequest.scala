@@ -13,9 +13,9 @@ import java.util.UUID
 case class CourseActivityRequest (
   courseId: Option[Int],
   formId: Option[String],
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   startTime: Option[String],
-  /* yyyy-mm-dd H:i */
+  /* Y-m-d H:i */
   endTime: Option[String],
   appliedPeople: Option[Seq[CourseActivityRequestAppliedPeople]],
   /* 預定時間結束 */
