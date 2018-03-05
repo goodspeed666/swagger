@@ -5,6 +5,7 @@
  */
 package io.swagger.client.api
 
+import io.swagger.client.model.GetBranch
 import io.swagger.client.model.GetConst
 import io.swagger.client.model.GetCourseList
 import io.swagger.client.model.GetCourseType
@@ -42,6 +43,18 @@ object CommonApi {
       .withQueryParam("keyword", keyword)
       .withHeaderParam("token", token)
       .withSuccessResponse[SearchCustomer](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : GetBranch (successful operation)
+   * 
+   * @param token 
+   */
+  def commonTypeBranchGet(token: String): ApiRequest[GetBranch] =
+    ApiRequest[GetBranch](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/branch", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[GetBranch](200)
         /**
    * 
    * 
