@@ -1637,6 +1637,9 @@
         },
         "group_id" : {
           "type" : "integer"
+        },
+        "weight" : {
+          "type" : "integer"
         }
       }
     },
