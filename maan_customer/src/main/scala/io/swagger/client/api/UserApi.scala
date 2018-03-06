@@ -5,11 +5,13 @@
  */
 package io.swagger.client.api
 
+import io.swagger.client.model.InsertReturn
 import io.swagger.client.model.UploadProfilePicRequest
 import io.swagger.client.model.User
 import io.swagger.client.model.UserChangePasswordRequest
 import io.swagger.client.model.UserData
 import io.swagger.client.model.UserList
+import io.swagger.client.model.UserRequest
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -72,6 +74,20 @@ object UserApi {
       .withHeaderParam("token", token)
       .withSuccessResponse[User](200)
       .withErrorResponse[Unit](400)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 201 : InsertReturn (successful operation)
+   * 
+   * @param token 
+   * @param body 
+   */
+  def usersPost(token: String, body: Option[UserRequest] = None): ApiRequest[InsertReturn] =
+    ApiRequest[InsertReturn](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/users", "application/json")
+      .withBody(body)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[InsertReturn](201)
         /**
    * 
    * 

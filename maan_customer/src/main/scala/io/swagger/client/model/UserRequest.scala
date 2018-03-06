@@ -10,20 +10,16 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class UserListInner (
-  id: Option[Int],
-  account: Option[String],
-  name: Option[String],
-  email: Option[String],
-  role: Option[Int],
+case class UserRequest (
+  account: String,
+  password: String,
+  name: String,
+  email: String,
+  role: Int,
   organization: Option[Int],
-  branch: Option[Int],
-  status: Option[Boolean],
-  employeeId: Option[String],
-  picture: Option[String],
-  lastLoginAt: Option[String],
-  createdAt: Option[String],
-  updatedAt: Option[String]
+  branch: Int,
+  status: Boolean,
+  employeeId: Option[String]
 ) extends ApiModel
 
 
