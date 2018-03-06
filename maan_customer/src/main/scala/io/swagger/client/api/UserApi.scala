@@ -9,7 +9,7 @@ import io.swagger.client.model.UploadProfilePicRequest
 import io.swagger.client.model.User
 import io.swagger.client.model.UserChangePasswordRequest
 import io.swagger.client.model.UserData
-import io.swagger.client.model.UserDataRequest
+import io.swagger.client.model.UserList
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -17,6 +17,18 @@ import io.swagger.client.core.ApiKeyLocations._
 object UserApi {
 
   /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : UserList (successful operation)
+   * 
+   * @param token 
+   */
+  def usersGet(token: String): ApiRequest[UserList] =
+    ApiRequest[UserList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/users", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[UserList](200)
+        /**
    * 
    * 
    * Expected answers:
@@ -76,24 +88,6 @@ object UserApi {
       .withPathParam("user_id", userId)
       .withHeaderParam("token", token)
       .withSuccessResponse[Unit](200)
-        /**
-   * 
-   * 
-   * Expected answers:
-   *   code 200 :  (successful operation)
-   *   code 400 :  (An error while decoding token.)
-   * 
-   * @param token 
-   * @param userId 
-   * @param body 
-   */
-  def usersUserIdGet(token: String, userId: Int, body: Option[UserDataRequest] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/users/{user_id}", "application/json")
-      .withBody(body)
-      .withPathParam("user_id", userId)
-      .withHeaderParam("token", token)
-      .withSuccessResponse[Unit](200)
-      .withErrorResponse[Unit](400)
         /**
    * 
    * 

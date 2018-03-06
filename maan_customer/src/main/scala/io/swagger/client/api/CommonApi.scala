@@ -115,14 +115,14 @@ object CommonApi {
    * 
    * 
    * Expected answers:
-   *   code 200 : GetBranch (successful operation)
+   *   code 200 : GetPeriod (successful operation)
    * 
    * @param token 
    */
-  def commonTypeRoleGet(token: String): ApiRequest[GetBranch] =
-    ApiRequest[GetBranch](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/role", "application/json")
+  def commonTypeRoleGet(token: String): ApiRequest[GetPeriod] =
+    ApiRequest[GetPeriod](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/role", "application/json")
       .withHeaderParam("token", token)
-      .withSuccessResponse[GetBranch](200)
+      .withSuccessResponse[GetPeriod](200)
       
 
 }
