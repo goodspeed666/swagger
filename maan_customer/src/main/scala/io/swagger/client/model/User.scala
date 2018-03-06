@@ -15,13 +15,13 @@ case class User (
   account: Option[String],
   name: Option[String],
   email: Option[String],
-  /* Roles */
   role: Option[Int],
   organization: Option[Int],
   branch: Option[Int],
   status: Option[Boolean],
   employeeId: Option[String],
   picture: Option[String],
+  lastLoginAt: Option[String],
   createdAt: Option[String],
   updatedAt: Option[String]
 ) extends ApiModel
