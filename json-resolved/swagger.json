@@ -1214,20 +1214,20 @@
         },
         "created_at" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD H:i:s"
+          "example" : "Y-m-d H:i:s"
         },
         "updated_at" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD H:i:s"
+          "example" : "Y-m-d H:i:s"
         }
       },
       "example" : {
         "role" : 6,
-        "created_at" : "YYYY-MM-DD H:i:s",
+        "created_at" : "Y-m-d H:i:s",
         "dept" : "dept",
         "branch" : 5,
         "picture" : "/admin_profile/1_1517480737.jpg",
-        "updated_at" : "YYYY-MM-DD H:i:s",
+        "updated_at" : "Y-m-d H:i:s",
         "organization" : 1,
         "employee_id" : "employee_id",
         "name" : "name",
@@ -1284,7 +1284,7 @@
         },
         "birth" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD"
+          "example" : "Y-m-d"
         },
         "howto_know" : {
           "type" : "string"
@@ -1300,7 +1300,7 @@
         },
         "dad_birth" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD"
+          "example" : "Y-m-d"
         },
         "plate_num" : {
           "type" : "string"
@@ -1316,11 +1316,11 @@
         },
         "created_at" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD H:i:s"
+          "example" : "YY-m-d H:i:s"
         },
         "updated_at" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD H:i:s"
+          "example" : "Y-m-d H:i:s"
         }
       },
       "example" : {
@@ -1329,14 +1329,14 @@
         "dad_name" : "dad_name",
         "plate_num" : "plate_num",
         "howto_know" : "howto_know",
-        "dad_birth" : "YYYY-MM-DD",
-        "birth" : "YYYY-MM-DD",
-        "created_at" : "YYYY-MM-DD H:i:s",
+        "dad_birth" : "Y-m-d",
+        "birth" : "Y-m-d",
+        "created_at" : "YY-m-d H:i:s",
         "unified_num" : "統一證號（跟身份證字號則一輸入）",
         "emergency_addr" : "emergency_addr",
         "emergency_phone" : "emergency_phone",
         "dad_mobile" : "dad_mobile",
-        "updated_at" : "YYYY-MM-DD H:i:s",
+        "updated_at" : "Y-m-d H:i:s",
         "pos" : "郵遞區號",
         "mobile_phone" : "mobile_phone",
         "name" : "name",
@@ -1480,7 +1480,7 @@
         },
         "created" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD H:i:s"
+          "example" : "Y-m-d H:i:s"
         }
       }
     },
@@ -1498,11 +1498,11 @@
       "properties" : {
         "due_date" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD"
+          "example" : "Y-m-d"
         },
         "give_birth_date" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD"
+          "example" : "Y-m-d"
         },
         "give_birth_area" : {
           "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
@@ -1533,25 +1533,25 @@
         },
         "visit_date" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD"
+          "example" : "Y-m-d"
         },
         "signing_receptionist" : {
           "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
         },
         "signing_date" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD"
+          "example" : "Y-m-d"
         },
         "your_cs" : {
           "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
         },
         "check_in" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD"
+          "example" : "Y-m-d"
         },
         "check_out" : {
           "type" : "string",
-          "example" : "YYYY-MM-DD"
+          "example" : "Y-m-d"
         }
       }
     },
