@@ -37,7 +37,10 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "successful operation"
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/LoginResponse"
+            }
           },
           "401" : {
             "description" : "Email or password is wrong"
@@ -1624,6 +1627,17 @@
       },
       "example" : {
         "id" : 0
+      }
+    },
+    "LoginResponse" : {
+      "type" : "object",
+      "properties" : {
+        "token" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "token" : "token"
       }
     },
     "macro" : {
