@@ -89,7 +89,7 @@ object JourneyApi {
    * 
    * 
    * Expected answers:
-   *   code 201 : InsertReturn (successful operation)
+   *   code 201 : InsertReturn ()
    *   code 400 :  (Customized error message)
    * 
    * @param token 

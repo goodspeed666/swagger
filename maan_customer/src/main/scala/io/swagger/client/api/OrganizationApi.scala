@@ -75,7 +75,7 @@ object OrganizationApi {
    * 
    * 
    * Expected answers:
-   *   code 201 : OrganizationResponse (successful operation)
+   *   code 201 : OrganizationResponse ()
    * 
    * @param token 
    */

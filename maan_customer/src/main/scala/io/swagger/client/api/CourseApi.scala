@@ -104,7 +104,7 @@ object CourseApi {
    * 
    * 
    * Expected answers:
-   *   code 201 : InsertReturn (Successful operation)
+   *   code 201 : InsertReturn ()
    *   code 400 :  (Customized error message)
    * 
    * @param token 
@@ -200,7 +200,7 @@ object CourseApi {
    * 
    * 
    * Expected answers:
-   *   code 201 : InsertReturn (Successful operation)
+   *   code 201 : InsertReturn ()
    *   code 400 :  (Customized error message)
    * 
    * @param token 
