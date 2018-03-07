@@ -415,6 +415,31 @@
         }
       }
     },
+    "/customers/login" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "客戶登入 (define OK, incomplete)",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Login"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
     "/customers/booking" : {
       "post" : {
         "tags" : [ "customer" ],
@@ -480,6 +505,31 @@
           },
           "400" : {
             "description" : "Customized error message"
+          }
+        }
+      }
+    },
+    "/customers/forgot_password" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "客戶忘記密碼 (define OK, incomplete)",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerForgotPassword"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
           }
         }
       }
@@ -1302,9 +1352,24 @@
         "account" : "account",
         "email" : "email",
         "status" : true
+      }
+    },
+    "Login" : {
+      "type" : "object",
+      "required" : [ "account", "password" ],
+      "properties" : {
+        "account" : {
+          "type" : "string",
+          "description" : "The user name for login"
+        },
+        "password" : {
+          "type" : "string",
+          "description" : "The password for login in clear text"
+        }
       },
-      "xml" : {
-        "name" : "User"
+      "example" : {
+        "password" : "password",
+        "account" : "account"
       }
     },
     "GetCustomers" : {
@@ -1413,6 +1478,17 @@
         "cid" : "cid",
         "dad_email" : "dad_email",
         "emergency_contact" : "emergency_contact"
+      }
+    },
+    "CustomerForgotPassword" : {
+      "type" : "object",
+      "properties" : {
+        "account" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "account" : "account"
       }
     },
     "CustomerConnectList" : {
@@ -1604,6 +1680,9 @@
         "from" : {
           "type" : "string",
           "example" : "fb, google, inside"
+        },
+        "uid" : {
+          "type" : "string"
         },
         "account" : {
           "type" : "string"
