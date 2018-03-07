@@ -682,10 +682,44 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "successful operation"
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/InsertReturn"
+            }
           },
           "404" : {
             "description" : "No data"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "連接客戶帳號 (define OK, incomplete)",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerConnect"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "The account has been connected to another user."
           }
         }
       }
@@ -716,6 +750,36 @@
           "required" : false,
           "schema" : {
             "$ref" : "#/definitions/CustomerConnectListRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/customers/{customer_id}/register" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "註冊客戶帳號 (define OK, incomplete)",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerRegister"
           }
         } ],
         "responses" : {
@@ -1354,6 +1418,33 @@
         "$ref" : "#/definitions/CustomerConnectList_inner"
       }
     },
+    "CustomerConnect" : {
+      "type" : "object",
+      "required" : [ "from", "token" ],
+      "properties" : {
+        "from" : {
+          "type" : "string",
+          "example" : "fb, google, inside"
+        },
+        "token" : {
+          "type" : "string"
+        },
+        "account" : {
+          "type" : "string",
+          "example" : "email"
+        },
+        "uid" : {
+          "type" : "string",
+          "example" : "Unique ID"
+        }
+      },
+      "example" : {
+        "uid" : "Unique ID",
+        "from" : "fb, google, inside",
+        "account" : "email",
+        "token" : "token"
+      }
+    },
     "CustomerConnectListRequest" : {
       "type" : "object",
       "properties" : {
@@ -1369,6 +1460,37 @@
       "example" : {
         "reason" : "如果 status 是 2 必填",
         "status" : "1: open, 2: close"
+      }
+    },
+    "CustomerRegister" : {
+      "type" : "object",
+      "required" : [ "birth", "connect_id", "id_num", "name" ],
+      "properties" : {
+        "connect_id" : {
+          "type" : "integer",
+          "example" : "from GET /customers/{customer_id}/connect"
+        },
+        "uid" : {
+          "type" : "string",
+          "example" : "Unique ID"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "id_num" : {
+          "type" : "string"
+        },
+        "birth" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        }
+      },
+      "example" : {
+        "uid" : "Unique ID",
+        "connect_id" : "from GET /customers/{customer_id}/connect",
+        "name" : "name",
+        "id_num" : "id_num",
+        "birth" : "Y-m-d"
       }
     },
     "GetCustomerBirth" : {
@@ -1416,6 +1538,18 @@
       },
       "example" : {
         "care_id" : 0
+      }
+    },
+    "InsertReturn" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "readOnly" : true
+        }
+      },
+      "example" : {
+        "id" : 0
       }
     },
     "macro" : {
