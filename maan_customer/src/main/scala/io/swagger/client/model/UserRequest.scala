@@ -15,6 +15,7 @@ case class UserRequest (
   password: String,
   name: String,
   email: String,
+  dept: Option[String],
   role: Int,
   organization: Option[Int],
   branch: Int,

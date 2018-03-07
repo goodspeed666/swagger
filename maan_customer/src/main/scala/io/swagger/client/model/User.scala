@@ -15,6 +15,7 @@ case class User (
   account: Option[String],
   name: Option[String],
   email: Option[String],
+  dept: Option[String],
   role: Option[String],
   organization: Option[String],
   branch: Option[String],
