@@ -28,17 +28,12 @@
         "summary" : "Logs user into the system",
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "account",
-          "in" : "query",
-          "description" : "The user name for login",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "password",
-          "in" : "query",
-          "description" : "The password for login in clear text",
-          "required" : true,
-          "type" : "string"
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Login"
+          }
         } ],
         "responses" : {
           "200" : {
