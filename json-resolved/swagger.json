@@ -784,6 +784,7 @@
         } ],
         "responses" : {
           "201" : {
+            "description" : "successful operation",
             "schema" : {
               "$ref" : "#/definitions/InsertReturn"
             }
