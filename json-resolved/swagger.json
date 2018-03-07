@@ -416,7 +416,7 @@
     "/customers/login" : {
       "post" : {
         "tags" : [ "customer" ],
-        "summary" : "客戶登入 (define OK, incomplete)",
+        "summary" : "客戶一般登入 (define OK, incomplete)",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -510,17 +510,35 @@
         }
       }
     },
+    "/customers/connect" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "連接客戶帳號 (define OK, incomplete)",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerConnect"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "The account has been connected to another user."
+          }
+        }
+      }
+    },
     "/customers/forgot_password" : {
       "post" : {
         "tags" : [ "customer" ],
         "summary" : "客戶忘記密碼 (define OK, incomplete)",
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "token",
-          "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
           "in" : "body",
           "name" : "body",
           "required" : false,
@@ -740,37 +758,6 @@
           },
           "404" : {
             "description" : "No data"
-          }
-        }
-      },
-      "post" : {
-        "tags" : [ "customer" ],
-        "summary" : "連接客戶帳號 (define OK, incomplete)",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "token",
-          "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "customer_id",
-          "in" : "path",
-          "required" : true,
-          "type" : "integer"
-        }, {
-          "in" : "body",
-          "name" : "body",
-          "required" : false,
-          "schema" : {
-            "$ref" : "#/definitions/CustomerConnect"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation"
-          },
-          "400" : {
-            "description" : "The account has been connected to another user."
           }
         }
       }
