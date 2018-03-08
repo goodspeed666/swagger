@@ -1888,7 +1888,7 @@
         },
         "supervisor" : {
           "type" : "string",
-          "example" : "{\"id\": 0, \"name\": XXX}"
+          "example" : "{\"id\": 0, \"name\": \"XXX\"}"
         },
         "supervisor_view_at" : {
           "type" : "string",
