@@ -1129,6 +1129,106 @@
         }
       }
     },
+    "/customers/{customer_id}/message" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得客服訊息",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "birth_id",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CustomerMessage"
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "新增客服訊息",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerMessageRequest"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/InsertReturn"
+            }
+          }
+        }
+      }
+    },
+    "/customers/{customer_id}/message/{message_id}" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "更新客服訊息",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "message_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerMessageRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
     "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
@@ -1431,28 +1531,40 @@
         "updated_at" : {
           "type" : "string",
           "example" : "Y-m-d H:i:s"
+        },
+        "photo" : {
+          "type" : "string"
+        },
+        "room_no" : {
+          "type" : "string"
+        },
+        "during_checkin" : {
+          "type" : "string"
         }
       },
       "example" : {
-        "home_phone" : "home_phone",
-        "address" : "address",
         "dad_name" : "dad_name",
         "plate_num" : "plate_num",
-        "howto_know" : "howto_know",
-        "dad_birth" : "Y-m-d",
-        "birth" : "Y-m-d",
         "created_at" : "YY-m-d H:i:s",
         "unified_num" : "統一證號（跟身份證字號則一輸入）",
-        "emergency_addr" : "emergency_addr",
         "emergency_phone" : "emergency_phone",
         "dad_mobile" : "dad_mobile",
         "updated_at" : "Y-m-d H:i:s",
         "pos" : "郵遞區號",
         "mobile_phone" : "mobile_phone",
-        "name" : "name",
-        "id_num" : "身分證字號",
+        "room_no" : "room_no",
         "id" : 0,
         "email" : "email",
+        "home_phone" : "home_phone",
+        "address" : "address",
+        "howto_know" : "howto_know",
+        "dad_birth" : "Y-m-d",
+        "birth" : "Y-m-d",
+        "photo" : "photo",
+        "emergency_addr" : "emergency_addr",
+        "name" : "name",
+        "id_num" : "身分證字號",
+        "during_checkin" : "during_checkin",
         "cid" : "cid",
         "dad_email" : "dad_email",
         "emergency_contact" : "emergency_contact"
@@ -1554,6 +1666,12 @@
       "type" : "array",
       "items" : {
         "$ref" : "#/definitions/GetCustomerBirth_inner"
+      }
+    },
+    "CustomerMessageList" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/CustomerMessageList_inner"
       }
     },
     "GetHospitals" : {
@@ -1757,6 +1875,24 @@
         "check_out" : {
           "type" : "string",
           "example" : "Y-m-d"
+        }
+      }
+    },
+    "CustomerMessageList_inner" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "supervisor" : {
+          "type" : "string",
+          "example" : "{\"id\": 0, \"name\": XXX}"
+        },
+        "supervisor_view_at" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i"
         }
       }
     },
