@@ -1132,7 +1132,7 @@
     "/customers/{customer_id}/message" : {
       "get" : {
         "tags" : [ "customer" ],
-        "summary" : "取得客服訊息",
+        "summary" : "取得客服訊息列表",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -1221,6 +1221,35 @@
           "schema" : {
             "$ref" : "#/definitions/CustomerMessageRequest"
           }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/customers/{customer_id}/message/{message_id}/supervisor" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "主管已讀",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "message_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
         } ],
         "responses" : {
           "200" : {
@@ -1908,6 +1937,10 @@
         "supervisor_view_at" : {
           "type" : "string",
           "example" : "Y-m-d H:i"
+        },
+        "created_uid" : {
+          "type" : "string",
+          "example" : "{\"id\": 0, \"name\": \"XXX\"}"
         },
         "created_at" : {
           "type" : "string",
