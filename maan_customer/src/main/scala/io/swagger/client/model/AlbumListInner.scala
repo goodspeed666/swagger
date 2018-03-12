@@ -13,6 +13,7 @@ import java.util.UUID
 case class AlbumListInner (
   id: Option[Int],
   name: Option[String],
+  actDate: Option[String],
   cover: Option[String]
 ) extends ApiModel
 
