@@ -10,12 +10,11 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class AlbumUpdateRequest (
-  id: Option[Int],
-  name: Option[String],
-  description: Option[String],
-  actDate: Option[String],
-  photos: Option[Seq[AlbumInfoRequestPhotos]]
+case class AlbumInfoRequestPhotos (
+  aid: Option[Int],
+  oPath: Option[String],
+  tPath: Option[String],
+  weight: Option[Int]
 ) extends ApiModel
 
 

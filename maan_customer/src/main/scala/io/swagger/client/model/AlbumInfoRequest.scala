@@ -11,6 +11,12 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class AlbumInfoRequest (
+  id: Option[Int],
+  name: Option[String],
+  description: Option[String],
+  actDate: Option[String],
+  branch: Option[Int],
+  photos: Option[Seq[AlbumInfoRequestPhotos]]
 ) extends ApiModel
 
 
