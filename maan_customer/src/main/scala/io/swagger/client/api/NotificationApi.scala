@@ -22,11 +22,9 @@ object NotificationApi {
    *   code 200 : NotificationList (successful operation)
    * 
    * @param token 
-   * @param branch 
    */
-  def notificationsGet(token: String, branch: String): ApiRequest[NotificationList] =
+  def notificationsGet(token: String): ApiRequest[NotificationList] =
     ApiRequest[NotificationList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/notifications", "application/json")
-      .withQueryParam("branch", branch)
       .withHeaderParam("token", token)
       .withSuccessResponse[NotificationList](200)
         /**

@@ -15,6 +15,7 @@ case class AlbumInfoRequestInner (
   name: Option[String],
   description: Option[String],
   actDate: Option[String],
+  branch: Option[Int],
   photos: Option[Seq[AlbumInfoRequestInnerPhotos]]
 ) extends ApiModel
 
