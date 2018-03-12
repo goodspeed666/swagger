@@ -1705,16 +1705,22 @@
     },
     "CustomerMessageRequest" : {
       "type" : "object",
+      "required" : [ "birth", "created_at", "message" ],
       "properties" : {
         "message" : {
           "type" : "string"
         },
         "birth" : {
           "type" : "integer"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i"
         }
       },
       "example" : {
         "birth" : 0,
+        "created_at" : "Y-m-d H:i",
         "message" : "message"
       }
     },
