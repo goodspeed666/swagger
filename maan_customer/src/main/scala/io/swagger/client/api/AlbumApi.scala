@@ -39,18 +39,18 @@ object AlbumApi {
    * 
    * 
    * Expected answers:
-   *   code 201 : AffectedRows (successful operation)
+   *   code 200 :  (successful operation)
    * 
    * @param token 
    * @param albumId 
    * @param body 
    */
-  def albumsAlbumIdGet(token: String, albumId: String, body: Option[AlbumUpdateRequest] = None): ApiRequest[AffectedRows] =
-    ApiRequest[AffectedRows](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/albums/{album_id}", "application/json")
+  def albumsAlbumIdGet(token: String, albumId: String, body: Option[AlbumUpdateRequest] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/albums/{album_id}", "application/json")
       .withBody(body)
       .withPathParam("album_id", albumId)
       .withHeaderParam("token", token)
-      .withSuccessResponse[AffectedRows](201)
+      .withSuccessResponse[Unit](200)
         /**
    * 
    * 
