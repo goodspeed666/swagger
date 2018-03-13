@@ -78,9 +78,11 @@ object OrganizationApi {
    *   code 201 : OrganizationResponse (successful operation)
    * 
    * @param token 
+   * @param body 
    */
-  def organizationPost(token: String): ApiRequest[OrganizationResponse] =
+  def organizationPost(token: String, body: Option[OrganizationRequest] = None): ApiRequest[OrganizationResponse] =
     ApiRequest[OrganizationResponse](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization", "application/json")
+      .withBody(body)
       .withHeaderParam("token", token)
       .withSuccessResponse[OrganizationResponse](201)
       
