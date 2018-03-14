@@ -287,7 +287,7 @@
           "name" : "cid",
           "in" : "query",
           "description" : "客戶編號",
-          "required" : false,
+          "required" : true,
           "type" : "string"
         }, {
           "name" : "name",
@@ -1496,7 +1496,7 @@
         },
         "cid" : {
           "type" : "string",
-          "example" : "客戶編號，三碼英文代碼加上數字，英文代碼不能修改"
+          "example" : "前三碼要抓出來，不能改"
         },
         "id_num" : {
           "type" : "string",
@@ -1600,7 +1600,7 @@
         "name" : "name",
         "id_num" : "身分證字號",
         "during_checkin" : "during_checkin",
-        "cid" : "客戶編號，三碼英文代碼加上數字，英文代碼不能修改",
+        "cid" : "前三碼要抓出來，不能改",
         "dad_email" : "dad_email",
         "emergency_contact" : "emergency_contact"
       }
