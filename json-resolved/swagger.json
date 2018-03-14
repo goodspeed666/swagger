@@ -1495,7 +1495,8 @@
           "type" : "string"
         },
         "cid" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "客戶編號，三碼英文代碼加上數字，英文代碼不能修改"
         },
         "id_num" : {
           "type" : "string",
@@ -1561,7 +1562,7 @@
           "type" : "string",
           "example" : "Y-m-d H:i:s"
         },
-        "photo" : {
+        "picture" : {
           "type" : "string"
         },
         "room_no" : {
@@ -1569,6 +1570,10 @@
         },
         "during_checkin" : {
           "type" : "string"
+        },
+        "branch" : {
+          "type" : "string",
+          "example" : "{\"id\": 0, \"name\": \"XXX\"}"
         }
       },
       "example" : {
@@ -1576,6 +1581,7 @@
         "plate_num" : "plate_num",
         "created_at" : "YY-m-d H:i:s",
         "unified_num" : "統一證號（跟身份證字號則一輸入）",
+        "branch" : "{\"id\": 0, \"name\": \"XXX\"}",
         "emergency_phone" : "emergency_phone",
         "dad_mobile" : "dad_mobile",
         "updated_at" : "Y-m-d H:i:s",
@@ -1589,12 +1595,12 @@
         "howto_know" : "howto_know",
         "dad_birth" : "Y-m-d",
         "birth" : "Y-m-d",
-        "photo" : "photo",
         "emergency_addr" : "emergency_addr",
+        "picture" : "picture",
         "name" : "name",
         "id_num" : "身分證字號",
         "during_checkin" : "during_checkin",
-        "cid" : "cid",
+        "cid" : "客戶編號，三碼英文代碼加上數字，英文代碼不能修改",
         "dad_email" : "dad_email",
         "emergency_contact" : "emergency_contact"
       }
