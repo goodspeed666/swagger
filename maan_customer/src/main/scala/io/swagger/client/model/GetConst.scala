@@ -11,7 +11,8 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class GetConst (
-  storagePath: Option[String]
+  storagePath: Option[String],
+  cidPrefix: Option[String]
 ) extends ApiModel
 
 
