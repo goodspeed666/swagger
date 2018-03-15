@@ -9,6 +9,7 @@ import io.swagger.client.model.GetBranch
 import io.swagger.client.model.GetConst
 import io.swagger.client.model.GetCourseList
 import io.swagger.client.model.GetCourseType
+import io.swagger.client.model.GetGreetings
 import io.swagger.client.model.GetPeriod
 import io.swagger.client.model.SearchCustomer
 import io.swagger.client.core._
@@ -87,6 +88,18 @@ object CommonApi {
       .withHeaderParam("token", token)
       .withSuccessResponse[GetCourseType](200)
       .withErrorResponse[Unit](404)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : GetGreetings (successful operation)
+   * 
+   * @param token 
+   */
+  def commonTypeGreetingsGet(token: String): ApiRequest[GetGreetings] =
+    ApiRequest[GetGreetings](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/greetings", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[GetGreetings](200)
         /**
    * 
    * 
