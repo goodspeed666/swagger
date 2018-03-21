@@ -15,6 +15,8 @@ case class NotificationRequest (
   message: String,
   landing: Int,
   target: Int,
+  targetDueStart: Option[String],
+  targetDueEnd: Option[String],
   sendTime: String
 ) extends ApiModel
 
