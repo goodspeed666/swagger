@@ -17,7 +17,7 @@ case class NotificationUpdateRequest (
   targetDueStart: Option[String],
   targetDueEnd: Option[String],
   sendTime: String,
-  targetList: Option[Seq[NotificationListInnerTargetList]]
+  targetList: Option[Seq[CourseActivityRequestAppliedPeople]]
 ) extends ApiModel
 
 
