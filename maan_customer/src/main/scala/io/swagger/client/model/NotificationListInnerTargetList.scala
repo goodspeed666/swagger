@@ -10,19 +10,11 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class NotificationListInner (
-  id: Option[Int],
-  `type`: Option[Int],
-  message: Option[String],
-  landing: Option[Int],
-  target: Option[Int],
-  targetDueStart: Option[String],
-  targetDueEnd: Option[String],
-  targetList: Option[Seq[NotificationListInnerTargetList]],
-  sendTime: Option[String],
-  createdUser: Option[String],
-  status: Option[Int],
-  progrss: Option[String]
+case class NotificationListInnerTargetList (
+  cid: Option[Int],
+  name: Option[String],
+  dueDate: Option[String],
+  phone: Option[String]
 ) extends ApiModel
 
 
