@@ -16,6 +16,8 @@ case class NotificationListInner (
   message: Option[String],
   landing: Option[Int],
   target: Option[Int],
+  targetDueStart: Option[String],
+  targetDueEnd: Option[String],
   sendTime: Option[String],
   createdUser: Option[String],
   status: Option[Int],
