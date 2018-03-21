@@ -23,32 +23,14 @@ object CalendarApi {
    * @param branch 
    * @param year 年，非必填，但需要跟月一起填寫。預設當年
    * @param month 月，非必填，但需要跟年一起填寫。預設當月
+   * @param cid 查詢個人行事曆用
    */
-  def calendarGet(token: String, branch: Int, year: Option[String] = None, month: Option[String] = None): ApiRequest[CalendarResponse] =
+  def calendarGet(token: String, branch: Int, year: Option[String] = None, month: Option[String] = None, cid: Option[Int] = None): ApiRequest[CalendarResponse] =
     ApiRequest[CalendarResponse](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/calendar", "application/json")
       .withQueryParam("branch", branch)
       .withQueryParam("year", year)
       .withQueryParam("month", month)
-      .withHeaderParam("token", token)
-      .withSuccessResponse[CalendarResponse](200)
-      .withErrorResponse[Unit](400)
-        /**
-   * 
-   * 
-   * Expected answers:
-   *   code 200 : CalendarResponse (successful operation)
-   *   code 400 :  (Customized error message)
-   * 
-   * @param token 
-   * @param userId 
-   * @param year 年，非必填，但需要跟月一起填寫。預設當年
-   * @param month 月，非必填，但需要跟年一起填寫。預設當月
-   */
-  def calendarUserIdGet(token: String, userId: Int, year: Option[String] = None, month: Option[String] = None): ApiRequest[CalendarResponse] =
-    ApiRequest[CalendarResponse](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/calendar/{user_id}", "application/json")
-      .withQueryParam("year", year)
-      .withQueryParam("month", month)
-      .withPathParam("user_id", userId)
+      .withQueryParam("cid", cid)
       .withHeaderParam("token", token)
       .withSuccessResponse[CalendarResponse](200)
       .withErrorResponse[Unit](400)
