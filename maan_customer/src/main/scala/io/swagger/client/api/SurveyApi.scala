@@ -8,6 +8,7 @@ package io.swagger.client.api
 import io.swagger.client.model.InsertReturn
 import io.swagger.client.model.SurveyList
 import io.swagger.client.model.SurveyRequest
+import io.swagger.client.model.SurveyResponse
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -30,18 +31,16 @@ object SurveyApi {
    * 
    * 
    * Expected answers:
-   *   code 200 :  (successful operation)
+   *   code 200 : SurveyResponse (successful operation)
    * 
    * @param token 
    * @param id 
-   * @param body 
    */
-  def surveysIdPost(token: String, id: Int, body: Option[SurveyRequest] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{id}", "application/json")
-      .withBody(body)
+  def surveysIdPost(token: String, id: Int): ApiRequest[SurveyResponse] =
+    ApiRequest[SurveyResponse](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{id}", "application/json")
       .withPathParam("id", id)
       .withHeaderParam("token", token)
-      .withSuccessResponse[Unit](200)
+      .withSuccessResponse[SurveyResponse](200)
         /**
    * 
    * 

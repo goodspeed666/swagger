@@ -11,11 +11,12 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class SurveyRequest (
-  `type`: Option[String],
+  `type`: Int,
   title: String,
   startTime: String,
   during: Int,
   target: Int,
+  targetList: Option[Seq[CourseActivityRequestAppliedPeople]],
   targetDueStart: Option[String],
   targetDueEnd: Option[String],
   notify: Option[Boolean],

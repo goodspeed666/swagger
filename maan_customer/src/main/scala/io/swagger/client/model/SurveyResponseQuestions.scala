@@ -10,9 +10,9 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class SurveyRequestQuestions (
+case class SurveyResponseQuestions (
   name: Option[String],
-  kind: Option[Int],
+  kind: Option[String],
   other: Option[Boolean],
   options: Option[String],
   weight: Option[Int],

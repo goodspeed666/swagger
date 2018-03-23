@@ -10,13 +10,20 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class SurveyRequestQuestions (
-  name: Option[String],
-  kind: Option[Int],
-  other: Option[Boolean],
-  options: Option[String],
-  weight: Option[Int],
-  required: Option[Boolean]
+case class SurveyResponse (
+  `type`: String,
+  title: String,
+  startTime: String,
+  during: Int,
+  target: Int,
+  targetList: Option[Seq[CourseActivityRequestAppliedPeople]],
+  targetDueStart: Option[String],
+  targetDueEnd: Option[String],
+  notify: Option[Boolean],
+  status: Option[Boolean],
+  header: Option[String],
+  footer: Option[String],
+  questions: Seq[SurveyResponseQuestions]
 ) extends ApiModel
 
 
