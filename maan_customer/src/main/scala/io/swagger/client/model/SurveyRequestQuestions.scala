@@ -15,7 +15,8 @@ case class SurveyRequestQuestions (
   kind: Option[String],
   other: Option[Boolean],
   options: Option[String],
-  weight: Option[Int]
+  weight: Option[Int],
+  required: Option[Boolean]
 ) extends ApiModel
 
 

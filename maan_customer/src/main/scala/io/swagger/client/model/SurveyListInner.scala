@@ -11,7 +11,7 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class SurveyListInner (
-  id: Option[Int],
+  sid: Option[Int],
   `type`: Option[Int],
   title: Option[String],
   startTime: Option[String],

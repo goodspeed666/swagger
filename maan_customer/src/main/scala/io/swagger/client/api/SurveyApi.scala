@@ -30,6 +30,22 @@ object SurveyApi {
    * 
    * 
    * Expected answers:
+   *   code 200 :  (successful operation)
+   * 
+   * @param token 
+   * @param id 
+   * @param body 
+   */
+  def surveysIdPost(token: String, id: Int, body: Option[SurveyRequest] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{id}", "application/json")
+      .withBody(body)
+      .withPathParam("id", id)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[Unit](200)
+        /**
+   * 
+   * 
+   * Expected answers:
    *   code 201 : InsertReturn (successful operation)
    * 
    * @param token 

@@ -19,6 +19,7 @@ case class SurveyRequest (
   targetDueStart: Option[String],
   targetDueEnd: Option[String],
   notify: Option[Boolean],
+  status: Option[Boolean],
   header: Option[String],
   footer: Option[String],
   questions: Seq[SurveyRequestQuestions]
