@@ -16,7 +16,8 @@ case class SurveyListInner (
   title: Option[String],
   startTime: Option[String],
   applied: Option[Int],
-  status: Option[String]
+  status: Option[String],
+  createdAt: Option[String]
 ) extends ApiModel
 
 
