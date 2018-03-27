@@ -35,10 +35,12 @@ object SurveyApi {
    * 
    * @param token 
    * @param id 
+   * @param tid 
    */
-  def surveysIdPost(token: String, id: Int): ApiRequest[SurveyResponse] =
-    ApiRequest[SurveyResponse](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{id}", "application/json")
+  def surveysIdTidPost(token: String, id: Int, tid: Int): ApiRequest[SurveyResponse] =
+    ApiRequest[SurveyResponse](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{id}/{tid}", "application/json")
       .withPathParam("id", id)
+      .withPathParam("tid", tid)
       .withHeaderParam("token", token)
       .withSuccessResponse[SurveyResponse](200)
         /**
