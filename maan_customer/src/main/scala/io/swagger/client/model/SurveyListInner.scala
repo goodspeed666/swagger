@@ -12,6 +12,7 @@ import java.util.UUID
 
 case class SurveyListInner (
   sid: Option[Int],
+  tid: Option[Int],
   `type`: Option[Int],
   title: Option[String],
   startTime: Option[String],

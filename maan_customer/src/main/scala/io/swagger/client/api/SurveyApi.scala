@@ -31,22 +31,6 @@ object SurveyApi {
    * 
    * 
    * Expected answers:
-   *   code 200 : SurveyResponse (successful operation)
-   * 
-   * @param token 
-   * @param id 
-   * @param tid 
-   */
-  def surveysIdTidPost(token: String, id: Int, tid: Int): ApiRequest[SurveyResponse] =
-    ApiRequest[SurveyResponse](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{id}/{tid}", "application/json")
-      .withPathParam("id", id)
-      .withPathParam("tid", tid)
-      .withHeaderParam("token", token)
-      .withSuccessResponse[SurveyResponse](200)
-        /**
-   * 
-   * 
-   * Expected answers:
    *   code 201 : InsertReturn (successful operation)
    * 
    * @param token 
@@ -57,6 +41,22 @@ object SurveyApi {
       .withBody(body)
       .withHeaderParam("token", token)
       .withSuccessResponse[InsertReturn](201)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : SurveyResponse (successful operation)
+   * 
+   * @param token 
+   * @param id 
+   * @param tid 
+   */
+  def surveysSidTidPost(token: String, id: Int, tid: Int): ApiRequest[SurveyResponse] =
+    ApiRequest[SurveyResponse](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{sid}/{tid}", "application/json")
+      .withPathParam("id", id)
+      .withPathParam("tid", tid)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[SurveyResponse](200)
       
 
 }
