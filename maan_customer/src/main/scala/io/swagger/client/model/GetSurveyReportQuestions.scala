@@ -10,10 +10,14 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class GetSurveyTitleInner (
-  sid: Option[Int],
-  tid: Option[Int],
-  title: Option[String]
+case class GetSurveyReportQuestions (
+  name: Option[String],
+  kind: Option[String],
+  options: Option[String],
+  comment: Option[String],
+  count: Option[Int],
+  avg: Option[Float],
+  weight: Option[Int]
 ) extends ApiModel
 
 
