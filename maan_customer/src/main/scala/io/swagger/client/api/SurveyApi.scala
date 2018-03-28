@@ -5,6 +5,7 @@
  */
 package io.swagger.client.api
 
+import io.swagger.client.model.GetSurveyTitle
 import io.swagger.client.model.InsertReturn
 import io.swagger.client.model.SurveyList
 import io.swagger.client.model.SurveyRequest
@@ -31,6 +32,18 @@ object SurveyApi {
    * 
    * 
    * Expected answers:
+   *   code 200 : GetSurveyTitle (successful operation)
+   * 
+   * @param token 
+   */
+  def surveysGetTitleGet(token: String): ApiRequest[GetSurveyTitle] =
+    ApiRequest[GetSurveyTitle](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/get_title", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[GetSurveyTitle](200)
+        /**
+   * 
+   * 
+   * Expected answers:
    *   code 201 : InsertReturn (successful operation)
    * 
    * @param token 
@@ -45,15 +58,31 @@ object SurveyApi {
    * 
    * 
    * Expected answers:
+   *   code 200 :  (successful operation)
+   * 
+   * @param token 
+   * @param sid 
+   * @param tid 
+   */
+  def surveysSidTidDelete(token: String, sid: Int, tid: Int): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.DELETE, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{sid}/{tid}", "application/json")
+      .withPathParam("sid", sid)
+      .withPathParam("tid", tid)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[Unit](200)
+        /**
+   * 
+   * 
+   * Expected answers:
    *   code 200 : SurveyResponse (successful operation)
    * 
    * @param token 
-   * @param id 
+   * @param sid 
    * @param tid 
    */
-  def surveysSidTidPost(token: String, id: Int, tid: Int): ApiRequest[SurveyResponse] =
+  def surveysSidTidPost(token: String, sid: Int, tid: Int): ApiRequest[SurveyResponse] =
     ApiRequest[SurveyResponse](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{sid}/{tid}", "application/json")
-      .withPathParam("id", id)
+      .withPathParam("sid", sid)
       .withPathParam("tid", tid)
       .withHeaderParam("token", token)
       .withSuccessResponse[SurveyResponse](200)
