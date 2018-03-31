@@ -65,10 +65,12 @@ object SurveyApi {
    * @param sid 
    * @param startDate 
    * @param endDate 
+   * @param tid 
    */
-  def surveysReportGet(token: String, sid: Int, startDate: String, endDate: String): ApiRequest[GetSurveyReport] =
+  def surveysReportGet(token: String, sid: Int, startDate: String, endDate: String, tid: Option[Int] = None): ApiRequest[GetSurveyReport] =
     ApiRequest[GetSurveyReport](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/report", "application/json")
       .withQueryParam("sid", sid)
+      .withQueryParam("tid", tid)
       .withQueryParam("start_date", startDate)
       .withQueryParam("end_date", endDate)
       .withHeaderParam("token", token)

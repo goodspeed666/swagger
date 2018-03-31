@@ -10,11 +10,11 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class GetSurveyReport (
-  quota: Option[Int],
-  questions: Option[Seq[GetSurveyReportQuestions]],
-  photos: Option[Seq[CourseActivityResponsePhotos]],
-  adminComment: Option[Seq[GetSurveyReportAdminComment]]
+case class GetSurveyReportAdminComment (
+  id: Option[Int],
+  name: Option[String],
+  comment: Option[String],
+  createdAt: Option[String]
 ) extends ApiModel
 
 
