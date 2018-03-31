@@ -8,6 +8,7 @@ package io.swagger.client.api
 import io.swagger.client.model.GetSurveyReport
 import io.swagger.client.model.GetSurveyTitle
 import io.swagger.client.model.InsertReturn
+import io.swagger.client.model.SurveyCommentResponse
 import io.swagger.client.model.SurveyList
 import io.swagger.client.model.SurveyRequest
 import io.swagger.client.model.SurveyResponse
@@ -18,6 +19,18 @@ import io.swagger.client.core.ApiKeyLocations._
 object SurveyApi {
 
   /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : SurveyCommentResponse (successful operation)
+   * 
+   * @param token 
+   */
+  def surveysCommentPost(token: String): ApiRequest[SurveyCommentResponse] =
+    ApiRequest[SurveyCommentResponse](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/comment", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[SurveyCommentResponse](200)
+        /**
    * 
    * 
    * Expected answers:
@@ -63,11 +76,11 @@ object SurveyApi {
    * 
    * @param token 
    * @param sid 
+   * @param tid 
    * @param startDate 
    * @param endDate 
-   * @param tid 
    */
-  def surveysReportGet(token: String, sid: Int, startDate: String, endDate: String, tid: Option[Int] = None): ApiRequest[GetSurveyReport] =
+  def surveysReportGet(token: String, sid: Int, tid: Option[Int] = None, startDate: Option[String] = None, endDate: Option[String] = None): ApiRequest[GetSurveyReport] =
     ApiRequest[GetSurveyReport](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/report", "application/json")
       .withQueryParam("sid", sid)
       .withQueryParam("tid", tid)
