@@ -10,16 +10,10 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class SurveyListInner (
-  sid: Option[Int],
-  tid: Option[Int],
-  `type`: Option[Int],
-  title: Option[String],
-  startTime: Option[String],
-  applied: Option[Int],
-  status: Option[String],
-  createdAt: Option[String],
-  questions: Option[Seq[SurveyListInnerQuestions]]
+case class SurveyListInnerQuestions (
+  cfgid: Option[Int],
+  other: Option[Boolean],
+  options: Option[String]
 ) extends ApiModel
 
 

@@ -160,6 +160,18 @@ object CommonApi {
     ApiRequest[GetPeriod](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/role", "application/json")
       .withHeaderParam("token", token)
       .withSuccessResponse[GetPeriod](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : GetGreetings (successful operation)
+   * 
+   * @param token 
+   */
+  def commonTypeSurveyGet(token: String): ApiRequest[GetGreetings] =
+    ApiRequest[GetGreetings](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/survey", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[GetGreetings](200)
       
 
 }
