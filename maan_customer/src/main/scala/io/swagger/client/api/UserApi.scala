@@ -25,9 +25,11 @@ object UserApi {
    *   code 200 : UserList (successful operation)
    * 
    * @param token 
+   * @param page 
    */
-  def usersGet(token: String): ApiRequest[UserList] =
+  def usersGet(token: String, page: Option[Int] = None): ApiRequest[UserList] =
     ApiRequest[UserList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/users", "application/json")
+      .withQueryParam("page", page)
       .withHeaderParam("token", token)
       .withSuccessResponse[UserList](200)
         /**

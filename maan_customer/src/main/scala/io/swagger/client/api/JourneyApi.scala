@@ -93,11 +93,13 @@ object JourneyApi {
    *   code 400 :  (Customized error message)
    * 
    * @param token 
+   * @param page 
    * @param body 
    */
-  def journeysPost(token: String, body: Option[JourneyInsertRequest] = None): ApiRequest[InsertReturn] =
+  def journeysPost(token: String, page: Option[Int] = None, body: Option[JourneyInsertRequest] = None): ApiRequest[InsertReturn] =
     ApiRequest[InsertReturn](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/journeys", "application/json")
       .withBody(body)
+      .withQueryParam("page", page)
       .withHeaderParam("token", token)
       .withSuccessResponse[InsertReturn](201)
       .withErrorResponse[Unit](400)
