@@ -19,6 +19,9 @@
   }, {
     "name" : "care",
     "description" : "Operations about nursing care service"
+  }, {
+    "name" : "shiftlog",
+    "description" : "Operations about nursing shift log service"
   } ],
   "schemes" : [ "https" ],
   "paths" : {
@@ -1407,6 +1410,94 @@
           }
         }
       }
+    },
+    "/shiftlog" : {
+      "get" : {
+        "tags" : [ "shiftlog" ],
+        "summary" : "取得shiftlog",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetShiftlog"
+            }
+          },
+          "404" : {
+            "description" : "No data"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "shiftlog" ],
+        "summary" : "新增shiftlog",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/ShiftlogRequest"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/InsertReturn"
+            }
+          }
+        }
+      }
+    },
+    "/shiftlog/{id}" : {
+      "post" : {
+        "tags" : [ "shiftlog" ],
+        "summary" : "新增shiftlog",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/ShiftlogRequest"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/InsertReturn"
+            }
+          }
+        }
+      }
     }
   },
   "definitions" : {
@@ -1784,6 +1875,62 @@
       },
       "example" : {
         "care_id" : 0
+      }
+    },
+    "GetShiftlog" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "content" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        },
+        "send_time" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "created_user" : {
+          "type" : "string",
+          "example" : "{\"id\": 0, \"name\": \"XXX\"}"
+        },
+        "updated_user" : {
+          "type" : "string",
+          "example" : "{\"id\": 0, \"name\": \"XXX\"}"
+        }
+      },
+      "example" : {
+        "send_time" : "Y-m-d H:i",
+        "created_user" : "{\"id\": 0, \"name\": \"XXX\"}",
+        "created_at" : "Y-m-d",
+        "id" : 0,
+        "content" : "content",
+        "updated_user" : "{\"id\": 0, \"name\": \"XXX\"}",
+        "status" : "status"
+      }
+    },
+    "ShiftlogRequest" : {
+      "type" : "object",
+      "required" : [ "content" ],
+      "properties" : {
+        "content" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        }
+      },
+      "example" : {
+        "created_at" : "Y-m-d",
+        "content" : "content"
       }
     },
     "InsertReturn" : {
