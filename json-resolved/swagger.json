@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "MAAN CS API",
+    "description" : "照護跟客服 MAAN CS API",
     "version" : "1.0.0",
     "title" : "Maan Customer Service API"
   },
