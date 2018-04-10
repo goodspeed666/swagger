@@ -109,10 +109,12 @@ object AlbumApi {
    * 
    * @param token 
    * @param branch 
+   * @param page 
    */
-  def albumsGet(token: String, branch: Int): ApiRequest[AlbumList] =
+  def albumsGet(token: String, branch: Int, page: Option[Int] = None): ApiRequest[AlbumList] =
     ApiRequest[AlbumList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/albums", "application/json")
       .withQueryParam("branch", branch)
+      .withQueryParam("page", page)
       .withHeaderParam("token", token)
       .withSuccessResponse[AlbumList](200)
         /**
