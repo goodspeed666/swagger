@@ -1422,10 +1422,10 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "page",
+          "name" : "created_at",
           "in" : "query",
           "required" : false,
-          "type" : "integer"
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -1469,7 +1469,7 @@
     "/shiftlog/{id}" : {
       "post" : {
         "tags" : [ "shiftlog" ],
-        "summary" : "新增shiftlog",
+        "summary" : "修改shiftlog",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
