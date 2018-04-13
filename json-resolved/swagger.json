@@ -918,7 +918,7 @@
           "required" : false,
           "type" : "integer"
         }, {
-          "name" : "how_much_bady",
+          "name" : "how_much_baby",
           "in" : "query",
           "description" : "幾胞胎",
           "required" : true,
@@ -1994,6 +1994,21 @@
         },
         "need_review" : {
           "type" : "boolean"
+        },
+        "room_number" : {
+          "type" : "string"
+        },
+        "multiple_births" : {
+          "type" : "integer",
+          "example" : "多胞胎的數量，如果只有一胎則為 1"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "check_out" : {
+          "type" : "string",
+          "example" : "Y-m-d"
         }
       }
     },
@@ -2063,7 +2078,7 @@
         "bring_children" : {
           "type" : "integer"
         },
-        "how_much_bady" : {
+        "how_much_baby" : {
           "type" : "integer"
         },
         "stay_with" : {
