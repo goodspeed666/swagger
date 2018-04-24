@@ -2299,6 +2299,12 @@
           "items" : {
             "$ref" : "#/definitions/GetCareInfo_inner_items"
           }
+        },
+        "mon_name" : {
+          "type" : "string"
+        },
+        "room_no" : {
+          "type" : "string"
         }
       }
     }
