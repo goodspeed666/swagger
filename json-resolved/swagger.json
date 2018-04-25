@@ -2305,6 +2305,9 @@
         },
         "room_no" : {
           "type" : "string"
+        },
+        "baby_name" : {
+          "type" : "string"
         }
       }
     }
