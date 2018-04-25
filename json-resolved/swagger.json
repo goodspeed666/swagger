@@ -2037,7 +2037,7 @@
         "need_review" : {
           "type" : "boolean"
         },
-        "room_number" : {
+        "room_no" : {
           "type" : "string"
         },
         "babies" : {
