@@ -1135,7 +1135,7 @@
           "schema" : {
             "type" : "array",
             "items" : {
-              "$ref" : "#/definitions/macro_1"
+              "$ref" : "#/definitions/macro"
             }
           }
         } ],
@@ -1999,33 +1999,6 @@
       }
     },
     "macro" : {
-      "properties" : {
-        "key" : {
-          "type" : "string"
-        },
-        "options" : {
-          "type" : "object",
-          "example" : [ 1, 2, 3 ],
-          "properties" : { }
-        },
-        "external_options" : {
-          "type" : "string"
-        },
-        "value" : {
-          "type" : "number",
-          "example" : "for bar"
-        },
-        "prefix" : {
-          "type" : "string",
-          "example" : "for type 5"
-        },
-        "suffix" : {
-          "type" : "string",
-          "example" : "for type 5"
-        }
-      }
-    },
-    "macro_1" : {
       "properties" : {
         "key" : {
           "type" : "string"
