@@ -1716,6 +1716,7 @@
         },
         "baby_info" : {
           "type" : "string",
+          "example" : "{ [\"bcid\": \"XXX\", \"gender\": 1] }",
           "description" : "baby資料"
         },
         "visit_receptionist" : {
@@ -1750,7 +1751,7 @@
         "visit_receptionist" : 7,
         "maan_birth_order" : 5,
         "give_birth_area" : 0,
-        "baby_info" : "baby_info",
+        "baby_info" : "{ [\"bcid\": \"XXX\", \"gender\": 1] }",
         "your_cs" : 3,
         "give_birth_date" : "give_birth_date",
         "how_much_baby" : 1,
