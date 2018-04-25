@@ -870,97 +870,12 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "due_date",
-          "in" : "query",
-          "description" : "預產期",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "give_birth_date",
-          "in" : "query",
-          "description" : "實際生產日期",
+          "in" : "body",
+          "name" : "body",
           "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "give_birth_area",
-          "in" : "query",
-          "description" : "生產地區",
-          "required" : true,
-          "type" : "integer"
-        }, {
-          "name" : "give_birth_hospital",
-          "in" : "query",
-          "description" : "生產醫院",
-          "required" : true,
-          "type" : "integer"
-        }, {
-          "name" : "give_birth_type",
-          "in" : "query",
-          "description" : "剖腹 or 自然產",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "birth_order",
-          "in" : "query",
-          "description" : "胎次",
-          "required" : true,
-          "type" : "integer"
-        }, {
-          "name" : "maan_birth_order",
-          "in" : "query",
-          "description" : "沁月第幾胎",
-          "required" : false,
-          "type" : "integer"
-        }, {
-          "name" : "bring_children",
-          "in" : "query",
-          "description" : "帶幾個小孩入住",
-          "required" : false,
-          "type" : "integer"
-        }, {
-          "name" : "how_much_baby",
-          "in" : "query",
-          "description" : "幾胞胎",
-          "required" : true,
-          "type" : "integer",
-          "maximum" : 5,
-          "minimum" : 1
-        }, {
-          "name" : "stay_with",
-          "in" : "query",
-          "description" : "留宿者",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "visit_receptionist",
-          "in" : "query",
-          "description" : "參觀接待人",
-          "required" : true,
-          "type" : "integer"
-        }, {
-          "name" : "visit_date",
-          "in" : "query",
-          "description" : "參觀日期",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "signing_receptionist",
-          "in" : "query",
-          "description" : "簽約接待人",
-          "required" : false,
-          "type" : "integer"
-        }, {
-          "name" : "signing_date",
-          "in" : "query",
-          "description" : "簽約日期",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "your_cs",
-          "in" : "query",
-          "description" : "責任客服",
-          "required" : false,
-          "type" : "integer"
+          "schema" : {
+            "$ref" : "#/definitions/CustomerBirthRequest"
+          }
         } ],
         "responses" : {
           "default" : {
@@ -1752,6 +1667,9 @@
         "dad_email" : "dad_email",
         "emergency_contact" : "emergency_contact"
       }
+    },
+    "CustomerBirthRequest" : {
+      "type" : "object"
     },
     "CustomerForgotPassword" : {
       "type" : "object",
