@@ -1050,7 +1050,7 @@
           "schema" : {
             "type" : "array",
             "items" : {
-              "$ref" : "#/definitions/macro"
+              "$ref" : "#/definitions/macro_1"
             }
           }
         } ],
@@ -2005,6 +2005,30 @@
       }
     },
     "macro" : {
+      "properties" : {
+        "key" : {
+          "type" : "string"
+        },
+        "options" : {
+          "type" : "object",
+          "example" : [ 1, 2, 3 ],
+          "properties" : { }
+        },
+        "external_options" : {
+          "type" : "string"
+        },
+        "value" : {
+          "type" : "number",
+          "example" : "for bar"
+        },
+        "values" : {
+          "type" : "object",
+          "example" : [ 4, 5, 6 ],
+          "properties" : { }
+        }
+      }
+    },
+    "macro_1" : {
       "properties" : {
         "key" : {
           "type" : "string"
