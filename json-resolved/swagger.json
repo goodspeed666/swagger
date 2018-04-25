@@ -2023,7 +2023,7 @@
         },
         "values" : {
           "type" : "object",
-          "example" : [ 4, 5, 6 ],
+          "example" : "[4, 5, 6] for type5",
           "properties" : { }
         }
       }
