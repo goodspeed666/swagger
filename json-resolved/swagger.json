@@ -1674,93 +1674,104 @@
     },
     "CustomerBirthRequest" : {
       "type" : "object",
-      "required" : [ "birth_order", "due_date", "give_birth_area", "give_birth_hospital", "how_much_baby", "visit_date", "visit_receptionist" ],
       "properties" : {
         "due_date" : {
           "type" : "string",
-          "description" : "預產期"
+          "example" : "Y-m-d"
         },
         "give_birth_date" : {
           "type" : "string",
-          "description" : "實際生產日期"
+          "example" : "Y-m-d"
         },
         "give_birth_area" : {
-          "type" : "integer",
-          "description" : "生產地區"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
         },
         "give_birth_hospital" : {
-          "type" : "integer",
-          "description" : "生產醫院"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
         },
         "give_birth_type" : {
-          "type" : "string",
-          "description" : "剖腹 or 自然產"
+          "type" : "string"
         },
         "birth_order" : {
-          "type" : "integer",
-          "description" : "胎次"
+          "type" : "integer"
         },
         "maan_birth_order" : {
-          "type" : "integer",
-          "description" : "沁月第幾胎"
+          "type" : "integer"
         },
         "bring_children" : {
-          "type" : "integer",
-          "description" : "帶幾個小孩入住"
+          "type" : "integer"
         },
         "how_much_baby" : {
-          "type" : "integer",
-          "description" : "幾胞胎",
-          "minimum" : 1,
-          "maximum" : 5
-        },
-        "stay_with" : {
-          "type" : "string",
-          "description" : "留宿者"
+          "type" : "integer"
         },
         "baby_info" : {
           "type" : "string",
           "example" : "{ [\"bcid\": \"XXX\", \"gender\": 1] }",
           "description" : "baby資料"
         },
+        "stay_with" : {
+          "type" : "string"
+        },
         "visit_receptionist" : {
-          "type" : "integer",
-          "description" : "參觀接待人"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
         },
         "visit_date" : {
           "type" : "string",
-          "description" : "參觀日期"
+          "example" : "Y-m-d"
         },
         "signing_receptionist" : {
-          "type" : "integer",
-          "description" : "簽約接待人"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
         },
         "signing_date" : {
           "type" : "string",
-          "description" : "簽約日期"
+          "example" : "Y-m-d"
         },
         "your_cs" : {
-          "type" : "integer",
-          "description" : "責任客服"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "check_out" : {
+          "type" : "string",
+          "example" : "Y-m-d"
         }
       },
       "example" : {
         "give_birth_type" : "give_birth_type",
         "stay_with" : "stay_with",
-        "give_birth_hospital" : 6,
-        "due_date" : "due_date",
-        "signing_date" : "signing_date",
-        "birth_order" : 1,
+        "give_birth_hospital" : {
+          "name" : "name",
+          "id" : 0
+        },
+        "check_in" : "Y-m-d",
+        "due_date" : "Y-m-d",
+        "signing_date" : "Y-m-d",
+        "birth_order" : 6,
         "bring_children" : 5,
-        "visit_receptionist" : 7,
-        "maan_birth_order" : 5,
-        "give_birth_area" : 0,
+        "visit_receptionist" : {
+          "name" : "name",
+          "id" : 0
+        },
+        "check_out" : "Y-m-d",
+        "maan_birth_order" : 1,
+        "give_birth_area" : {
+          "name" : "name",
+          "id" : 0
+        },
         "baby_info" : "{ [\"bcid\": \"XXX\", \"gender\": 1] }",
-        "your_cs" : 3,
-        "give_birth_date" : "give_birth_date",
-        "how_much_baby" : 1,
-        "visit_date" : "visit_date",
-        "signing_receptionist" : 9
+        "your_cs" : {
+          "name" : "name",
+          "id" : 0
+        },
+        "give_birth_date" : "Y-m-d",
+        "how_much_baby" : 5,
+        "visit_date" : "Y-m-d",
+        "signing_receptionist" : {
+          "name" : "name",
+          "id" : 0
+        }
       }
     },
     "CustomerForgotPassword" : {
@@ -2088,6 +2099,20 @@
         }
       }
     },
+    "CustomerBirthRequest_give_birth_area" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "name" : "name",
+        "id" : 0
+      }
+    },
     "CustomerConnectList_inner" : {
       "properties" : {
         "id" : {
@@ -2116,16 +2141,6 @@
         }
       }
     },
-    "GetCustomerBirth_inner_give_birth_area" : {
-      "properties" : {
-        "id" : {
-          "type" : "integer"
-        },
-        "name" : {
-          "type" : "string"
-        }
-      }
-    },
     "GetCustomerBirth_inner" : {
       "properties" : {
         "due_date" : {
@@ -2137,10 +2152,10 @@
           "example" : "Y-m-d"
         },
         "give_birth_area" : {
-          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
         },
         "give_birth_hospital" : {
-          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
         },
         "give_birth_type" : {
           "type" : "string"
@@ -2166,21 +2181,21 @@
           "type" : "string"
         },
         "visit_receptionist" : {
-          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
         },
         "visit_date" : {
           "type" : "string",
           "example" : "Y-m-d"
         },
         "signing_receptionist" : {
-          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
         },
         "signing_date" : {
           "type" : "string",
           "example" : "Y-m-d"
         },
         "your_cs" : {
-          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
+          "$ref" : "#/definitions/CustomerBirthRequest_give_birth_area"
         },
         "check_in" : {
           "type" : "string",
