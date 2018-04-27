@@ -909,13 +909,17 @@
           "description" : "The Birth ID of Customer",
           "required" : true,
           "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/GetCustomerBirth"
+          }
         } ],
         "responses" : {
           "default" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/GetCustomerBirth"
-            }
+            "description" : "successful operation"
           },
           "404" : {
             "description" : "No record found"
@@ -2152,6 +2156,11 @@
         },
         "how_much_baby" : {
           "type" : "integer"
+        },
+        "baby_info" : {
+          "type" : "string",
+          "example" : "{ [\"bcid\": \"XXX\", \"gender\": 1] }",
+          "description" : "baby資料"
         },
         "stay_with" : {
           "type" : "string"
