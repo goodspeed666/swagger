@@ -441,7 +441,7 @@
           "200" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/GetCustomers"
+              "$ref" : "#/definitions/GetCustomersIN"
             }
           },
           "404" : {
@@ -1576,6 +1576,12 @@
       }
     },
     "GetCustomers" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCustomers_inner"
+      }
+    },
+    "GetCustomersIN" : {
       "type" : "array",
       "items" : {
         "$ref" : "#/definitions/GetCustomers_inner"
