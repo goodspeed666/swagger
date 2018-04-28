@@ -1584,7 +1584,7 @@
     "GetCustomersIN" : {
       "type" : "array",
       "items" : {
-        "$ref" : "#/definitions/GetCustomers_inner"
+        "$ref" : "#/definitions/GetCustomersIN_inner"
       }
     },
     "GetCustomer" : {
@@ -2123,6 +2123,40 @@
         }
       }
     },
+    "GetCustomersIN_inner" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "cid" : {
+          "type" : "string"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "home_phone" : {
+          "type" : "string"
+        },
+        "room_no" : {
+          "type" : "string"
+        },
+        "babies" : {
+          "type" : "string",
+          "example" : "{ ['id' => 0, 'name' => 'XXX'] }"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "check_out" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        }
+      }
+    },
     "CustomerConnectList_inner" : {
       "properties" : {
         "id" : {
@@ -2356,6 +2390,11 @@
         },
         "value" : {
           "type" : "number"
+        },
+        "values" : {
+          "type" : "object",
+          "example" : [ 1, 2, 3 ],
+          "properties" : { }
         }
       }
     },
