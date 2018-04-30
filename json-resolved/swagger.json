@@ -269,6 +269,11 @@
           "in" : "query",
           "required" : false,
           "type" : "integer"
+        }, {
+          "name" : "checked_in",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
         } ],
         "responses" : {
           "200" : {
@@ -417,35 +422,6 @@
           },
           "400" : {
             "description" : "Customized error message"
-          }
-        }
-      }
-    },
-    "/customers_in" : {
-      "get" : {
-        "tags" : [ "customer" ],
-        "summary" : "取得客戶清單 for APP",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "token",
-          "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "page",
-          "in" : "query",
-          "required" : false,
-          "type" : "integer"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/GetCustomersIN"
-            }
-          },
-          "404" : {
-            "description" : "No data"
           }
         }
       }
@@ -1581,12 +1557,6 @@
         "$ref" : "#/definitions/GetCustomers_inner"
       }
     },
-    "GetCustomersIN" : {
-      "type" : "array",
-      "items" : {
-        "$ref" : "#/definitions/GetCustomersIN_inner"
-      }
-    },
     "GetCustomer" : {
       "type" : "object",
       "properties" : {
@@ -2105,40 +2075,6 @@
         },
         "need_review" : {
           "type" : "boolean"
-        },
-        "room_no" : {
-          "type" : "string"
-        },
-        "babies" : {
-          "type" : "string",
-          "example" : "{ ['id' => 0, 'name' => 'XXX'] }"
-        },
-        "check_in" : {
-          "type" : "string",
-          "example" : "Y-m-d"
-        },
-        "check_out" : {
-          "type" : "string",
-          "example" : "Y-m-d"
-        }
-      }
-    },
-    "GetCustomersIN_inner" : {
-      "properties" : {
-        "id" : {
-          "type" : "integer"
-        },
-        "name" : {
-          "type" : "string"
-        },
-        "cid" : {
-          "type" : "string"
-        },
-        "mobile_phone" : {
-          "type" : "string"
-        },
-        "home_phone" : {
-          "type" : "string"
         },
         "room_no" : {
           "type" : "string"
