@@ -992,11 +992,6 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "birth_id",
-          "in" : "query",
-          "required" : true,
-          "type" : "integer"
-        }, {
           "name" : "baby_id",
           "in" : "query",
           "required" : true,
@@ -1343,6 +1338,30 @@
             "schema" : {
               "$ref" : "#/definitions/SearchRole"
             }
+          }
+        }
+      }
+    },
+    "/common/type/customer_status" : {
+      "get" : {
+        "tags" : [ "common" ],
+        "summary" : "取得客戶狀態",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCommonType"
+            }
+          },
+          "404" : {
+            "description" : "The type is empty or does not exist"
           }
         }
       }
@@ -2081,7 +2100,10 @@
         },
         "babies" : {
           "type" : "string",
-          "example" : "{ ['id' => 0, 'name' => 'XXX'] }"
+          "example" : "{ ['baby_id' => 0, 'name' => 'XXX'] }"
+        },
+        "current_birth" : {
+          "type" : "integer"
         },
         "check_in" : {
           "type" : "string",
