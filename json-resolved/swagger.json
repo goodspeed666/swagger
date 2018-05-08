@@ -2112,6 +2112,11 @@
         "check_out" : {
           "type" : "string",
           "example" : "Y-m-d"
+        },
+        "status" : {
+          "type" : "object",
+          "example" : "{ ['id' => 0, 'name' => 'XXX'] }",
+          "properties" : { }
         }
       }
     },
@@ -2216,6 +2221,10 @@
         "check_out" : {
           "type" : "string",
           "example" : "Y-m-d"
+        },
+        "baby_care" : {
+          "type" : "boolean",
+          "example" : false
         }
       }
     },
