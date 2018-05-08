@@ -849,6 +849,11 @@
           "description" : "Customer ID",
           "required" : true,
           "type" : "string"
+        }, {
+          "name" : "baby_id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
         } ],
         "responses" : {
           "default" : {
