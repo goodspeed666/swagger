@@ -2104,19 +2104,6 @@
         },
         "current_birth" : {
           "type" : "integer"
-        },
-        "check_in" : {
-          "type" : "string",
-          "example" : "Y-m-d"
-        },
-        "check_out" : {
-          "type" : "string",
-          "example" : "Y-m-d"
-        },
-        "status" : {
-          "type" : "object",
-          "example" : "{ ['id' => 0, 'name' => 'XXX'] }",
-          "properties" : { }
         }
       }
     },
