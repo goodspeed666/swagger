@@ -289,7 +289,7 @@
       },
       "post" : {
         "tags" : [ "customer" ],
-        "summary" : "新增客戶資料",
+        "summary" : "新增客戶資料(新增參觀單資料)",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -1665,6 +1665,19 @@
         "branch" : {
           "type" : "string",
           "example" : "{\"id\": 0, \"name\": \"XXX\"}"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "check_out" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "status" : {
+          "type" : "object",
+          "example" : "{ ['id' => 0, 'name' => 'XXX'] }",
+          "properties" : { }
         }
       },
       "example" : {
@@ -1674,6 +1687,7 @@
         "unified_num" : "統一證號（跟身份證字號則一輸入）",
         "branch" : "{\"id\": 0, \"name\": \"XXX\"}",
         "emergency_phone" : "emergency_phone",
+        "check_out" : "Y-m-d",
         "dad_mobile" : "dad_mobile",
         "updated_at" : "Y-m-d H:i:s",
         "pos" : "郵遞區號",
@@ -1683,6 +1697,7 @@
         "email" : "email",
         "home_phone" : "home_phone",
         "address" : "address",
+        "check_in" : "Y-m-d",
         "howto_know" : "howto_know",
         "dad_birth" : "Y-m-d",
         "birth" : "Y-m-d",
@@ -1693,7 +1708,8 @@
         "during_checkin" : "during_checkin",
         "cid" : "前三碼要抓出來，不能改",
         "dad_email" : "dad_email",
-        "emergency_contact" : "emergency_contact"
+        "emergency_contact" : "emergency_contact",
+        "status" : "{ ['id' => 0, 'name' => 'XXX'] }"
       }
     },
     "CustomerBirthRequest" : {
