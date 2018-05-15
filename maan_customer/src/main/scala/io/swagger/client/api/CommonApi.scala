@@ -37,7 +37,7 @@ object CommonApi {
    *   code 200 : SearchCustomer (successful operation)
    * 
    * @param token 
-   * @param keyword 請輸入姓名或身分證字號或統一證號搜尋
+   * @param keyword 請輸入姓名或身分證字號或統一證號, email,手機號碼搜尋
    */
   def commonSearchCustomerGet(token: String, keyword: String): ApiRequest[SearchCustomer] =
     ApiRequest[SearchCustomer](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/search/customer", "application/json")
