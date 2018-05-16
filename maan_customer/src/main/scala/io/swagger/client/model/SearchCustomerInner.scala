@@ -15,7 +15,7 @@ case class SearchCustomerInner (
   name: Option[String],
   dueDate: Option[String],
   mobilePhone: Option[String],
-  status: Option[Boolean]
+  status: Option[Any]
 ) extends ApiModel
 
 
