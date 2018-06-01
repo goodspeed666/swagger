@@ -1678,6 +1678,10 @@
           "type" : "object",
           "example" : "{ ['id' => 0, 'name' => 'XXX'] }",
           "properties" : { }
+        },
+        "babies" : {
+          "type" : "string",
+          "example" : "{ ['baby_id' => 0, 'name' => 'XXX'] }"
         }
       },
       "example" : {
@@ -1685,6 +1689,7 @@
         "plate_num" : "plate_num",
         "created_at" : "YY-m-d H:i:s",
         "unified_num" : "統一證號（跟身份證字號則一輸入）",
+        "babies" : "{ ['baby_id' => 0, 'name' => 'XXX'] }",
         "branch" : "{\"id\": 0, \"name\": \"XXX\"}",
         "emergency_phone" : "emergency_phone",
         "check_out" : "Y-m-d",
