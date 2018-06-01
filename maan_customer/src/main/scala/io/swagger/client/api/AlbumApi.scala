@@ -124,9 +124,11 @@ object AlbumApi {
    *   code 200 : AlbumList (successful operation)
    * 
    * @param token 
+   * @param branch 
    */
-  def albumsGetYearsGet(token: String): ApiRequest[AlbumList] =
+  def albumsGetYearsGet(token: String, branch: Int): ApiRequest[AlbumList] =
     ApiRequest[AlbumList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/albums/get_years", "application/json")
+      .withQueryParam("branch", branch)
       .withHeaderParam("token", token)
       .withSuccessResponse[AlbumList](200)
         /**
