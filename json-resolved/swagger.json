@@ -2391,6 +2391,9 @@
         "mon_name" : {
           "type" : "string"
         },
+        "cid" : {
+          "type" : "string"
+        },
         "room_no" : {
           "type" : "string"
         },
