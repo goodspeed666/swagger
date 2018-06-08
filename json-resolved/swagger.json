@@ -2405,7 +2405,7 @@
         },
         "baby_id" : {
           "type" : "string",
-          "example" : "baby才會出現"
+          "example" : "當日且baby才會出現"
         }
       }
     }
