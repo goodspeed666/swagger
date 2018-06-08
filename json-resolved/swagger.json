@@ -2399,6 +2399,9 @@
         },
         "baby_name" : {
           "type" : "string"
+        },
+        "editable" : {
+          "type" : "boolean"
         }
       }
     }
