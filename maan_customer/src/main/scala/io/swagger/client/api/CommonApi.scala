@@ -132,6 +132,18 @@ object CommonApi {
    * 
    * @param token 
    */
+  def commonTypeLadningGet(token: String): ApiRequest[GetPeriod] =
+    ApiRequest[GetPeriod](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/ladning", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[GetPeriod](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : GetPeriod (successful operation)
+   * 
+   * @param token 
+   */
   def commonTypeNotificationGet(token: String): ApiRequest[GetPeriod] =
     ApiRequest[GetPeriod](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/notification", "application/json")
       .withHeaderParam("token", token)

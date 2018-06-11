@@ -14,7 +14,7 @@ case class NotificationListInner (
   id: Option[Int],
   `type`: Option[Int],
   message: Option[String],
-  landing: Option[Int],
+  landing: Option[Any],
   target: Option[Int],
   targetDueStart: Option[String],
   targetDueEnd: Option[String],
