@@ -96,9 +96,11 @@ object SurveyApi {
    *   code 200 : GetSurvey (successful operation)
    * 
    * @param token 
+   * @param sid 
    */
-  def surveysSidGet(token: String): ApiRequest[GetSurvey] =
+  def surveysSidGet(token: String, sid: Int): ApiRequest[GetSurvey] =
     ApiRequest[GetSurvey](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{sid}", "application/json")
+      .withPathParam("sid", sid)
       .withHeaderParam("token", token)
       .withSuccessResponse[GetSurvey](200)
         /**
