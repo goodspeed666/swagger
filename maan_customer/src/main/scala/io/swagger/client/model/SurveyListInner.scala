@@ -16,6 +16,7 @@ case class SurveyListInner (
   `type`: Option[Int],
   title: Option[String],
   startTime: Option[String],
+  applied: Option[Int],
   status: Option[String],
   createdAt: Option[String],
   questions: Option[Seq[SurveyListInnerQuestions]]

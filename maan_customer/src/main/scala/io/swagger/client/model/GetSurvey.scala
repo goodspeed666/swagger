@@ -19,6 +19,8 @@ case class GetSurvey (
   target: Option[Int],
   applied: Option[Int],
   status: Option[String],
+  header: Option[String],
+  footer: Option[String],
   createdAt: Option[String],
   questions: Option[Seq[SurveyListInnerQuestions]]
 ) extends ApiModel
