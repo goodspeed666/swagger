@@ -12,10 +12,11 @@ import java.util.UUID
 
 case class GetSurvey (
   sid: Option[Int],
-  tid: Option[Int],
   `type`: Option[Int],
   title: Option[String],
   startTime: Option[String],
+  during: Option[Int],
+  target: Option[Int],
   applied: Option[Int],
   status: Option[String],
   createdAt: Option[String],
