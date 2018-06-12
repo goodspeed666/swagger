@@ -5,6 +5,7 @@
  */
 package io.swagger.client.api
 
+import io.swagger.client.model.GetSurvey
 import io.swagger.client.model.GetSurveyReport
 import io.swagger.client.model.GetSurveyTitle
 import io.swagger.client.model.InsertReturn
@@ -88,6 +89,18 @@ object SurveyApi {
       .withQueryParam("end_date", endDate)
       .withHeaderParam("token", token)
       .withSuccessResponse[GetSurveyReport](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : GetSurvey (successful operation)
+   * 
+   * @param token 
+   */
+  def surveysSidGet(token: String): ApiRequest[GetSurvey] =
+    ApiRequest[GetSurvey](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/{sid}", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[GetSurvey](200)
         /**
    * 
    * 
