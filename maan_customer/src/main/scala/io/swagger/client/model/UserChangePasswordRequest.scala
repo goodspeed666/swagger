@@ -12,7 +12,8 @@ import java.util.UUID
 
 case class UserChangePasswordRequest (
   password: String,
-  confirmPassword: String
+  confirmPassword: String,
+  forgotPass: String
 ) extends ApiModel
 
 
