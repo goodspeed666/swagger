@@ -7,6 +7,7 @@ package io.swagger.client.api
 
 import io.swagger.client.model.InsertReturn
 import io.swagger.client.model.UploadProfilePicRequest
+import io.swagger.client.model.User
 import io.swagger.client.model.UserChangePasswordRequest
 import io.swagger.client.model.UserData
 import io.swagger.client.model.UserList
@@ -61,6 +62,20 @@ object UserApi {
     ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/users/logout", "application/json")
       .withHeaderParam("token", token)
       .withDefaultSuccessResponse[Unit]
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : User (successful operation)
+   *   code 400 :  (An error while decoding token.)
+   * 
+   * @param token 
+   */
+  def usersMeGet(token: String): ApiRequest[User] =
+    ApiRequest[User](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/users/me", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[User](200)
+      .withErrorResponse[Unit](400)
         /**
    * 
    * 
