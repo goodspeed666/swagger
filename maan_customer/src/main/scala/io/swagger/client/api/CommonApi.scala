@@ -12,6 +12,7 @@ import io.swagger.client.model.GetCourseType
 import io.swagger.client.model.GetGreetings
 import io.swagger.client.model.GetPeriod
 import io.swagger.client.model.SearchCustomer
+import io.swagger.client.model.SearchRole
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -44,6 +45,22 @@ object CommonApi {
       .withQueryParam("keyword", keyword)
       .withHeaderParam("token", token)
       .withSuccessResponse[SearchCustomer](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : SearchRole (successful operation)
+   * 
+   * @param token 
+   * @param role 客服是CS
+   * @param keyword 請輸入要搜尋的姓名或帳號關鍵字
+   */
+  def commonSearchGet(token: String, role: String, keyword: String): ApiRequest[SearchRole] =
+    ApiRequest[SearchRole](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/search", "application/json")
+      .withQueryParam("role", role)
+      .withQueryParam("keyword", keyword)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[SearchRole](200)
         /**
    * 
    * 
