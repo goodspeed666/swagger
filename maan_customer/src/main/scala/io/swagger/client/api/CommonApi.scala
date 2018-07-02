@@ -65,14 +65,14 @@ object CommonApi {
    * 
    * 
    * Expected answers:
-   *   code 200 : GetGreetings (successful operation)
+   *   code 200 : GetPeriod (successful operation)
    * 
    * @param token 
    */
-  def commonTypeAlbumKindGet(token: String): ApiRequest[GetGreetings] =
-    ApiRequest[GetGreetings](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/album_kind", "application/json")
+  def commonTypeAlbumKindGet(token: String): ApiRequest[GetPeriod] =
+    ApiRequest[GetPeriod](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/album_kind", "application/json")
       .withHeaderParam("token", token)
-      .withSuccessResponse[GetGreetings](200)
+      .withSuccessResponse[GetPeriod](200)
         /**
    * 
    * 
