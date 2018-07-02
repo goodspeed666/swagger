@@ -65,6 +65,18 @@ object CommonApi {
    * 
    * 
    * Expected answers:
+   *   code 200 : GetGreetings (successful operation)
+   * 
+   * @param token 
+   */
+  def commonTypeAlbumKindGet(token: String): ApiRequest[GetGreetings] =
+    ApiRequest[GetGreetings](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/album_kind", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[GetGreetings](200)
+        /**
+   * 
+   * 
+   * Expected answers:
    *   code 200 : GetBranch (successful operation)
    * 
    * @param token 
