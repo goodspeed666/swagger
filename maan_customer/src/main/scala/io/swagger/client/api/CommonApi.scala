@@ -68,9 +68,11 @@ object CommonApi {
    *   code 200 : GetPeriod (successful operation)
    * 
    * @param token 
+   * @param branch 
    */
-  def commonTypeAlbumKindGet(token: String): ApiRequest[GetPeriod] =
+  def commonTypeAlbumKindGet(token: String, branch: Int): ApiRequest[GetPeriod] =
     ApiRequest[GetPeriod](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/type/album_kind", "application/json")
+      .withQueryParam("branch", branch)
       .withHeaderParam("token", token)
       .withSuccessResponse[GetPeriod](200)
         /**
