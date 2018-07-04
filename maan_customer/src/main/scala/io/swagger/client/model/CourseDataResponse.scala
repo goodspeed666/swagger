@@ -26,6 +26,8 @@ case class CourseDataResponse (
   isExtra: Option[Boolean],
   condition1: Option[String],
   condition2: Option[Int],
+  background: Option[String],
+  description: Option[String],
   status: Boolean
 ) extends ApiModel
 
