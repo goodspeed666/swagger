@@ -11,7 +11,7 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class SearchCustomerInner (
-  czid: Option[Int],
+  cid: Option[Int],
   name: Option[String],
   dueDate: Option[String],
   mobilePhone: Option[String],
