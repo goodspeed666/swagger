@@ -526,7 +526,7 @@
     "/customers/connect" : {
       "post" : {
         "tags" : [ "customer" ],
-        "summary" : "連接客戶帳號 (define OK, incomplete)",
+        "summary" : "連接客戶帳號",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
