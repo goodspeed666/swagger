@@ -1883,7 +1883,7 @@
           "type" : "integer",
           "example" : "from GET /customers/connect"
         },
-        "uid" : {
+        "unique_id" : {
           "type" : "string",
           "example" : "Unique ID"
         },
@@ -1899,7 +1899,7 @@
         }
       },
       "example" : {
-        "uid" : "Unique ID",
+        "unique_id" : "Unique ID",
         "connect_id" : "from GET /customers/connect",
         "name" : "name",
         "id_num" : "id_num",
