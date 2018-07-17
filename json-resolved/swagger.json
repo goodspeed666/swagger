@@ -541,7 +541,10 @@
             "description" : "successful operation"
           },
           "201" : {
-            "description" : "successful operation"
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/InsertReturn"
+            }
           },
           "400" : {
             "description" : "The account has been connected to another user."
@@ -552,7 +555,7 @@
     "/customers/register" : {
       "post" : {
         "tags" : [ "customer" ],
-        "summary" : "註冊客戶帳號 (define OK, incomplete)",
+        "summary" : "註冊客戶帳號",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
@@ -1878,7 +1881,7 @@
       "properties" : {
         "connect_id" : {
           "type" : "integer",
-          "example" : "from GET /customers/{customer_id}/connect"
+          "example" : "from GET /customers/connect"
         },
         "uid" : {
           "type" : "string",
@@ -1897,7 +1900,7 @@
       },
       "example" : {
         "uid" : "Unique ID",
-        "connect_id" : "from GET /customers/{customer_id}/connect",
+        "connect_id" : "from GET /customers/connect",
         "name" : "name",
         "id_num" : "id_num",
         "birth" : "Y-m-d"
