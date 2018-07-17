@@ -429,7 +429,7 @@
     "/customers/login" : {
       "post" : {
         "tags" : [ "customer" ],
-        "summary" : "客戶一般登入 (define OK, incomplete)",
+        "summary" : "客戶一般登入",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -538,6 +538,9 @@
         } ],
         "responses" : {
           "200" : {
+            "description" : "successful operation"
+          },
+          "201" : {
             "description" : "successful operation"
           },
           "400" : {
