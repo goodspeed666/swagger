@@ -1877,7 +1877,7 @@
     },
     "CustomerRegister" : {
       "type" : "object",
-      "required" : [ "birth", "connect_id", "id_num", "name" ],
+      "required" : [ "birth", "id_num", "name" ],
       "properties" : {
         "connect_id" : {
           "type" : "integer",
