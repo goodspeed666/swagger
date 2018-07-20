@@ -274,6 +274,12 @@
           "in" : "query",
           "required" : false,
           "type" : "integer"
+        }, {
+          "name" : "birth_status",
+          "in" : "query",
+          "description" : "80:潛在客戶, 81:已預約未入住, 82:",
+          "required" : false,
+          "type" : "integer"
         } ],
         "responses" : {
           "200" : {
