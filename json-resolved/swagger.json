@@ -272,12 +272,13 @@
         }, {
           "name" : "checked_in",
           "in" : "query",
+          "description" : "1:為入住中",
           "required" : false,
-          "type" : "integer"
+          "type" : "boolean"
         }, {
           "name" : "birth_status",
           "in" : "query",
-          "description" : "80:潛在客戶, 81:已預約未入住, 82:",
+          "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館",
           "required" : false,
           "type" : "integer"
         } ],
