@@ -13,7 +13,7 @@ import java.util.UUID
 case class SearchRoleInner (
   id: Option[String],
   name: Option[String],
-  status: Option[Int],
+  status: Option[Seq[ERRORUNKNOWN]],
   roomNo: Option[String]
 ) extends ApiModel
 
