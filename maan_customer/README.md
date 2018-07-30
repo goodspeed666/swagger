@@ -124,13 +124,13 @@ Class | Method | HTTP request | Description
 *SurveyApi* | [**surveysSidTidDelete**](SurveyApi.md#surveysSidTidDelete) | **DELETE** /surveys/{sid}/{tid} | Destroy survey setting
 *SurveyApi* | [**surveysSidTidGet**](SurveyApi.md#surveysSidTidGet) | **GET** /surveys/{sid}/{tid} | Get survey list
 *SurveyApi* | [**surveysSidTidPost**](SurveyApi.md#surveysSidTidPost) | **POST** /surveys/{sid}/{tid} | Update survey setting
+*UserApi* | [**usersChangePassword2Post**](UserApi.md#usersChangePassword2Post) | **POST** /users/change_password2 | Update self password
 *UserApi* | [**usersGet**](UserApi.md#usersGet) | **GET** /users | Get user list
 *UserApi* | [**usersLoginPost**](UserApi.md#usersLoginPost) | **POST** /users/login | Logs user into the system
 *UserApi* | [**usersLogoutPost**](UserApi.md#usersLogoutPost) | **POST** /users/logout | Logout
 *UserApi* | [**usersMeGet**](UserApi.md#usersMeGet) | **GET** /users/me | Get myself information
 *UserApi* | [**usersMePost**](UserApi.md#usersMePost) | **POST** /users/me | Update user data
 *UserApi* | [**usersPost**](UserApi.md#usersPost) | **POST** /users | Store user
-*UserApi* | [**usersUserIdChangePassword2Post**](UserApi.md#usersUserIdChangePassword2Post) | **POST** /users/{user_id}/change_password2 | Update self password
 *UserApi* | [**usersUserIdChangePasswordPost**](UserApi.md#usersUserIdChangePasswordPost) | **POST** /users/{user_id}/change_password | Update password
 *UserApi* | [**usersUserIdPost**](UserApi.md#usersUserIdPost) | **POST** /users/{user_id} | Update user data
 *UserApi* | [**usersUserIdResetGet**](UserApi.md#usersUserIdResetGet) | **GET** /users/{user_id}/reset | Reset user password, send mail to change password
