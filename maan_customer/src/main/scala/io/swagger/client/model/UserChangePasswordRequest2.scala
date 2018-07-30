@@ -11,6 +11,7 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class UserChangePasswordRequest2 (
+  originalPassword: String,
   password: String,
   confirmPassword: String
 ) extends ApiModel
