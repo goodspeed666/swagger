@@ -9,6 +9,7 @@ import io.swagger.client.model.InsertReturn
 import io.swagger.client.model.UploadProfilePicRequest
 import io.swagger.client.model.User
 import io.swagger.client.model.UserChangePasswordRequest
+import io.swagger.client.model.UserChangePasswordRequest2
 import io.swagger.client.model.UserData
 import io.swagger.client.model.UserList
 import io.swagger.client.model.UserRequest
@@ -104,6 +105,22 @@ object UserApi {
       .withBody(body)
       .withHeaderParam("token", token)
       .withSuccessResponse[InsertReturn](201)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 :  (successful operation)
+   * 
+   * @param token 
+   * @param userId 
+   * @param body 
+   */
+  def usersUserIdChangePassword2Post(token: String, userId: Int, body: Option[UserChangePasswordRequest2] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/users/{user_id}/change_password2", "application/json")
+      .withBody(body)
+      .withPathParam("user_id", userId)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[Unit](200)
         /**
    * 
    * 

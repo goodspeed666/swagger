@@ -10,14 +10,9 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class SearchCustomerInner (
-  id: Option[Int],
-  cid: Option[Int],
-  name: Option[String],
-  dueDate: Option[String],
-  mobilePhone: Option[String],
-  roomNo: Option[String],
-  status: Option[Any]
+case class UserChangePasswordRequest2 (
+  password: String,
+  confirmPassword: String
 ) extends ApiModel
 
 
