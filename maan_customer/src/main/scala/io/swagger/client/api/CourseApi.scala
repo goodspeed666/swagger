@@ -192,10 +192,12 @@ object CourseApi {
    * 
    * @param token 
    * @param page 
+   * @param newest 
    */
-  def coursesGet(token: String, page: Option[Int] = None): ApiRequest[CourseList] =
+  def coursesGet(token: String, page: Option[Int] = None, newest: Option[Int] = None): ApiRequest[CourseList] =
     ApiRequest[CourseList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/courses", "application/json")
       .withQueryParam("page", page)
+      .withQueryParam("newest", newest)
       .withHeaderParam("token", token)
       .withSuccessResponse[CourseList](200)
         /**
