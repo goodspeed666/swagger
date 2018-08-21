@@ -118,9 +118,10 @@ Class | Method | HTTP request | Description
 *OrganizationApi* | [**organizationPost**](OrganizationApi.md#organizationPost) | **POST** /organization | Store organization
 *SurveyApi* | [**surveysCommentPost**](SurveyApi.md#surveysCommentPost) | **POST** /surveys/comment | Store survey comment
 *SurveyApi* | [**surveysGet**](SurveyApi.md#surveysGet) | **GET** /surveys | Get survey list
-*SurveyApi* | [**surveysGetTitleGet**](SurveyApi.md#surveysGetTitleGet) | **GET** /surveys/get_title | Get survey title
+*SurveyApi* | [**surveysGetTitleGet**](SurveyApi.md#surveysGetTitleGet) | **GET** /surveys/get_title | Get survey title for type 67 系統
 *SurveyApi* | [**surveysPost**](SurveyApi.md#surveysPost) | **POST** /surveys | Store survey setting
 *SurveyApi* | [**surveysReportGet**](SurveyApi.md#surveysReportGet) | **GET** /surveys/report | Get survey report
+*SurveyApi* | [**surveysSidTidCidGet**](SurveyApi.md#surveysSidTidCidGet) | **GET** /surveys/{sid}/{tid}/{cid} | Get someone survey
 *SurveyApi* | [**surveysSidTidDelete**](SurveyApi.md#surveysSidTidDelete) | **DELETE** /surveys/{sid}/{tid} | Destroy survey setting
 *SurveyApi* | [**surveysSidTidGet**](SurveyApi.md#surveysSidTidGet) | **GET** /surveys/{sid}/{tid} | Get survey list
 *SurveyApi* | [**surveysSidTidPost**](SurveyApi.md#surveysSidTidPost) | **POST** /surveys/{sid}/{tid} | Update survey setting
@@ -175,6 +176,7 @@ Class | Method | HTTP request | Description
  - [GetGreetingsInner](GetGreetingsInner.md)
  - [GetPeriod](GetPeriod.md)
  - [GetSurvey](GetSurvey.md)
+ - [GetSurveyDetail](GetSurveyDetail.md)
  - [GetSurveyQuestions](GetSurveyQuestions.md)
  - [GetSurveyReport](GetSurveyReport.md)
  - [GetSurveyReportAdminComment](GetSurveyReportAdminComment.md)
