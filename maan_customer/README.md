@@ -177,6 +177,7 @@ Class | Method | HTTP request | Description
  - [GetPeriod](GetPeriod.md)
  - [GetSurvey](GetSurvey.md)
  - [GetSurveyDetail](GetSurveyDetail.md)
+ - [GetSurveyDetailQuestions](GetSurveyDetailQuestions.md)
  - [GetSurveyQuestions](GetSurveyQuestions.md)
  - [GetSurveyReport](GetSurveyReport.md)
  - [GetSurveyReportAdminComment](GetSurveyReportAdminComment.md)

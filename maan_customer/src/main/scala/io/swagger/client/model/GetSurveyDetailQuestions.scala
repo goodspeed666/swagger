@@ -10,18 +10,14 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class GetSurveyDetail (
-  title: Option[String],
-  startTime: Option[String],
-  during: Option[Int],
-  targetDueStart: Option[String],
-  targetDueEnd: Option[String],
-  notify: Option[Boolean],
-  status: Option[Boolean],
-  header: Option[String],
-  footer: Option[String],
-  createdAt: Option[String],
-  questions: Option[Seq[GetSurveyDetailQuestions]]
+case class GetSurveyDetailQuestions (
+  cfgid: Option[Int],
+  name: Option[String],
+  kind: Option[Int],
+  options: Option[String],
+  weight: Option[Int],
+  delta: Option[String],
+  other: Option[String]
 ) extends ApiModel
 
 
