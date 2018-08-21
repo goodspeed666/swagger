@@ -15,6 +15,7 @@ case class GetSurveyReport (
   title: Option[String],
   teacher: Option[String],
   location: Option[String],
+  startTime: Option[String],
   quota: Option[Int],
   questions: Option[Seq[GetSurveyReportQuestions]],
   photos: Option[Seq[CourseActivityResponsePhotos]],
