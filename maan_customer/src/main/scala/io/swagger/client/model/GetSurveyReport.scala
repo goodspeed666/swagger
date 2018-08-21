@@ -11,6 +11,7 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class GetSurveyReport (
+  title: Option[String],
   quota: Option[Int],
   questions: Option[Seq[GetSurveyReportQuestions]],
   photos: Option[Seq[CourseActivityResponsePhotos]],
