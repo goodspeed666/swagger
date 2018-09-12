@@ -17,7 +17,7 @@ case class GetSurvey (
   startTime: Option[String],
   during: Option[Int],
   target: Option[Int],
-  targetList: Option[Seq[CourseActivityRequestAppliedPeople]],
+  targetList: Option[Seq[GetSurveyTargetList]],
   targetDueStart: Option[String],
   targetDueEnd: Option[String],
   notify: Option[Boolean],

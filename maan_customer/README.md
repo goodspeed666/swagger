@@ -183,6 +183,7 @@ Class | Method | HTTP request | Description
  - [GetSurveyReportAdminComment](GetSurveyReportAdminComment.md)
  - [GetSurveyReportOptions](GetSurveyReportOptions.md)
  - [GetSurveyReportQuestions](GetSurveyReportQuestions.md)
+ - [GetSurveyTargetList](GetSurveyTargetList.md)
  - [GetSurveyTitle](GetSurveyTitle.md)
  - [GetSurveyTitleInner](GetSurveyTitleInner.md)
  - [InsertReturn](InsertReturn.md)
