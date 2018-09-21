@@ -1011,13 +1011,10 @@
           "type" : "integer"
         }, {
           "in" : "body",
-          "name" : "macro",
-          "required" : true,
+          "name" : "body",
+          "required" : false,
           "schema" : {
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/definitions/macro"
-            }
+            "$ref" : "#/definitions/CustomerCareRequest"
           }
         } ],
         "responses" : {
@@ -1067,7 +1064,7 @@
           "schema" : {
             "type" : "array",
             "items" : {
-              "$ref" : "#/definitions/macro_1"
+              "$ref" : "#/definitions/macro"
             }
           }
         } ],
@@ -1976,6 +1973,37 @@
         "$ref" : "#/definitions/GetCareInfo_inner"
       }
     },
+    "CustomerCareRequest" : {
+      "type" : "object",
+      "required" : [ "macro" ],
+      "properties" : {
+        "created_at" : {
+          "type" : "string"
+        },
+        "macro" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/CustomerCareRequest_macro"
+          }
+        }
+      },
+      "example" : {
+        "macro" : [ {
+          "values" : "[4, 5, 6] for type5",
+          "options" : [ 1, 2, 3 ],
+          "external_options" : "external_options",
+          "value" : "for bar",
+          "key" : "key"
+        }, {
+          "values" : "[4, 5, 6] for type5",
+          "options" : [ 1, 2, 3 ],
+          "external_options" : "external_options",
+          "value" : "for bar",
+          "key" : "key"
+        } ],
+        "created_at" : "created_at"
+      }
+    },
     "Care" : {
       "type" : "object",
       "properties" : {
@@ -2067,30 +2095,6 @@
       }
     },
     "macro" : {
-      "properties" : {
-        "key" : {
-          "type" : "string"
-        },
-        "options" : {
-          "type" : "object",
-          "example" : [ 1, 2, 3 ],
-          "properties" : { }
-        },
-        "external_options" : {
-          "type" : "string"
-        },
-        "value" : {
-          "type" : "number",
-          "example" : "for bar"
-        },
-        "values" : {
-          "type" : "object",
-          "example" : "[4, 5, 6] for type5",
-          "properties" : { }
-        }
-      }
-    },
-    "macro_1" : {
       "properties" : {
         "key" : {
           "type" : "string"
@@ -2420,6 +2424,37 @@
           "type" : "string",
           "example" : "當日且baby才會出現"
         }
+      }
+    },
+    "CustomerCareRequest_macro" : {
+      "properties" : {
+        "key" : {
+          "type" : "string"
+        },
+        "options" : {
+          "type" : "object",
+          "example" : [ 1, 2, 3 ],
+          "properties" : { }
+        },
+        "external_options" : {
+          "type" : "string"
+        },
+        "value" : {
+          "type" : "number",
+          "example" : "for bar"
+        },
+        "values" : {
+          "type" : "object",
+          "example" : "[4, 5, 6] for type5",
+          "properties" : { }
+        }
+      },
+      "example" : {
+        "values" : "[4, 5, 6] for type5",
+        "options" : [ 1, 2, 3 ],
+        "external_options" : "external_options",
+        "value" : "for bar",
+        "key" : "key"
       }
     }
   }
