@@ -54,10 +54,12 @@ object CommonApi {
    * @param token 
    * @param role 客服是CS
    * @param keyword 請輸入要搜尋的姓名或帳號關鍵字
+   * @param status 狀態(不輸入為不過濾狀態, 0:關閉, 1:開啟)
    */
-  def commonSearchGet(token: String, role: String, keyword: String): ApiRequest[SearchRole] =
+  def commonSearchGet(token: String, role: String, keyword: String, status: Option[Boolean] = None): ApiRequest[SearchRole] =
     ApiRequest[SearchRole](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/search", "application/json")
       .withQueryParam("role", role)
+      .withQueryParam("status", status)
       .withQueryParam("keyword", keyword)
       .withHeaderParam("token", token)
       .withSuccessResponse[SearchRole](200)
