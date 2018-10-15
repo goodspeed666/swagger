@@ -2181,6 +2181,13 @@
         },
         "current_birth" : {
           "type" : "integer"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "null"
+        },
+        "check_out" : {
+          "type" : "string"
         }
       }
     },
@@ -2255,7 +2262,7 @@
         },
         "baby_info" : {
           "type" : "string",
-          "example" : "{ [\"bcid\": \"XXX\", \"gender\": 1] }",
+          "example" : "{ [\"bcid\": \"XXX\", \"gender\": 1, \"height\": 80, \"weight\": 3000] }",
           "description" : "baby資料"
         },
         "stay_with" : {
