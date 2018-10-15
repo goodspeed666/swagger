@@ -276,6 +276,12 @@
           "required" : false,
           "type" : "boolean"
         }, {
+          "name" : "passive",
+          "in" : "query",
+          "description" : "潛在客戶",
+          "required" : false,
+          "type" : "boolean"
+        }, {
           "name" : "birth_status",
           "in" : "query",
           "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館",
