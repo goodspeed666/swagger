@@ -52,7 +52,7 @@ object CommonApi {
    *   code 200 : SearchRole (successful operation)
    * 
    * @param token 
-   * @param role 客服是CS
+   * @param role CS,BR
    * @param keyword 請輸入要搜尋的姓名或帳號關鍵字
    * @param status 狀態(不輸入為不過濾狀態, 0:關閉, 1:開啟)
    */
