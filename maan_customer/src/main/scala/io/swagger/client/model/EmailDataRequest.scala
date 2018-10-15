@@ -12,7 +12,7 @@ import java.util.UUID
 
 case class EmailDataRequest (
   subject: String,
-  mailTo: Option[String],
+  mailTo: String,
   mailCc: Option[String],
   mailBcc: Option[String],
   content: String
