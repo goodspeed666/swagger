@@ -278,7 +278,7 @@
         }, {
           "name" : "passive",
           "in" : "query",
-          "description" : "潛在客戶",
+          "description" : "1:潛在客戶",
           "required" : false,
           "type" : "boolean"
         }, {
