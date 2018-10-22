@@ -282,6 +282,12 @@
           "required" : false,
           "type" : "boolean"
         }, {
+          "name" : "waiting",
+          "in" : "query",
+          "description" : "1:候補人員優先排序（只有潛在客戶適用）",
+          "required" : false,
+          "type" : "boolean"
+        }, {
           "name" : "birth_status",
           "in" : "query",
           "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館",
