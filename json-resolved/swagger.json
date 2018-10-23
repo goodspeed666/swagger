@@ -1025,7 +1025,7 @@
           "default" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/GetCareInfo"
+              "$ref" : "#/definitions/GetCareDiff"
             }
           }
         }
@@ -2061,6 +2061,12 @@
         "$ref" : "#/definitions/GetCareInfo_inner"
       }
     },
+    "GetCareDiff" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCareDiff_inner"
+      }
+    },
     "CustomerCareRequest" : {
       "type" : "object",
       "required" : [ "macro" ],
@@ -2522,6 +2528,24 @@
         "edit_times" : {
           "type" : "integer",
           "example" : "修改次數"
+        }
+      }
+    },
+    "GetCareDiff_inner" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "YY-mm-dd H:i:s"
+        },
+        "version" : {
+          "type" : "integer"
+        },
+        "diff" : {
+          "type" : "string",
+          "example" : "跟上一版的差異"
         }
       }
     },
