@@ -977,7 +977,7 @@
           "name" : "customer_id",
           "in" : "path",
           "required" : true,
-          "type" : "string"
+          "type" : "integer"
         }, {
           "name" : "type_id",
           "in" : "query",
@@ -988,37 +988,6 @@
           "name" : "baby_id",
           "in" : "query",
           "required" : false,
-          "type" : "integer"
-        } ],
-        "responses" : {
-          "default" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/GetCareInfo"
-            }
-          }
-        }
-      }
-    },
-    "/customers/{customer_id}/care/{rid}" : {
-      "get" : {
-        "tags" : [ "care" ],
-        "summary" : "取得顧客照護修改紀錄",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "token",
-          "in" : "header",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "customer_id",
-          "in" : "path",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "rid",
-          "in" : "path",
-          "required" : true,
           "type" : "integer"
         } ],
         "responses" : {
