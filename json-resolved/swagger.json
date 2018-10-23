@@ -2487,6 +2487,10 @@
         "baby_id" : {
           "type" : "string",
           "example" : "當日且baby才會出現"
+        },
+        "edits" : {
+          "type" : "integer",
+          "example" : "修改次數"
         }
       }
     },
