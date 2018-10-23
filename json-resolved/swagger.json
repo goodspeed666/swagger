@@ -2528,6 +2528,9 @@
         "edit_times" : {
           "type" : "integer",
           "example" : "修改次數"
+        },
+        "status" : {
+          "type" : "integer"
         }
       }
     },
