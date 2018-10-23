@@ -1000,10 +1000,10 @@
         }
       }
     },
-    "/customers/{customer_id}/care/{rid}" : {
+    "/customers/{customer_id}/care/diff" : {
       "get" : {
         "tags" : [ "care" ],
-        "summary" : "取得顧客照護資料",
+        "summary" : "取得顧客照護修改記錄",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -1017,17 +1017,6 @@
           "type" : "integer"
         }, {
           "name" : "rid",
-          "in" : "path",
-          "required" : true,
-          "type" : "integer"
-        }, {
-          "name" : "type_id",
-          "in" : "query",
-          "description" : "mon for 產婦, baby for 嬰兒",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "baby_id",
           "in" : "query",
           "required" : false,
           "type" : "integer"
