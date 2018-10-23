@@ -2533,19 +2533,16 @@
     },
     "GetCareDiff_inner" : {
       "properties" : {
-        "id" : {
-          "type" : "integer"
-        },
-        "created_at" : {
-          "type" : "string",
-          "example" : "YY-mm-dd H:i:s"
-        },
         "version" : {
           "type" : "integer"
         },
         "diff" : {
           "type" : "string",
           "example" : "跟上一版的差異"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "YY-mm-dd H:i:s"
         }
       }
     },
