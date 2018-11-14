@@ -2074,6 +2074,11 @@
         "created_at" : {
           "type" : "string"
         },
+        "signature" : {
+          "type" : "object",
+          "example" : "簽名圖片檔(png)",
+          "properties" : { }
+        },
         "macro" : {
           "type" : "array",
           "items" : {
@@ -2095,6 +2100,7 @@
           "value" : "for bar",
           "key" : "key"
         } ],
+        "signature" : "簽名圖片檔(png)",
         "created_at" : "created_at"
       }
     },
