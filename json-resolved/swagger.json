@@ -2243,6 +2243,14 @@
         },
         "check_out" : {
           "type" : "string"
+        },
+        "receptionist" : {
+          "type" : "string",
+          "example" : "簽約接待人"
+        },
+        "estimate_checked_in" : {
+          "type" : "string",
+          "example" : "預計入住日"
         }
       }
     },
