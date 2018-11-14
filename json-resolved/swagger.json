@@ -1108,13 +1108,10 @@
           "type" : "integer"
         }, {
           "in" : "body",
-          "name" : "macro",
-          "required" : true,
+          "name" : "body",
+          "required" : false,
           "schema" : {
-            "type" : "array",
-            "items" : {
-              "$ref" : "#/definitions/macro"
-            }
+            "$ref" : "#/definitions/CustomerCareRequest"
           }
         } ],
         "responses" : {
@@ -2192,25 +2189,6 @@
       },
       "example" : {
         "token" : "token"
-      }
-    },
-    "macro" : {
-      "properties" : {
-        "key" : {
-          "type" : "string"
-        },
-        "options" : {
-          "type" : "object",
-          "example" : [ 1, 2, 3 ],
-          "properties" : { }
-        },
-        "external_options" : {
-          "type" : "string"
-        },
-        "value" : {
-          "type" : "number",
-          "example" : "for bar"
-        }
       }
     },
     "GetCustomers_inner" : {
