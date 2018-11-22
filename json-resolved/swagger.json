@@ -2523,6 +2523,14 @@
         },
         "status" : {
           "type" : "integer"
+        },
+        "desc" : {
+          "type" : "string",
+          "example" : "description"
+        },
+        "signature" : {
+          "type" : "string",
+          "example" : "簽名檔位置"
         }
       }
     },
