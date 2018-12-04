@@ -48,6 +48,18 @@ object CommonApi {
    * 
    * 
    * Expected answers:
+   *   code 200 : GetNotice (successful operation)
+   * 
+   * @param token 
+   */
+  def commonNoticePost(token: String): ApiRequest[GetNotice] =
+    ApiRequest[GetNotice](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/notice", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[GetNotice](200)
+        /**
+   * 
+   * 
+   * Expected answers:
    *   code 200 : SearchCustomer (successful operation)
    * 
    * @param token 
