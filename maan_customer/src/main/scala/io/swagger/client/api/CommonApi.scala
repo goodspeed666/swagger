@@ -49,16 +49,16 @@ object CommonApi {
    * 
    * 
    * Expected answers:
-   *   code 200 : GetNotice (successful operation)
+   *   code 200 :  (successful operation)
    * 
    * @param token 
    * @param body 
    */
-  def commonNoticePost(token: String, body: Option[NoticeDataRequest] = None): ApiRequest[GetNotice] =
-    ApiRequest[GetNotice](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/notice", "application/json")
+  def commonNoticePost(token: String, body: Option[NoticeDataRequest] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/notice", "application/json")
       .withBody(body)
       .withHeaderParam("token", token)
-      .withSuccessResponse[GetNotice](200)
+      .withSuccessResponse[Unit](200)
         /**
    * 
    * 
