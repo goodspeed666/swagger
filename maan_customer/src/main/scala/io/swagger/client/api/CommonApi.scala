@@ -10,6 +10,7 @@ import io.swagger.client.model.GetConst
 import io.swagger.client.model.GetCourseList
 import io.swagger.client.model.GetCourseType
 import io.swagger.client.model.GetGreetings
+import io.swagger.client.model.GetNotice
 import io.swagger.client.model.GetPeriod
 import io.swagger.client.model.SearchCustomer
 import io.swagger.client.model.SearchRole
@@ -31,6 +32,18 @@ object CommonApi {
     ApiRequest[GetConst](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/const", "application/json")
       .withHeaderParam("token", token)
       .withSuccessResponse[GetConst](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : GetNotice (successful operation)
+   * 
+   * @param token 
+   */
+  def commonNoticeGet(token: String): ApiRequest[GetNotice] =
+    ApiRequest[GetNotice](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/notice", "application/json")
+      .withHeaderParam("token", token)
+      .withSuccessResponse[GetNotice](200)
         /**
    * 
    * 
