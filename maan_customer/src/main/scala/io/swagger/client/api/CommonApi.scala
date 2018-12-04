@@ -12,6 +12,7 @@ import io.swagger.client.model.GetCourseType
 import io.swagger.client.model.GetGreetings
 import io.swagger.client.model.GetNotice
 import io.swagger.client.model.GetPeriod
+import io.swagger.client.model.NoticeDataRequest
 import io.swagger.client.model.SearchCustomer
 import io.swagger.client.model.SearchRole
 import io.swagger.client.core._
@@ -51,9 +52,11 @@ object CommonApi {
    *   code 200 : GetNotice (successful operation)
    * 
    * @param token 
+   * @param body 
    */
-  def commonNoticePost(token: String): ApiRequest[GetNotice] =
+  def commonNoticePost(token: String, body: Option[NoticeDataRequest] = None): ApiRequest[GetNotice] =
     ApiRequest[GetNotice](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/common/notice", "application/json")
+      .withBody(body)
       .withHeaderParam("token", token)
       .withSuccessResponse[GetNotice](200)
         /**
