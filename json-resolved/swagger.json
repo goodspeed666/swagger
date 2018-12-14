@@ -269,8 +269,49 @@
           "name" : "body",
           "required" : false,
           "schema" : {
-            "$ref" : "#/definitions/CustomersRequest"
+            "$ref" : "#/definitions/GetCustomers"
           }
+        }, {
+          "name" : "page",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
+        }, {
+          "name" : "checked_in",
+          "in" : "query",
+          "description" : "1:為入住中",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "passive",
+          "in" : "query",
+          "description" : "1:潛在客戶",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "waiting",
+          "in" : "query",
+          "description" : "1:候補人員優先排序（只有潛在客戶適用）",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "noBirth",
+          "in" : "query",
+          "description" : "1: 顯示沒有胎次但有CID",
+          "required" : false,
+          "type" : "boolean"
+        }, {
+          "name" : "birth_status",
+          "in" : "query",
+          "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館",
+          "required" : false,
+          "type" : "integer"
+        }, {
+          "name" : "tags",
+          "in" : "query",
+          "description" : "['New', '即將離館']",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -1615,38 +1656,6 @@
         "password" : {
           "type" : "string",
           "description" : "The password for login in clear text"
-        }
-      }
-    },
-    "CustomersRequest" : {
-      "type" : "object",
-      "properties" : {
-        "page" : {
-          "type" : "integer"
-        },
-        "checked_in" : {
-          "type" : "boolean",
-          "description" : "1:為入住中"
-        },
-        "passive" : {
-          "type" : "boolean",
-          "description" : "1:潛在客戶"
-        },
-        "waiting" : {
-          "type" : "boolean",
-          "description" : "1:候補人員優先排序（只有潛在客戶適用）"
-        },
-        "noBirth" : {
-          "type" : "boolean",
-          "description" : "1: 顯示沒有胎次但有CID"
-        },
-        "birth_status" : {
-          "type" : "integer",
-          "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館"
-        },
-        "tags" : {
-          "type" : "string",
-          "description" : "['New', '即將離館']"
         }
       }
     },
