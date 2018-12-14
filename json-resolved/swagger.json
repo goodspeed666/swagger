@@ -299,6 +299,12 @@
           "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館",
           "required" : false,
           "type" : "integer"
+        }, {
+          "name" : "tags",
+          "in" : "query",
+          "description" : "['New', '即將離館']",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -1630,21 +1636,6 @@
           "type" : "string",
           "example" : "Y-m-d H:i:s"
         }
-      },
-      "example" : {
-        "role" : 6,
-        "created_at" : "Y-m-d H:i:s",
-        "dept" : "dept",
-        "branch" : 5,
-        "picture" : "/admin_profile/1_1517480737.jpg",
-        "updated_at" : "Y-m-d H:i:s",
-        "organization" : 1,
-        "employee_id" : "employee_id",
-        "name" : "name",
-        "id" : 0,
-        "account" : "account",
-        "email" : "email",
-        "status" : true
       }
     },
     "Login" : {
@@ -1659,10 +1650,6 @@
           "type" : "string",
           "description" : "The password for login in clear text"
         }
-      },
-      "example" : {
-        "password" : "password",
-        "account" : "account"
       }
     },
     "GetCustomers" : {
@@ -1778,38 +1765,6 @@
           "type" : "string",
           "example" : "{ ['baby_id' => 0, 'name' => 'XXX'] }"
         }
-      },
-      "example" : {
-        "dad_name" : "dad_name",
-        "plate_num" : "plate_num",
-        "created_at" : "YY-m-d H:i:s",
-        "unified_num" : "統一證號（跟身份證字號則一輸入）",
-        "babies" : "{ ['baby_id' => 0, 'name' => 'XXX'] }",
-        "branch" : "{\"id\": 0, \"name\": \"XXX\"}",
-        "emergency_phone" : "emergency_phone",
-        "check_out" : "Y-m-d",
-        "dad_mobile" : "dad_mobile",
-        "updated_at" : "Y-m-d H:i:s",
-        "pos" : "郵遞區號",
-        "mobile_phone" : "mobile_phone",
-        "room_no" : "room_no",
-        "id" : 0,
-        "email" : "email",
-        "home_phone" : "home_phone",
-        "address" : "address",
-        "check_in" : "Y-m-d",
-        "howto_know" : "howto_know",
-        "dad_birth" : "Y-m-d",
-        "birth" : "Y-m-d",
-        "emergency_addr" : "emergency_addr",
-        "picture" : "picture",
-        "name" : "name",
-        "id_num" : "身分證字號",
-        "during_checkin" : "during_checkin",
-        "cid" : "前三碼要抓出來，不能改",
-        "dad_email" : "dad_email",
-        "emergency_contact" : "emergency_contact",
-        "status" : "{ ['id' => 0, 'name' => 'XXX'] }"
       }
     },
     "CustomerBirthRequest" : {
@@ -1883,24 +1838,6 @@
           "type" : "integer",
           "description" : "責任客服"
         }
-      },
-      "example" : {
-        "give_birth_type" : "give_birth_type",
-        "stay_with" : "stay_with",
-        "give_birth_hospital" : 6,
-        "due_date" : "due_date",
-        "signing_date" : "signing_date",
-        "birth_order" : 1,
-        "bring_children" : 5,
-        "visit_receptionist" : 7,
-        "maan_birth_order" : 5,
-        "give_birth_area" : 0,
-        "baby_info" : "{ [\"bcid\": \"XXX\", \"gender\": 1, \"height\": 80, \"weight\": 3000] }",
-        "your_cs" : 3,
-        "give_birth_date" : "give_birth_date",
-        "how_much_baby" : 1,
-        "visit_date" : "visit_date",
-        "signing_receptionist" : 9
       }
     },
     "CustomerForgotPassword" : {
@@ -1909,9 +1846,6 @@
         "account" : {
           "type" : "string"
         }
-      },
-      "example" : {
-        "account" : "account"
       }
     },
     "CustomerConnectList" : {
@@ -1939,12 +1873,6 @@
           "type" : "string",
           "example" : "Unique ID"
         }
-      },
-      "example" : {
-        "uid" : "Unique ID",
-        "from" : "fb, google, inside",
-        "account" : "email",
-        "token" : "token"
       }
     },
     "CustomerConnectListRequest" : {
@@ -1958,10 +1886,6 @@
           "type" : "string",
           "example" : "如果 status 是 2 必填"
         }
-      },
-      "example" : {
-        "reason" : "如果 status 是 2 必填",
-        "status" : "1: open, 2: close"
       }
     },
     "CustomerRegister" : {
@@ -1986,13 +1910,6 @@
           "type" : "string",
           "example" : "Y-m-d"
         }
-      },
-      "example" : {
-        "unique_id" : "Unique ID",
-        "connect_id" : "from GET /customers/connect",
-        "name" : "name",
-        "id_num" : "id_num",
-        "birth" : "Y-m-d"
       }
     },
     "GetCustomerBirth" : {
@@ -2021,11 +1938,6 @@
           "type" : "string",
           "example" : "Y-m-d H:i"
         }
-      },
-      "example" : {
-        "birth" : 0,
-        "created_at" : "Y-m-d H:i",
-        "message" : "message"
       }
     },
     "GetHospitals" : {
@@ -2082,23 +1994,6 @@
             "$ref" : "#/definitions/CustomerCareRequest_macro"
           }
         }
-      },
-      "example" : {
-        "macro" : [ {
-          "values" : "[4, 5, 6] for type5",
-          "options" : [ 1, 2, 3 ],
-          "external_options" : "external_options",
-          "value" : "for bar",
-          "key" : "key"
-        }, {
-          "values" : "[4, 5, 6] for type5",
-          "options" : [ 1, 2, 3 ],
-          "external_options" : "external_options",
-          "value" : "for bar",
-          "key" : "key"
-        } ],
-        "signature" : "簽名圖片檔(png)",
-        "created_at" : "created_at"
       }
     },
     "Care" : {
@@ -2107,9 +2002,6 @@
         "care_id" : {
           "type" : "integer"
         }
-      },
-      "example" : {
-        "care_id" : 0
       }
     },
     "GetShiftlog" : {
@@ -2140,15 +2032,6 @@
           "type" : "string",
           "example" : "{\"id\": 0, \"name\": \"XXX\"}"
         }
-      },
-      "example" : {
-        "send_time" : "Y-m-d H:i",
-        "created_user" : "{\"id\": 0, \"name\": \"XXX\"}",
-        "created_at" : "Y-m-d",
-        "id" : 0,
-        "content" : "content",
-        "updated_user" : "{\"id\": 0, \"name\": \"XXX\"}",
-        "status" : "status"
       }
     },
     "ShiftlogRequest" : {
@@ -2162,10 +2045,6 @@
           "type" : "string",
           "example" : "Y-m-d"
         }
-      },
-      "example" : {
-        "created_at" : "Y-m-d",
-        "content" : "content"
       }
     },
     "InsertReturn" : {
@@ -2175,9 +2054,6 @@
           "type" : "integer",
           "readOnly" : true
         }
-      },
-      "example" : {
-        "id" : 0
       }
     },
     "LoginResponse" : {
@@ -2186,9 +2062,6 @@
         "token" : {
           "type" : "string"
         }
-      },
-      "example" : {
-        "token" : "token"
       }
     },
     "GetCustomers_inner" : {
@@ -2571,13 +2444,6 @@
           "example" : "[4, 5, 6] for type5",
           "properties" : { }
         }
-      },
-      "example" : {
-        "values" : "[4, 5, 6] for type5",
-        "options" : [ 1, 2, 3 ],
-        "external_options" : "external_options",
-        "value" : "for bar",
-        "key" : "key"
       }
     }
   }
