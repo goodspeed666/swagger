@@ -306,12 +306,6 @@
           "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館",
           "required" : false,
           "type" : "integer"
-        }, {
-          "name" : "tags",
-          "in" : "query",
-          "description" : "['New', '即將離館']",
-          "required" : false,
-          "type" : "string"
         } ],
         "responses" : {
           "200" : {
