@@ -2111,7 +2111,8 @@
           "example" : "預計入住日"
         },
         "tags" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : ""
         }
       }
     },
