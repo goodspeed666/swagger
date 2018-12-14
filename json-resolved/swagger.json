@@ -2109,6 +2109,10 @@
         "estimate_checked_in" : {
           "type" : "string",
           "example" : "預計入住日"
+        },
+        "tags" : {
+          "type" : "string",
+          "description" : "['New', '即將離館']"
         }
       }
     },
