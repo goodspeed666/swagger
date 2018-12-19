@@ -2111,8 +2111,9 @@
           "example" : "預計入住日"
         },
         "tags" : {
-          "type" : "string",
-          "example" : ""
+          "type" : "object",
+          "example" : [ "今日入住", "即將離館" ],
+          "properties" : { }
         }
       }
     },
