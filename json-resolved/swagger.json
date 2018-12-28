@@ -1990,7 +1990,8 @@
           "properties" : { }
         },
         "pointinfo" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "紀錄所有座標資料"
         },
         "macro" : {
           "type" : "array",
