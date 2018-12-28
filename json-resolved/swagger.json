@@ -1989,6 +1989,9 @@
           "example" : "簽名圖片檔(png)",
           "properties" : { }
         },
+        "pointinfo" : {
+          "type" : "string"
+        },
         "macro" : {
           "type" : "array",
           "items" : {
