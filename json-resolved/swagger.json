@@ -289,6 +289,12 @@
           "required" : false,
           "type" : "boolean"
         }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "搜尋姓名 only for passive",
+          "required" : false,
+          "type" : "string"
+        }, {
           "name" : "waiting",
           "in" : "query",
           "description" : "1:候補人員優先排序（只有潛在客戶適用）",
