@@ -1697,7 +1697,8 @@
         },
         "pos" : {
           "type" : "string",
-          "example" : "郵遞區號"
+          "example" : "300",
+          "description" : "郵遞區號"
         },
         "address" : {
           "type" : "string"
@@ -1726,13 +1727,16 @@
           "type" : "string"
         },
         "emergency_contact" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "緊急聯絡人"
         },
         "emergency_phone" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "緊急聯絡人電話"
         },
         "emergency_addr" : {
-          "type" : "string"
+          "type" : "string",
+          "description" : "緊急聯絡人地址"
         },
         "created_at" : {
           "type" : "string",
