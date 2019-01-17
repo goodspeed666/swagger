@@ -2198,6 +2198,17 @@
         }
       }
     },
+    "GetCustomerBirth_inner_contractor_relation" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      },
+      "description" : "簽約者關係"
+    },
     "GetCustomerBirth_inner" : {
       "properties" : {
         "due_date" : {
@@ -2288,9 +2299,7 @@
           "description" : "簽約者地址"
         },
         "contractor_relation" : {
-          "type" : "integer",
-          "example" : "",
-          "description" : "簽約者關係"
+          "$ref" : "#/definitions/GetCustomerBirth_inner_contractor_relation"
         },
         "contractor_in_person" : {
           "type" : "integer",
