@@ -2265,6 +2265,36 @@
         "baby_care" : {
           "type" : "boolean",
           "example" : false
+        },
+        "contractor" : {
+          "type" : "string",
+          "description" : "簽約者"
+        },
+        "contractor_mobile" : {
+          "type" : "string",
+          "description" : "簽約者手機"
+        },
+        "contractor_id_num" : {
+          "type" : "string",
+          "description" : "簽約者身分證字號"
+        },
+        "contractor_birth" : {
+          "type" : "string",
+          "example" : "Y-m-d",
+          "description" : "簽約者生日"
+        },
+        "contractor_address" : {
+          "type" : "string",
+          "description" : "簽約者地址"
+        },
+        "contractor_relation" : {
+          "type" : "integer",
+          "example" : "",
+          "description" : "簽約者關係"
+        },
+        "contractor_in_person" : {
+          "type" : "integer",
+          "description" : "是否為本人"
         }
       }
     },
