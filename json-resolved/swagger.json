@@ -678,123 +678,12 @@
           "required" : true,
           "type" : "string"
         }, {
-          "name" : "cid",
-          "in" : "query",
-          "description" : "客戶編號",
+          "in" : "body",
+          "name" : "body",
           "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "name",
-          "in" : "query",
-          "description" : "客戶姓名",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "email",
-          "in" : "query",
-          "description" : "email",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "mobile_phone",
-          "in" : "query",
-          "description" : "手機號碼",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "home_phone",
-          "in" : "query",
-          "description" : "家裡電話",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "pos",
-          "in" : "query",
-          "description" : "郵遞區號",
-          "required" : false,
-          "type" : "integer",
-          "maxLength" : 5
-        }, {
-          "name" : "address",
-          "in" : "query",
-          "description" : "地址",
-          "required" : true,
-          "type" : "string"
-        }, {
-          "name" : "id_num",
-          "in" : "query",
-          "description" : "身分證字號",
-          "required" : false,
-          "type" : "string",
-          "maxLength" : 10
-        }, {
-          "name" : "unified_num",
-          "in" : "query",
-          "description" : "統一證號",
-          "required" : false,
-          "type" : "string",
-          "maxLength" : 15
-        }, {
-          "name" : "birth",
-          "in" : "query",
-          "description" : "生日",
-          "required" : true,
-          "type" : "string",
-          "maxLength" : 10
-        }, {
-          "name" : "howto_know",
-          "in" : "query",
-          "description" : "如何得知",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "dad_name",
-          "in" : "query",
-          "description" : "爸爸姓名",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "dad_mobile",
-          "in" : "query",
-          "description" : "爸爸的手機",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "dad_email",
-          "in" : "query",
-          "description" : "爸爸的Email",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "dad_birth",
-          "in" : "query",
-          "description" : "爸爸的生日",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "plate_num",
-          "in" : "query",
-          "description" : "車牌號碼及顏色",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "emergency_contact",
-          "in" : "query",
-          "description" : "緊急聯絡人",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "emergency_phone",
-          "in" : "query",
-          "description" : "緊急聯絡電話",
-          "required" : false,
-          "type" : "string"
-        }, {
-          "name" : "emergency_addr",
-          "in" : "query",
-          "description" : "緊急聯絡處所",
-          "required" : false,
-          "type" : "string"
+          "schema" : {
+            "$ref" : "#/definitions/CustomerData"
+          }
         } ],
         "responses" : {
           "default" : {
@@ -1775,6 +1664,90 @@
         "babies" : {
           "type" : "string",
           "example" : "{ ['baby_id' => 0, 'name' => 'XXX'] }"
+        }
+      }
+    },
+    "CustomerData" : {
+      "type" : "object",
+      "properties" : {
+        "cid" : {
+          "type" : "string",
+          "description" : "客戶編號"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : "客戶姓名"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "email"
+        },
+        "mobile_phone" : {
+          "type" : "string",
+          "description" : "手機號碼"
+        },
+        "home_phone" : {
+          "type" : "string",
+          "description" : "家裡電話"
+        },
+        "pos" : {
+          "type" : "integer",
+          "description" : "郵遞區號"
+        },
+        "address" : {
+          "type" : "string",
+          "description" : "地址"
+        },
+        "id_num" : {
+          "type" : "string",
+          "description" : "身分證字號",
+          "maxLength" : 10
+        },
+        "unified_num" : {
+          "type" : "string",
+          "description" : "統一證號",
+          "maxLength" : 15
+        },
+        "birth" : {
+          "type" : "string",
+          "description" : "生日",
+          "maxLength" : 10
+        },
+        "howto_know" : {
+          "type" : "string",
+          "description" : "如何得知"
+        },
+        "dad_name" : {
+          "type" : "string",
+          "description" : "爸爸姓名"
+        },
+        "dad_mobile" : {
+          "type" : "string",
+          "description" : "爸爸的手機"
+        },
+        "dad_email" : {
+          "type" : "string",
+          "description" : "爸爸的Email"
+        },
+        "dad_birth" : {
+          "type" : "string",
+          "description" : "爸爸的生日"
+        },
+        "plate_num" : {
+          "type" : "string",
+          "description" : "車牌號碼及顏色"
+        },
+        "emergency_contact" : {
+          "type" : "string",
+          "description" : "緊急聯絡人"
+        },
+        "emergency_phone" : {
+          "type" : "string",
+          "description" : "緊急聯絡電話"
+        },
+        "emergency_addr" : {
+          "type" : "string",
+          "description" : "緊急聯絡處所"
         }
       }
     },
