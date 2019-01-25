@@ -865,6 +865,37 @@
         }
       }
     },
+    "/customers/{customer_id}/contract" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "上傳合約",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerContractRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
     "/customers/{customer_id}/care" : {
       "get" : {
         "tags" : [ "care" ],
@@ -1851,6 +1882,19 @@
         "contractor_in_person" : {
           "type" : "integer",
           "description" : "是否為本人"
+        }
+      }
+    },
+    "CustomerContractRequest" : {
+      "type" : "object",
+      "required" : [ "birth_id" ],
+      "properties" : {
+        "birth_id" : {
+          "type" : "integer"
+        },
+        "constract" : {
+          "type" : "string",
+          "description" : "合約檔案(pdf)"
         }
       }
     },
