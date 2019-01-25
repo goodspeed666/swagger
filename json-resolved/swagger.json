@@ -1669,6 +1669,7 @@
     },
     "CustomerData" : {
       "type" : "object",
+      "required" : [ "address", "birth", "mobile_phone", "name" ],
       "properties" : {
         "cid" : {
           "type" : "string",
