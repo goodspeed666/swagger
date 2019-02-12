@@ -54,6 +54,35 @@
         }
       }
     },
+    "/admin/login" : {
+      "post" : {
+        "tags" : [ "user" ],
+        "summary" : "Logs admin into the system",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Login"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/LoginResponse"
+            }
+          },
+          "401" : {
+            "description" : "Email or password is wrong"
+          },
+          "404" : {
+            "description" : "Account does not exist"
+          }
+        }
+      }
+    },
     "/users/me" : {
       "get" : {
         "tags" : [ "user" ],
