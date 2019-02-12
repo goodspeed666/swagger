@@ -9,7 +9,7 @@
   "basePath" : "/goodspeed666/maan_cs/1.0.0",
   "tags" : [ {
     "name" : "user",
-    "description" : "Operations about user"
+    "description" : "Operations about user, the user mean employee"
   }, {
     "name" : "customer",
     "description" : "Operations about customer"
@@ -28,7 +28,7 @@
     "/users/login" : {
       "post" : {
         "tags" : [ "user" ],
-        "summary" : "Logs user into the system",
+        "summary" : "User login",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
@@ -57,7 +57,7 @@
     "/admin/login" : {
       "post" : {
         "tags" : [ "user" ],
-        "summary" : "Logs admin into the system",
+        "summary" : "Admin login",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "in" : "body",
