@@ -912,7 +912,7 @@
         }, {
           "name" : "type_id",
           "in" : "query",
-          "description" : "mon for 產婦, baby for 嬰兒",
+          "description" : "mon for 產婦, baby for 嬰兒, dps for 產憂",
           "required" : true,
           "type" : "string"
         }, {
@@ -981,7 +981,7 @@
         }, {
           "name" : "type_id",
           "in" : "path",
-          "description" : "mon for 產婦, baby for 嬰兒",
+          "description" : "mon for 產婦, baby for 嬰兒, dps for 產憂",
           "required" : true,
           "type" : "string"
         }, {
@@ -1029,7 +1029,7 @@
         }, {
           "name" : "type_id",
           "in" : "path",
-          "description" : "mon for 產婦, baby for 嬰兒",
+          "description" : "mon for 產婦, baby for 嬰兒, dps for 產憂",
           "required" : true,
           "type" : "string"
         }, {
@@ -1075,7 +1075,7 @@
         }, {
           "name" : "type_id",
           "in" : "path",
-          "description" : "mon for 產婦, baby for 嬰兒",
+          "description" : "mon for 產婦, baby for 嬰兒, dps for 產憂",
           "required" : true,
           "type" : "string"
         }, {
@@ -1115,7 +1115,7 @@
         }, {
           "name" : "type_id",
           "in" : "query",
-          "description" : "mon for 產婦, baby for 嬰兒",
+          "description" : "mon for 產婦, baby for 嬰兒, dps for 產憂",
           "required" : true,
           "type" : "string"
         } ],
@@ -1405,7 +1405,7 @@
         }, {
           "name" : "type_id",
           "in" : "path",
-          "description" : "mon for 產婦, baby for 嬰兒",
+          "description" : "mon for 產婦, baby for 嬰兒, dps for 產憂",
           "required" : true,
           "type" : "string"
         } ],
