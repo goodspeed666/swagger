@@ -2011,19 +2011,9 @@
       }
     },
     "CustomerCourseList" : {
-      "type" : "object",
-      "required" : [ "birth", "created_at", "message" ],
-      "properties" : {
-        "message" : {
-          "type" : "string"
-        },
-        "birth" : {
-          "type" : "integer"
-        },
-        "created_at" : {
-          "type" : "string",
-          "example" : "Y-m-d H:i"
-        }
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/CustomerCourseList_inner"
       }
     },
     "GetHospitals" : {
@@ -2376,6 +2366,25 @@
         "created_at" : {
           "type" : "string",
           "example" : "Y-m-d H:i"
+        }
+      }
+    },
+    "CustomerCourseList_inner" : {
+      "properties" : {
+        "course_name" : {
+          "type" : "string"
+        },
+        "class_time" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i"
+        },
+        "enrolled" : {
+          "type" : "integer",
+          "description" : "是否報名"
+        },
+        "attended" : {
+          "type" : "integer",
+          "description" : "是否有上課"
         }
       }
     },
