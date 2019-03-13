@@ -2371,7 +2371,7 @@
     },
     "CustomerCourseList_inner" : {
       "properties" : {
-        "course_name" : {
+        "title" : {
           "type" : "string"
         },
         "class_time" : {
