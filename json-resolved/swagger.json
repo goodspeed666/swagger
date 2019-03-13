@@ -1284,7 +1284,7 @@
           "default" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/CustomerMessageList"
+              "$ref" : "#/definitions/CustomerCourseList"
             }
           }
         }
@@ -1995,6 +1995,22 @@
       }
     },
     "CustomerMessageRequest" : {
+      "type" : "object",
+      "required" : [ "birth", "created_at", "message" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "birth" : {
+          "type" : "integer"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i"
+        }
+      }
+    },
+    "CustomerCoursesListRequest" : {
       "type" : "object",
       "required" : [ "birth", "created_at", "message" ],
       "properties" : {
