@@ -1263,6 +1263,33 @@
         }
       }
     },
+    "/customers/{customer_id}/courses" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得個人上過課的列表",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CustomerMessageList"
+            }
+          }
+        }
+      }
+    },
     "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
