@@ -2010,7 +2010,7 @@
         }
       }
     },
-    "CustomerCoursesListRequest" : {
+    "CustomerCourseList" : {
       "type" : "object",
       "required" : [ "birth", "created_at", "message" ],
       "properties" : {
