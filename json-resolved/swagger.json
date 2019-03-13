@@ -1266,7 +1266,7 @@
     "/customers/{customer_id}/courses" : {
       "get" : {
         "tags" : [ "customer" ],
-        "summary" : "取得個人上過課的列表",
+        "summary" : "取得個人已上過課的列表",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
