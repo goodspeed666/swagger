@@ -2378,6 +2378,10 @@
           "type" : "string",
           "example" : "Y-m-d H:i"
         },
+        "hours" : {
+          "type" : "integer",
+          "description" : "課程點數"
+        },
         "enrolled" : {
           "type" : "integer",
           "description" : "是否報名"
