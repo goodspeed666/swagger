@@ -21,7 +21,10 @@ case class CourseListInner (
   courseName: Option[CourseListInnerCourseName] = None,
   classTime: Option[String] = None,
   quota: Option[Int] = None,
-  applied: Option[Int] = None
+  /* 已報名 */
+  applied: Option[Int] = None,
+  /* 已點名 */
+  enrolled: Option[Int] = None
 ) extends ApiModel
 
 
