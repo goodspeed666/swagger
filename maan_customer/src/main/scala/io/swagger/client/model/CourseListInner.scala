@@ -24,7 +24,7 @@ case class CourseListInner (
   /* 已報名 */
   applied: Option[Int] = None,
   /* 已點名 */
-  enrolled: Option[Int] = None
+  attended: Option[Int] = None
 ) extends ApiModel
 
 
