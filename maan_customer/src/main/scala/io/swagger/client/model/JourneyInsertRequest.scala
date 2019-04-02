@@ -19,7 +19,9 @@ case class JourneyInsertRequest (
   startTime: String,
   endTime: Option[String] = None,
   period: Int,
+  /* 行程名稱 */
   name: String,
+  /* 講師/負責人 */
   keyman: Option[String] = None,
   /* 地點 */
   location: Option[String] = None,
