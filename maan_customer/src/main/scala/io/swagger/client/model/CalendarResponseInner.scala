@@ -28,7 +28,9 @@ case class CalendarResponseInner (
   teacher: Option[String] = None,
   /* 地點 */
   location: Option[String] = None,
+  /* text color */
   color: Option[String] = None,
+  /* background color */
   bgcolor: Option[String] = None
 ) extends ApiModel
 
