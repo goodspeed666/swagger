@@ -19,15 +19,12 @@ case class JourneyRequest (
   startTime: String,
   endTime: Option[String] = None,
   period: CourseListInnerCourseName,
-  repeat: Option[Int] = None,
-  repeatPeriod: Option[Int] = None,
-  repeatPeriodUnit: Option[String] = None,
-  repeatDay: Option[Int] = None,
-  repeatTimes: Option[Int] = None,
+  /* 行程名稱 */
   name: String,
+  /* 講師/負責人 */
   keyman: Option[String] = None,
-  temporarily: Option[Boolean] = None,
-  cancel: Option[Boolean] = None,
+  /* 地點 */
+  location: Option[String] = None,
   branch: Option[Int] = None
 ) extends ApiModel
 
