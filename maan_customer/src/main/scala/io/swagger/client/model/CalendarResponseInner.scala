@@ -18,10 +18,15 @@ import java.util.UUID
 case class CalendarResponseInner (
   id: Option[Int] = None,
   theDate: Option[String] = None,
+  /* 上午 or AM 09:00~10:00 */
   timePeriod: Option[String] = None,
+  /* 1:課程, 2:行程 */
   `type`: Option[Int] = None,
+  /* 課程 or 行程名稱 */
   name: Option[String] = None,
+  /* 講師 or 主事者 */
   teacher: Option[String] = None,
+  /* 上課地點 */
   location: Option[String] = None,
   color: Option[String] = None,
   bgcolor: Option[String] = None
