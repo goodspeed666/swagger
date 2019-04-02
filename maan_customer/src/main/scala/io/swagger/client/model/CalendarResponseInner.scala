@@ -24,9 +24,9 @@ case class CalendarResponseInner (
   `type`: Option[Int] = None,
   /* 課程 or 行程名稱 */
   name: Option[String] = None,
-  /* 講師 or 主事者 */
+  /* 講師/負責人 */
   teacher: Option[String] = None,
-  /* 上課地點 */
+  /* 地點 */
   location: Option[String] = None,
   color: Option[String] = None,
   bgcolor: Option[String] = None
