@@ -2264,7 +2264,7 @@
         },
         "estimate_checked_in" : {
           "type" : "string",
-          "example" : "預計入住日"
+          "description" : "預計入住日"
         },
         "tags" : {
           "type" : "object",
