@@ -2235,7 +2235,8 @@
           "type" : "string"
         },
         "need_review" : {
-          "type" : "boolean"
+          "type" : "boolean",
+          "description" : "如果有註冊帳號需審核, review 就會是 1"
         },
         "room_no" : {
           "type" : "string"
@@ -2243,9 +2244,6 @@
         "babies" : {
           "type" : "string",
           "example" : "{ ['baby_id' => 0, 'name' => 'XXX'] }"
-        },
-        "current_birth" : {
-          "type" : "integer"
         },
         "check_in" : {
           "type" : "string",
