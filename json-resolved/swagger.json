@@ -2183,7 +2183,7 @@
         },
         "receptionist" : {
           "type" : "string",
-          "example" : "簽約接待人"
+          "description" : "簽約接待人"
         },
         "estimate_checked_in" : {
           "type" : "string",
