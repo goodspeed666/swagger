@@ -2184,6 +2184,9 @@
           "type" : "string",
           "description" : "fb帳號"
         },
+        "email" : {
+          "type" : "string"
+        },
         "receptionist" : {
           "type" : "string",
           "description" : "簽約接待人"
