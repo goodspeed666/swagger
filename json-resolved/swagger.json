@@ -338,7 +338,7 @@
         }, {
           "name" : "birth_status",
           "in" : "query",
-          "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館",
+          "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館, 91:待處理, 92:退訂",
           "required" : false,
           "type" : "integer"
         } ],
@@ -2189,6 +2189,7 @@
         },
         "receptionist" : {
           "type" : "string",
+          "example" : "{ ['id' => 0, 'name' => 'XXX'] }",
           "description" : "簽約接待人"
         },
         "estimate_checked_in" : {
