@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *CourseApi* | **coursesCourseIdRollcallGet** | **GET** /courses/{course_id}/rollcall | Get the registration list
 *CourseApi* | **coursesGet** | **GET** /courses | Get course list
 *CourseApi* | **coursesPost** | **POST** /courses | Store course
+*JourneyApi* | **journeysDefaultListGet** | **GET** /journeys/default_list | Retrieve default journey items
 *JourneyApi* | **journeysJidCopyPost** | **POST** /journeys/{jid}/copy | Copy journey
 *JourneyApi* | **journeysJidDelete** | **DELETE** /journeys/{jid} | Destroy journey
 *JourneyApi* | **journeysJidGet** | **GET** /journeys/{jid} | Retrieve journey
@@ -194,6 +195,7 @@ Class | Method | HTTP request | Description
  - [GetSurveyTitleInner](GetSurveyTitleInner.md)
  - [InsertReturn](InsertReturn.md)
  - [JourneyCopyRequest](JourneyCopyRequest.md)
+ - [JourneyDefaultItemsRequest](JourneyDefaultItemsRequest.md)
  - [JourneyInsertRequest](JourneyInsertRequest.md)
  - [JourneyRequest](JourneyRequest.md)
  - [NoticeDataRequest](NoticeDataRequest.md)

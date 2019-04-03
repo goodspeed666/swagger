@@ -13,6 +13,7 @@ package io.swagger.client.api
 
 import io.swagger.client.model.InsertReturn
 import io.swagger.client.model.JourneyCopyRequest
+import io.swagger.client.model.JourneyDefaultItemsRequest
 import io.swagger.client.model.JourneyInsertRequest
 import io.swagger.client.model.JourneyRequest
 import io.swagger.client.core._
@@ -22,6 +23,22 @@ import io.swagger.client.core.ApiKeyLocations._
 object JourneyApi {
 
   /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 :  (successful operation)
+   * 
+   * @param token 
+   * @param jid 
+   * @param body 
+   */
+  def journeysDefaultListGet(token: String, jid: Int, body: Option[JourneyDefaultItemsRequest] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/journeys/default_list", "application/json")
+      .withBody(body)
+      .withPathParam("jid", jid)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[Unit](200)
+        /**
    * 
    * 
    * Expected answers:
