@@ -2249,10 +2249,14 @@
         },
         "check_in" : {
           "type" : "string",
-          "example" : "null"
+          "example" : "Y-m-d"
         },
         "check_out" : {
           "type" : "string"
+        },
+        "fb" : {
+          "type" : "string",
+          "description" : "fb帳號"
         },
         "receptionist" : {
           "type" : "string",
