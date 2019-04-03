@@ -196,6 +196,7 @@ Class | Method | HTTP request | Description
  - [InsertReturn](InsertReturn.md)
  - [JourneyCopyRequest](JourneyCopyRequest.md)
  - [JourneyDefaultItemsRequest](JourneyDefaultItemsRequest.md)
+ - [JourneyDefaultItemsRequestInner](JourneyDefaultItemsRequestInner.md)
  - [JourneyInsertRequest](JourneyInsertRequest.md)
  - [JourneyRequest](JourneyRequest.md)
  - [NoticeDataRequest](NoticeDataRequest.md)

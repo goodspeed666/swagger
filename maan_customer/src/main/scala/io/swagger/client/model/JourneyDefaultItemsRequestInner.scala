@@ -15,7 +15,13 @@ import io.swagger.client.core.ApiModel
 import org.joda.time.DateTime
 import java.util.UUID
 
-case class JourneyDefaultItemsRequest (
+case class JourneyDefaultItemsRequestInner (
+  id: Option[Int] = None,
+  /* 行程名稱 */
+  name: Option[String] = None,
+  /* 講師/負責人 */
+  keyman: Option[String] = None,
+  location: Option[String] = None
 ) extends ApiModel
 
 
