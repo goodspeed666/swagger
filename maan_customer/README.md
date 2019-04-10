@@ -129,6 +129,10 @@ Class | Method | HTTP request | Description
 *SurveyApi* | **surveysSidTidDelete** | **DELETE** /surveys/{sid}/{tid} | Destroy survey setting
 *SurveyApi* | **surveysSidTidGet** | **GET** /surveys/{sid}/{tid} | Get survey list
 *SurveyApi* | **surveysSidTidPost** | **POST** /surveys/{sid}/{tid} | Update survey setting
+*SurveyApi* | **surveysSingleCommentIdDelete** | **DELETE** /surveys/single_comment/{id} | 刪除單一回覆留言
+*SurveyApi* | **surveysSingleCommentIdPost** | **POST** /surveys/single_comment/{id} | 更新單一回覆留言
+*SurveyApi* | **surveysSingleCommentListGet** | **GET** /surveys/single_comment/list | 取得所有單一回覆留言
+*SurveyApi* | **surveysSingleCommentPost** | **POST** /surveys/single_comment | 寫入單一回覆留言
 *UserApi* | **usersChangePassword2Post** | **POST** /users/change_password2 | Update self password
 *UserApi* | **usersGet** | **GET** /users | Get user list
 *UserApi* | **usersLoginPost** | **POST** /users/login | Logs user into the system

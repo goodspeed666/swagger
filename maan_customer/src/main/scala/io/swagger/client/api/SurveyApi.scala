@@ -20,6 +20,9 @@ import io.swagger.client.model.SurveyCommentResponse
 import io.swagger.client.model.SurveyList
 import io.swagger.client.model.SurveyRequest
 import io.swagger.client.model.SurveyResponse
+import io.swagger.client.model.SurveySingleComment
+import io.swagger.client.model.SurveySingleCommentList
+import io.swagger.client.model.SurveySingleCommentRequest
 import io.swagger.client.core._
 import io.swagger.client.core.CollectionFormats._
 import io.swagger.client.core.ApiKeyLocations._
@@ -164,6 +167,72 @@ object SurveyApi {
       .withPathParam("tid", tid)
       .withHeaderParam("token", token)
       .withSuccessResponse[SurveyResponse](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 :  (successful operation)
+   * 
+   * @param token 
+   * @param id 
+   */
+  def surveysSingleCommentIdDelete(token: String, id: Int): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.DELETE, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/single_comment/{id}", "application/json")
+      .withPathParam("id", id)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[Unit](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 :  (successful operation)
+   * 
+   * @param token 
+   * @param id 
+   * @param body 
+   */
+  def surveysSingleCommentIdPost(token: String, id: Int, body: Option[SurveySingleCommentRequest] = None): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/single_comment/{id}", "application/json")
+      .withBody(body)
+      .withPathParam("id", id)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[Unit](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : SurveySingleComment (successful operation)
+   * 
+   * @param token 
+   * @param cfgid 
+   * @param sid 
+   * @param tid 
+   * @param cid 
+   * @param body 
+   */
+  def surveysSingleCommentListGet(token: String, cfgid: Int, sid: Int, tid: Int, cid: Int, body: Option[SurveySingleCommentList] = None): ApiRequest[SurveySingleComment] =
+    ApiRequest[SurveySingleComment](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/single_comment/list", "application/json")
+      .withBody(body)
+      .withQueryParam("cfgid", cfgid)
+      .withQueryParam("sid", sid)
+      .withQueryParam("tid", tid)
+      .withQueryParam("cid", cid)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[SurveySingleComment](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 201 : InsertReturn (successful operation)
+   * 
+   * @param token 
+   * @param body 
+   */
+  def surveysSingleCommentPost(token: String, body: Option[SurveySingleCommentRequest] = None): ApiRequest[InsertReturn] =
+    ApiRequest[InsertReturn](ApiMethods.POST, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/single_comment", "application/json")
+      .withBody(body)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[InsertReturn](201)
       
 
 }
