@@ -227,6 +227,8 @@ Class | Method | HTTP request | Description
  - [SurveyRequestQuestions](SurveyRequestQuestions.md)
  - [SurveyResponse](SurveyResponse.md)
  - [SurveyResponseQuestions](SurveyResponseQuestions.md)
+ - [SurveySingleCommentList](SurveySingleCommentList.md)
+ - [SurveySingleCommentRequest](SurveySingleCommentRequest.md)
  - [UploadProfilePicRequest](UploadProfilePicRequest.md)
  - [User](User.md)
  - [UserChangePasswordRequest](UserChangePasswordRequest.md)
