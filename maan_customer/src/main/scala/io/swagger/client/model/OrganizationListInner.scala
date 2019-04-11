@@ -18,6 +18,7 @@ import java.util.UUID
 case class OrganizationListInner (
   id: Option[Int] = None,
   name: Option[String] = None,
+  parentId: Option[String] = None,
   path: Option[String] = None,
   depth: Option[Int] = None,
   weight: Option[Int] = None,
