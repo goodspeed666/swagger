@@ -119,7 +119,7 @@ Class | Method | HTTP request | Description
 *OrganizationApi* | **organizationGet** | **GET** /organization | Get organization list
 *OrganizationApi* | **organizationIdDelete** | **DELETE** /organization/{id} | Remove the organization
 *OrganizationApi* | **organizationIdPost** | **POST** /organization/{id} | Update organization
-*OrganizationApi* | **organizationPost** | **POST** /organization | Store organization
+*OrganizationApi* | **organizationPost** | **POST** /organization | Store organization, path 請帶入 parent path 即可
 *SurveyApi* | **surveysCommentPost** | **POST** /surveys/comment | Store survey comment
 *SurveyApi* | **surveysGet** | **GET** /surveys | Get survey list
 *SurveyApi* | **surveysGetTitleGet** | **GET** /surveys/get_title | Get survey title for type 67 系統
