@@ -17,7 +17,7 @@ import java.util.UUID
 
 case class OrganizationRequest (
   name: Option[String] = None,
-  path: Option[String] = None,
+  parentId: Option[Int] = None,
   weight: Option[Int] = None,
   status: Option[Boolean] = None
 ) extends ApiModel
