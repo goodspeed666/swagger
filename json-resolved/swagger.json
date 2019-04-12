@@ -1907,7 +1907,7 @@
           "description" : "簽約者地址"
         },
         "contractor_relation" : {
-          "type" : "integer",
+          "type" : "string",
           "description" : "簽約者關係"
         },
         "contractor_in_person" : {
