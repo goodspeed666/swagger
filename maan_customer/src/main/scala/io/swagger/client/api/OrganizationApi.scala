@@ -51,16 +51,16 @@ object OrganizationApi {
    * 
    * 
    * Expected answers:
-   *   code 200 : OrganizationList (successful operation)
+   *   code 200 :  (successful operation)
    * 
    * @param token 
    * @param id 
    */
-  def organizationIdDelete(token: String, id: Int): ApiRequest[OrganizationList] =
-    ApiRequest[OrganizationList](ApiMethods.DELETE, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization/{id}", "application/json")
+  def organizationIdDelete(token: String, id: Int): ApiRequest[Unit] =
+    ApiRequest[Unit](ApiMethods.DELETE, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/organization/{id}", "application/json")
       .withPathParam("id", id)
       .withHeaderParam("token", token)
-      .withSuccessResponse[OrganizationList](200)
+      .withSuccessResponse[Unit](200)
         /**
    * 
    * 
