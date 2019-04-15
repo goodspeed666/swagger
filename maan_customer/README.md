@@ -121,6 +121,7 @@ Class | Method | HTTP request | Description
 *OrganizationApi* | **organizationIdPost** | **POST** /organization/{id} | Update organization
 *OrganizationApi* | **organizationPost** | **POST** /organization | Store organization
 *SurveyApi* | **surveysCommentPost** | **POST** /surveys/comment | Store survey comment
+*SurveyApi* | **surveysCompletedGet** | **GET** /surveys/completed | 已填寫問券列表
 *SurveyApi* | **surveysGet** | **GET** /surveys | Get survey list
 *SurveyApi* | **surveysGetTitleGet** | **GET** /surveys/get_title | Get survey title for type 67 系統
 *SurveyApi* | **surveysPost** | **POST** /surveys | Store survey setting

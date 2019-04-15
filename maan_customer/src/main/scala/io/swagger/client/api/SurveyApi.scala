@@ -50,6 +50,20 @@ object SurveyApi {
    * @param token 
    * @param unread 
    */
+  def surveysCompletedGet(token: String, unread: Option[Int] = None): ApiRequest[SurveyList] =
+    ApiRequest[SurveyList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/completed", "application/json")
+      .withQueryParam("unread", unread)
+      .withHeaderParam("token", token)
+      .withSuccessResponse[SurveyList](200)
+        /**
+   * 
+   * 
+   * Expected answers:
+   *   code 200 : SurveyList (successful operation)
+   * 
+   * @param token 
+   * @param unread 
+   */
   def surveysGet(token: String, unread: Option[Int] = None): ApiRequest[SurveyList] =
     ApiRequest[SurveyList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys", "application/json")
       .withQueryParam("unread", unread)
