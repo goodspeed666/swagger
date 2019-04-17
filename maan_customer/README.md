@@ -159,6 +159,7 @@ Class | Method | HTTP request | Description
  - [CalendarResponse](CalendarResponse.md)
  - [CalendarResponseInner](CalendarResponseInner.md)
  - [CompletedSurveyList](CompletedSurveyList.md)
+ - [CompletedSurveyListInner](CompletedSurveyListInner.md)
  - [CourseActivityPhotoRequest](CourseActivityPhotoRequest.md)
  - [CourseActivityRearrangeRequest](CourseActivityRearrangeRequest.md)
  - [CourseActivityRearrangeRequestList](CourseActivityRearrangeRequestList.md)
