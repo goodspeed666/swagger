@@ -17,10 +17,11 @@ import java.util.UUID
 
 case class CompletedSurveyListInner (
   id: Option[Int] = None,
-  sid: Option[Int] = None,
-  tid: Option[Int] = None,
   `type`: Option[Int] = None,
   title: Option[String] = None,
+  customerName: Option[Int] = None,
+  room: Option[String] = None,
+  status: Option[String] = None,
   startTime: Option[String] = None,
   createdAt: Option[String] = None
 ) extends ApiModel
