@@ -49,11 +49,15 @@ object SurveyApi {
    *   code 200 : CompletedSurveyList (successful operation)
    * 
    * @param token 
-   * @param unread 
+   * @param `type` 
+   * @param title 
+   * @param condition 
    */
-  def surveysCompletedGet(token: String, unread: Option[Int] = None): ApiRequest[CompletedSurveyList] =
+  def surveysCompletedGet(token: String, `type`: Option[Int] = None, title: Option[Int] = None, condition: Option[Int] = None): ApiRequest[CompletedSurveyList] =
     ApiRequest[CompletedSurveyList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/completed", "application/json")
-      .withQueryParam("unread", unread)
+      .withQueryParam("type", `type`)
+      .withQueryParam("title", title)
+      .withQueryParam("condition", condition)
       .withHeaderParam("token", token)
       .withSuccessResponse[CompletedSurveyList](200)
         /**
