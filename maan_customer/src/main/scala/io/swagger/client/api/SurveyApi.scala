@@ -11,6 +11,7 @@
  */
 package io.swagger.client.api
 
+import io.swagger.client.model.CompletedSurveyList
 import io.swagger.client.model.GetSurvey
 import io.swagger.client.model.GetSurveyDetail
 import io.swagger.client.model.GetSurveyReport
@@ -45,16 +46,16 @@ object SurveyApi {
    * 
    * 
    * Expected answers:
-   *   code 200 : SurveyList (successful operation)
+   *   code 200 : CompletedSurveyList (successful operation)
    * 
    * @param token 
    * @param unread 
    */
-  def surveysCompletedGet(token: String, unread: Option[Int] = None): ApiRequest[SurveyList] =
-    ApiRequest[SurveyList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/completed", "application/json")
+  def surveysCompletedGet(token: String, unread: Option[Int] = None): ApiRequest[CompletedSurveyList] =
+    ApiRequest[CompletedSurveyList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/completed", "application/json")
       .withQueryParam("unread", unread)
       .withHeaderParam("token", token)
-      .withSuccessResponse[SurveyList](200)
+      .withSuccessResponse[CompletedSurveyList](200)
         /**
    * 
    * 

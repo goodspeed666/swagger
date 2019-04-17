@@ -158,6 +158,7 @@ Class | Method | HTTP request | Description
  - [AlbumUpdateRequest](AlbumUpdateRequest.md)
  - [CalendarResponse](CalendarResponse.md)
  - [CalendarResponseInner](CalendarResponseInner.md)
+ - [CompletedSurveyList](CompletedSurveyList.md)
  - [CourseActivityPhotoRequest](CourseActivityPhotoRequest.md)
  - [CourseActivityRearrangeRequest](CourseActivityRearrangeRequest.md)
  - [CourseActivityRearrangeRequestList](CourseActivityRearrangeRequestList.md)
