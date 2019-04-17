@@ -51,13 +51,13 @@ object SurveyApi {
    * @param token 
    * @param `type` 
    * @param title 
-   * @param statement 
+   * @param conditions 
    */
-  def surveysCompletedGet(token: String, `type`: Option[Int] = None, title: Option[Int] = None, statement: Option[Int] = None): ApiRequest[CompletedSurveyList] =
+  def surveysCompletedGet(token: String, `type`: Option[Int] = None, title: Option[Int] = None, conditions: Option[Int] = None): ApiRequest[CompletedSurveyList] =
     ApiRequest[CompletedSurveyList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/completed", "application/json")
       .withQueryParam("type", `type`)
       .withQueryParam("title", title)
-      .withQueryParam("statement", statement)
+      .withQueryParam("conditions", conditions)
       .withHeaderParam("token", token)
       .withSuccessResponse[CompletedSurveyList](200)
         /**
