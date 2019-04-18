@@ -2382,10 +2382,23 @@
         }
       }
     },
+    "CustomerCourseList_inner_form_id" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    },
     "CustomerCourseList_inner" : {
       "properties" : {
         "title" : {
           "type" : "string"
+        },
+        "form_id" : {
+          "$ref" : "#/definitions/CustomerCourseList_inner_form_id"
         },
         "class_time" : {
           "type" : "string",
