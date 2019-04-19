@@ -16,6 +16,7 @@ import org.joda.time.DateTime
 import java.util.UUID
 
 case class CompletedSurveyListInner (
+  sid: Option[Int] = None,
   tid: Option[Int] = None,
   `type`: Option[Int] = None,
   title: Option[String] = None,
