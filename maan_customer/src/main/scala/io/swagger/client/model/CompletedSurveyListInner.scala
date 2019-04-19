@@ -19,6 +19,7 @@ case class CompletedSurveyListInner (
   id: Option[Int] = None,
   `type`: Option[Int] = None,
   title: Option[String] = None,
+  cid: Option[String] = None,
   customerName: Option[Int] = None,
   room: Option[String] = None,
   status: Option[String] = None,
