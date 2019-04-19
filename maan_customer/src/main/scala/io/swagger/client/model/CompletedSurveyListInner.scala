@@ -23,7 +23,9 @@ case class CompletedSurveyListInner (
   customerName: Option[Int] = None,
   room: Option[String] = None,
   status: Option[String] = None,
+  /* 活動時間 */
   startTime: Option[String] = None,
+  /* 填寫時間 */
   createdAt: Option[String] = None
 ) extends ApiModel
 
