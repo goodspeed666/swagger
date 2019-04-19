@@ -55,8 +55,9 @@ object SurveyApi {
    * @param pending 待處理
    * @param review 待審閱
    * @param recent 近期瀏覽
+   * @param page 
    */
-  def surveysCompletedGet(token: String, `type`: Option[Int] = None, courseId: Option[Int] = None, newest: Option[Boolean] = None, pending: Option[Boolean] = None, review: Option[Boolean] = None, recent: Option[Boolean] = None): ApiRequest[CompletedSurveyList] =
+  def surveysCompletedGet(token: String, `type`: Option[Int] = None, courseId: Option[Int] = None, newest: Option[Boolean] = None, pending: Option[Boolean] = None, review: Option[Boolean] = None, recent: Option[Boolean] = None, page: Option[Int] = None): ApiRequest[CompletedSurveyList] =
     ApiRequest[CompletedSurveyList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/surveys/completed", "application/json")
       .withQueryParam("type", `type`)
       .withQueryParam("course_id", courseId)
@@ -64,6 +65,7 @@ object SurveyApi {
       .withQueryParam("pending", pending)
       .withQueryParam("review", review)
       .withQueryParam("recent", recent)
+      .withQueryParam("page", page)
       .withHeaderParam("token", token)
       .withSuccessResponse[CompletedSurveyList](200)
         /**
