@@ -338,7 +338,13 @@
         }, {
           "name" : "due_month",
           "in" : "query",
-          "description" : "預產期 Y-m",
+          "description" : "預產期 Start Y-m",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "due_month2",
+          "in" : "query",
+          "description" : "預產期 End Y-m",
           "required" : false,
           "type" : "string"
         }, {
