@@ -2578,11 +2578,19 @@
         },
         "desc" : {
           "type" : "string",
-          "example" : "description"
+          "description" : "description"
         },
         "signature" : {
           "type" : "string",
-          "example" : "簽名檔位置"
+          "description" : "簽名檔位置"
+        },
+        "ddp" : {
+          "type" : "integer",
+          "description" : "產憂表單總分"
+        },
+        "ddp_desc" : {
+          "type" : "string",
+          "description" : "產憂表單分數描述"
         }
       }
     },
