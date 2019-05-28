@@ -2507,6 +2507,10 @@
         "group_id" : {
           "type" : "integer"
         },
+        "group_name" : {
+          "type" : "string",
+          "description" : "for guide"
+        },
         "weight" : {
           "type" : "integer"
         }
