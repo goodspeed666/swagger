@@ -2595,6 +2595,10 @@
         "ddp_desc" : {
           "type" : "string",
           "description" : "產憂表單分數描述"
+        },
+        "warning" : {
+          "type" : "boolean",
+          "description" : "如果是 1 則 ddp_desc 要用紅色顯示"
         }
       }
     },
