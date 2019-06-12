@@ -1302,6 +1302,41 @@
         }
       }
     },
+    "/customers/{customer_id}/pdf_care/{birth_id}/{form}" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得照護PDF",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "form",
+          "in" : "path",
+          "description" : "form id, mon/care...etc.",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
     "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
