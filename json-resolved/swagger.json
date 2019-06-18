@@ -1337,7 +1337,7 @@
         } ],
         "responses" : {
           "200" : {
-            "description" : "successful operation"
+            "description" : "PDF URL"
           }
         }
       }
