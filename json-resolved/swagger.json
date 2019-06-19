@@ -1326,7 +1326,7 @@
         }, {
           "name" : "form",
           "in" : "path",
-          "description" : "form id, mon/baby...etc.",
+          "description" : "form id, mon or baby",
           "required" : true,
           "type" : "string"
         }, {
@@ -1363,12 +1363,6 @@
           "in" : "path",
           "required" : true,
           "type" : "integer"
-        }, {
-          "name" : "form",
-          "in" : "path",
-          "description" : "form id, mon/baby...etc.",
-          "required" : true,
-          "type" : "string"
         }, {
           "name" : "baby_id",
           "in" : "query",
