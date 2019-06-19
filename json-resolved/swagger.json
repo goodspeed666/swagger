@@ -1305,7 +1305,7 @@
     "/customers/{customer_id}/pdf_care/{birth_id}/{form}" : {
       "get" : {
         "tags" : [ "customer" ],
-        "summary" : "取得照護PDF",
+        "summary" : "取得媽媽/嬰兒照護PDF",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
