@@ -1342,6 +1342,46 @@
         }
       }
     },
+    "/customers/{customer_id}/pdf_care_ppd/{birth_id}/" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得憂鬱量表PDF",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "form",
+          "in" : "path",
+          "description" : "form id, mon/baby...etc.",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "baby_id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "PDF URL"
+          }
+        }
+      }
+    },
     "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
