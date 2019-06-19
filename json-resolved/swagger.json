@@ -1342,7 +1342,7 @@
         }
       }
     },
-    "/customers/{customer_id}/pdf_care_ppd/{birth_id}/" : {
+    "/customers/{customer_id}/pdf_care_ppd/{birth_id}" : {
       "get" : {
         "tags" : [ "customer" ],
         "summary" : "取得憂鬱量表PDF",
