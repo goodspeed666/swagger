@@ -2159,6 +2159,12 @@
           "items" : {
             "$ref" : "#/definitions/CustomerCareRequest_macro"
           }
+        },
+        "macro2" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/CustomerCareRequest_macro2"
+          }
         }
       }
     },
@@ -2711,6 +2717,21 @@
         "values" : {
           "type" : "object",
           "example" : "[4, 5, 6] for type5",
+          "properties" : { }
+        }
+      }
+    },
+    "CustomerCareRequest_macro2" : {
+      "properties" : {
+        "cid" : {
+          "type" : "integer"
+        },
+        "key" : {
+          "type" : "string"
+        },
+        "options" : {
+          "type" : "object",
+          "example" : [ 1, 2, 3 ],
           "properties" : { }
         }
       }
