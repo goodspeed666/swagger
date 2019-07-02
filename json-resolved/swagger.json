@@ -2166,7 +2166,8 @@
             "$ref" : "#/definitions/CustomerCareRequest_macro2"
           }
         }
-      }
+      },
+      "description" : "macro2 只有指導紀錄單 guide 才需要填寫"
     },
     "Care" : {
       "type" : "object",
