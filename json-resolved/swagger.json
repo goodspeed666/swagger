@@ -2617,6 +2617,28 @@
           "type" : "object",
           "example" : [ 1, 2, 3 ],
           "properties" : { }
+        },
+        "created_at" : {
+          "type" : "string",
+          "description" : "指導日期，guide才有"
+        },
+        "created_user" : {
+          "type" : "string",
+          "description" : "護理人員，guide才有"
+        },
+        "guide_options" : {
+          "type" : "object",
+          "example" : [ 1, 2, 3 ],
+          "description" : "評鑑結果",
+          "properties" : { }
+        },
+        "guide_created_at" : {
+          "type" : "string",
+          "description" : "評鑑日期"
+        },
+        "guide_created_user" : {
+          "type" : "string",
+          "description" : "護理人員"
         }
       }
     },
