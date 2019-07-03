@@ -376,6 +376,12 @@
           "required" : true,
           "type" : "string"
         }, {
+          "name" : "visit",
+          "in" : "query",
+          "description" : "如果是1的話，僅name,email,mobile_phone為必填欄位，給建立參觀單用",
+          "required" : false,
+          "type" : "boolean"
+        }, {
           "name" : "cid",
           "in" : "query",
           "description" : "客戶編號",
