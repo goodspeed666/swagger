@@ -382,12 +382,6 @@
           "required" : false,
           "type" : "boolean"
         }, {
-          "name" : "auto_cid",
-          "in" : "query",
-          "description" : "如果是 1 的話，則會自動生成 cid",
-          "required" : false,
-          "type" : "boolean"
-        }, {
           "name" : "cid",
           "in" : "query",
           "description" : "客戶編號",
@@ -730,6 +724,12 @@
           "description" : "Customer ID",
           "required" : true,
           "type" : "string"
+        }, {
+          "name" : "auto_cid",
+          "in" : "query",
+          "description" : "如果是 1 的話，則會自動生成 cid",
+          "required" : false,
+          "type" : "boolean"
         }, {
           "in" : "body",
           "name" : "body",
