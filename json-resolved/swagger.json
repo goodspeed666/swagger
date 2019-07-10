@@ -1992,6 +1992,10 @@
           "type" : "string",
           "description" : "簽約者身分證字號"
         },
+        "contractor_unified_num" : {
+          "type" : "string",
+          "description" : "簽約者統一證號"
+        },
         "contractor_birth" : {
           "type" : "string",
           "example" : "Y-m-d",
