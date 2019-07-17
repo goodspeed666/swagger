@@ -2773,6 +2773,15 @@
           "type" : "object",
           "example" : "[4, 5, 6] for type5",
           "properties" : { }
+        },
+        "cid" : {
+          "type" : "integer",
+          "description" : "only for guide(指導記錄單)"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s",
+          "description" : "only for guide(指導記錄單)"
         }
       }
     },
@@ -2788,6 +2797,10 @@
           "type" : "object",
           "example" : [ 1, 2, 3 ],
           "properties" : { }
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
         }
       }
     }
