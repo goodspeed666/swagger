@@ -2657,18 +2657,25 @@
         "created_user" : {
           "type" : "string",
           "description" : "護理人員，guide才有"
+        }
+      }
+    },
+    "GetCareInfo_inner_items2" : {
+      "properties" : {
+        "key" : {
+          "type" : "string"
         },
-        "guide_options" : {
+        "options" : {
           "type" : "object",
           "example" : [ 1, 2, 3 ],
           "description" : "評鑑結果",
           "properties" : { }
         },
-        "guide_created_at" : {
+        "created_at" : {
           "type" : "string",
-          "description" : "評鑑日期"
+          "description" : "指導日期"
         },
-        "guide_created_user" : {
+        "created_user" : {
           "type" : "string",
           "description" : "護理人員"
         }
@@ -2687,6 +2694,12 @@
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/GetCareInfo_inner_items"
+          }
+        },
+        "items2" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetCareInfo_inner_items2"
           }
         },
         "mon_name" : {
