@@ -2657,6 +2657,10 @@
         "created_user" : {
           "type" : "string",
           "description" : "護理人員，guide才有"
+        },
+        "created_uid" : {
+          "type" : "integer",
+          "description" : "護理人員id，guide才有"
         }
       }
     },
@@ -2678,6 +2682,10 @@
         "created_user" : {
           "type" : "string",
           "description" : "護理人員"
+        },
+        "created_cid" : {
+          "type" : "integer",
+          "description" : "護理人員id"
         }
       }
     },
