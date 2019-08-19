@@ -2524,6 +2524,43 @@
         "id" : {
           "type" : "integer"
         },
+        "date" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i:s"
+        },
+        "the_date" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "the_time" : {
+          "type" : "string",
+          "example" : "H:i:s"
+        },
+        "message_type" : {
+          "type" : "string",
+          "example" : "{\"id\": 0, \"name\": \"XXX\"}"
+        },
+        "dept_type" : {
+          "type" : "integer"
+        },
+        "responsible_uid" : {
+          "type" : "string",
+          "example" : "{\"id\": 0, \"name\": \"XXX\"}"
+        },
+        "closed" : {
+          "type" : "integer"
+        },
+        "remind_date" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i:s"
+        },
+        "spend_days" : {
+          "type" : "integer"
+        },
+        "deadline" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i:s"
+        },
         "message" : {
           "type" : "string"
         },
