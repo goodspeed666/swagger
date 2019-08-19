@@ -1766,15 +1766,15 @@
         },
         "cid" : {
           "type" : "string",
-          "example" : "前三碼要抓出來，不能改"
+          "description" : "前三碼要抓出來，不能改"
         },
         "id_num" : {
           "type" : "string",
-          "example" : "身分證字號"
+          "description" : "身分證字號"
         },
         "unified_num" : {
           "type" : "string",
-          "example" : "統一證號（跟身份證字號則一輸入）"
+          "description" : "統一證號（跟身份證字號則一輸入）"
         },
         "email" : {
           "type" : "string"
