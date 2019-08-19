@@ -947,6 +947,11 @@
           "in" : "query",
           "required" : false,
           "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
         } ],
         "responses" : {
           "default" : {
