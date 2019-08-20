@@ -2145,17 +2145,27 @@
     },
     "CustomerMessageRequest" : {
       "type" : "object",
-      "required" : [ "birth", "created_at", "message" ],
+      "required" : [ "birth", "message" ],
       "properties" : {
+        "the_date" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "the_time" : {
+          "type" : "string",
+          "example" : "H:i:s"
+        },
+        "message_type" : {
+          "type" : "integer"
+        },
         "message" : {
           "type" : "string"
         },
         "birth" : {
           "type" : "integer"
         },
-        "created_at" : {
-          "type" : "string",
-          "example" : "Y-m-d H:i"
+        "responsible_uid" : {
+          "type" : "integer"
         }
       }
     },
