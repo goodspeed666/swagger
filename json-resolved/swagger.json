@@ -1456,7 +1456,7 @@
           "name" : "body",
           "required" : false,
           "schema" : {
-            "$ref" : "#/definitions/CustomerBirthRequest"
+            "$ref" : "#/definitions/CustomerCordRequest"
           }
         } ],
         "responses" : {
@@ -2014,6 +2014,111 @@
     "CustomerBirthRequest" : {
       "type" : "object",
       "required" : [ "birth_order", "due_date", "give_birth_area", "give_birth_hospital", "how_much_baby", "visit_date", "visit_receptionist" ],
+      "properties" : {
+        "due_date" : {
+          "type" : "string",
+          "description" : "預產期"
+        },
+        "give_birth_date" : {
+          "type" : "string",
+          "description" : "實際生產日期"
+        },
+        "give_birth_area" : {
+          "type" : "integer",
+          "description" : "生產地區"
+        },
+        "give_birth_hospital" : {
+          "type" : "integer",
+          "description" : "生產醫院"
+        },
+        "give_birth_type" : {
+          "type" : "string",
+          "description" : "剖腹 or 自然產"
+        },
+        "birth_order" : {
+          "type" : "integer",
+          "description" : "胎次"
+        },
+        "maan_birth_order" : {
+          "type" : "integer",
+          "description" : "沁月第幾胎"
+        },
+        "bring_children" : {
+          "type" : "integer",
+          "description" : "帶幾個小孩入住"
+        },
+        "how_much_baby" : {
+          "type" : "integer",
+          "description" : "幾胞胎",
+          "minimum" : 1,
+          "maximum" : 5
+        },
+        "stay_with" : {
+          "type" : "string",
+          "description" : "留宿者"
+        },
+        "baby_info" : {
+          "type" : "string",
+          "example" : "{ [\"bcid\": \"XXX\", \"gender\": 1, \"height\": 80, \"weight\": 3000] }",
+          "description" : "baby資料"
+        },
+        "visit_receptionist" : {
+          "type" : "integer",
+          "description" : "參觀接待人"
+        },
+        "visit_date" : {
+          "type" : "string",
+          "description" : "參觀日期"
+        },
+        "signing_receptionist" : {
+          "type" : "integer",
+          "description" : "簽約接待人"
+        },
+        "signing_date" : {
+          "type" : "string",
+          "description" : "簽約日期"
+        },
+        "your_cs" : {
+          "type" : "integer",
+          "description" : "責任客服"
+        },
+        "contractor" : {
+          "type" : "string",
+          "description" : "簽約者"
+        },
+        "contractor_mobile" : {
+          "type" : "string",
+          "description" : "簽約者手機"
+        },
+        "contractor_id_num" : {
+          "type" : "string",
+          "description" : "簽約者身分證字號"
+        },
+        "contractor_unified_num" : {
+          "type" : "string",
+          "description" : "簽約者統一證號"
+        },
+        "contractor_birth" : {
+          "type" : "string",
+          "example" : "Y-m-d",
+          "description" : "簽約者生日"
+        },
+        "contractor_address" : {
+          "type" : "string",
+          "description" : "簽約者地址"
+        },
+        "contractor_relation" : {
+          "type" : "string",
+          "description" : "簽約者關係"
+        },
+        "contractor_in_person" : {
+          "type" : "integer",
+          "description" : "是否為本人"
+        }
+      }
+    },
+    "CustomerCordRequest" : {
+      "type" : "object",
       "properties" : {
         "due_date" : {
           "type" : "string",
