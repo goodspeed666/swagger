@@ -1438,7 +1438,7 @@
     "/customers/{customer_id}/cord" : {
       "post" : {
         "tags" : [ "customer" ],
-        "summary" : "建立胎次資料",
+        "summary" : "上傳臍帶簽收者簽名檔",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
