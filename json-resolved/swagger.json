@@ -1435,6 +1435,40 @@
         }
       }
     },
+    "/customers/{customer_id}/cord" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "建立胎次資料",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerBirthRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
+          },
+          "400" : {
+            "description" : "Customized error message"
+          }
+        }
+      }
+    },
     "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
