@@ -1517,6 +1517,27 @@
         }
       }
     },
+    "/common/type/dept" : {
+      "get" : {
+        "tags" : [ "common" ],
+        "summary" : "取得部門別",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCommonType"
+            }
+          }
+        }
+      }
+    },
     "/common/type/relation_ship" : {
       "get" : {
         "tags" : [ "common" ],
