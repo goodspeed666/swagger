@@ -2129,6 +2129,7 @@
         },
         "created_at" : {
           "type" : "string",
+          "example" : "YYYY-mm-dd H:i",
           "description" : "簽收臍帶時間"
         },
         "signature" : {
