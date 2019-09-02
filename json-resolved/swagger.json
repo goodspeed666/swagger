@@ -1013,7 +1013,7 @@
         }, {
           "name" : "type_id",
           "in" : "path",
-          "description" : "mon 產婦, baby 嬰兒, dps 產憂, apgar 家庭功能, lsns 社會支持, guide 指導紀錄單, wash 嬰兒盥洗",
+          "description" : "mon 產婦, baby 嬰兒, dps 產憂, apgar 家庭功能, lsns 社會支持, guide 指導紀錄單, wash 嬰兒盥洗, babydaily 寶寶日誌",
           "required" : true,
           "type" : "string"
         }, {
