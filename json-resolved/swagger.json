@@ -1786,6 +1786,32 @@
             "description" : "No data"
           }
         }
+      },
+      "post" : {
+        "tags" : [ "appointment" ],
+        "summary" : "新增appointment",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/AppointmentRequest"
+          }
+        } ],
+        "responses" : {
+          "201" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/InsertReturn"
+            }
+          }
+        }
       }
     }
   },
@@ -2456,6 +2482,72 @@
         },
         "unexpected_visit" : {
           "type" : "string"
+        },
+        "appointment_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
+        }
+      }
+    },
+    "AppointmentRequest" : {
+      "type" : "object",
+      "required" : [ "appointment_at", "appointment_item", "due_date", "mobile_phone", "name" ],
+      "properties" : {
+        "cid" : {
+          "type" : "integer"
+        },
+        "visit_id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "appointment_item" : {
+          "type" : "string"
+        },
+        "created_uid" : {
+          "type" : "string"
+        },
+        "car_color" : {
+          "type" : "string"
+        },
+        "plate_num" : {
+          "type" : "string"
+        },
+        "today_appointment" : {
+          "type" : "string"
+        },
+        "unexpected_visit" : {
+          "type" : "string"
+        },
+        "dad_name" : {
+          "type" : "string"
+        },
+        "dad_mobile" : {
+          "type" : "string"
+        },
+        "note" : {
+          "type" : "string"
+        },
+        "care_point" : {
+          "type" : "string"
+        },
+        "do_not_eat" : {
+          "type" : "string"
+        },
+        "other_appointment" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
         },
         "appointment_at" : {
           "type" : "string",
