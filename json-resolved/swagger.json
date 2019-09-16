@@ -22,6 +22,9 @@
   }, {
     "name" : "shiftlog",
     "description" : "Operations about nursing shift log service"
+  }, {
+    "name" : "appointment",
+    "description" : "Operations about appointment service"
   } ],
   "schemes" : [ "https" ],
   "paths" : {
@@ -1760,6 +1763,30 @@
           }
         }
       }
+    },
+    "/appointment" : {
+      "get" : {
+        "tags" : [ "appointment" ],
+        "summary" : "取得appointment",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/AppointmentList"
+            }
+          },
+          "404" : {
+            "description" : "No data"
+          }
+        }
+      }
     }
   },
   "definitions" : {
@@ -2390,6 +2417,49 @@
         "created_at" : {
           "type" : "string",
           "example" : "Y-m-d"
+        }
+      }
+    },
+    "AppointmentList" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "cid" : {
+          "type" : "integer"
+        },
+        "visit_id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "appointment_item" : {
+          "type" : "string"
+        },
+        "car_color" : {
+          "type" : "string"
+        },
+        "plate_num" : {
+          "type" : "string"
+        },
+        "today_appointment" : {
+          "type" : "string"
+        },
+        "unexpected_visit" : {
+          "type" : "string"
+        },
+        "appointment_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
         }
       }
     },
