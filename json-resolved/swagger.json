@@ -1785,7 +1785,7 @@
           "200" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/AppointmentList"
+              "$ref" : "#/definitions/GetAppointmentList"
             }
           },
           "404" : {
@@ -1840,7 +1840,7 @@
           "200" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/AppointmentRequest"
+              "$ref" : "#/definitions/GetAppointment"
             }
           }
         }
@@ -2478,10 +2478,86 @@
         }
       }
     },
-    "AppointmentList" : {
+    "GetAppointmentList" : {
       "type" : "array",
       "items" : {
-        "$ref" : "#/definitions/AppointmentList_inner"
+        "$ref" : "#/definitions/GetAppointmentList_inner"
+      }
+    },
+    "GetAppointment" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "cid" : {
+          "type" : "integer"
+        },
+        "visit_id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "appointment_item" : {
+          "type" : "string",
+          "example" : "參觀,試吃"
+        },
+        "created_uid" : {
+          "type" : "string",
+          "example" : "{\"id\": 0, \"name\": \"XXX\"}"
+        },
+        "car_color" : {
+          "type" : "string"
+        },
+        "plate_num" : {
+          "type" : "string"
+        },
+        "today_appointment" : {
+          "type" : "integer"
+        },
+        "unexpected_visit" : {
+          "type" : "integer"
+        },
+        "dad_name" : {
+          "type" : "string"
+        },
+        "dad_mobile" : {
+          "type" : "string"
+        },
+        "note" : {
+          "type" : "string"
+        },
+        "care_point" : {
+          "type" : "string",
+          "example" : "31,32"
+        },
+        "do_not_eat" : {
+          "type" : "string",
+          "example" : "羊肉,牛肉"
+        },
+        "other_appointment" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
+        },
+        "updated_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
+        },
+        "appointment_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
+        }
       }
     },
     "AppointmentRequest" : {
@@ -2505,7 +2581,8 @@
           "example" : "Y-m-d"
         },
         "appointment_item" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "參觀,試吃"
         },
         "created_uid" : {
           "type" : "string"
@@ -2532,10 +2609,12 @@
           "type" : "string"
         },
         "care_point" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "31,32"
         },
         "do_not_eat" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "羊肉,牛肉"
         },
         "other_appointment" : {
           "type" : "string"
@@ -3173,7 +3252,7 @@
         }
       }
     },
-    "AppointmentList_inner" : {
+    "GetAppointmentList_inner" : {
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -3195,7 +3274,8 @@
           "example" : "Y-m-d"
         },
         "appointment_item" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "參觀,試吃"
         },
         "car_color" : {
           "type" : "string"
@@ -3204,10 +3284,10 @@
           "type" : "string"
         },
         "today_appointment" : {
-          "type" : "string"
+          "type" : "integer"
         },
         "unexpected_visit" : {
-          "type" : "string"
+          "type" : "integer"
         },
         "appointment_at" : {
           "type" : "string",
