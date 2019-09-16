@@ -2479,46 +2479,9 @@
       }
     },
     "AppointmentList" : {
-      "type" : "object",
-      "properties" : {
-        "id" : {
-          "type" : "integer"
-        },
-        "cid" : {
-          "type" : "integer"
-        },
-        "visit_id" : {
-          "type" : "integer"
-        },
-        "name" : {
-          "type" : "string"
-        },
-        "mobile_phone" : {
-          "type" : "string"
-        },
-        "due_date" : {
-          "type" : "string",
-          "example" : "Y-m-d"
-        },
-        "appointment_item" : {
-          "type" : "string"
-        },
-        "car_color" : {
-          "type" : "string"
-        },
-        "plate_num" : {
-          "type" : "string"
-        },
-        "today_appointment" : {
-          "type" : "string"
-        },
-        "unexpected_visit" : {
-          "type" : "string"
-        },
-        "appointment_at" : {
-          "type" : "string",
-          "example" : "YYYY-mm-dd H:i:s"
-        }
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/AppointmentList_inner"
       }
     },
     "AppointmentRequest" : {
@@ -3205,6 +3168,48 @@
           "properties" : { }
         },
         "created_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
+        }
+      }
+    },
+    "AppointmentList_inner" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "cid" : {
+          "type" : "integer"
+        },
+        "visit_id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "appointment_item" : {
+          "type" : "string"
+        },
+        "car_color" : {
+          "type" : "string"
+        },
+        "plate_num" : {
+          "type" : "string"
+        },
+        "today_appointment" : {
+          "type" : "string"
+        },
+        "unexpected_visit" : {
+          "type" : "string"
+        },
+        "appointment_at" : {
           "type" : "string",
           "example" : "YYYY-mm-dd H:i:s"
         }
