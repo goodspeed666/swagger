@@ -1578,7 +1578,7 @@
         }, {
           "name" : "role",
           "in" : "query",
-          "description" : "客服是CS",
+          "description" : "客服是CS,SC",
           "required" : true,
           "type" : "string"
         }, {
@@ -1773,6 +1773,12 @@
           "name" : "token",
           "in" : "header",
           "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "the_date",
+          "in" : "query",
+          "description" : "Y-mm-dd",
+          "required" : false,
           "type" : "string"
         } ],
         "responses" : {
