@@ -1885,7 +1885,7 @@
           "200" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/GetAppointmentList"
+              "$ref" : "#/definitions/GetAppointmentClassSchedule"
             }
           },
           "404" : {
@@ -2605,6 +2605,19 @@
         "appointment_at" : {
           "type" : "string",
           "example" : "YYYY-mm-dd H:i:s"
+        }
+      }
+    },
+    "GetAppointmentClassSchedule" : {
+      "type" : "object",
+      "properties" : {
+        "class" : {
+          "type" : "string",
+          "example" : "早班"
+        },
+        "cs_list" : {
+          "type" : "string",
+          "example" : "Amber, Emma"
         }
       }
     },
