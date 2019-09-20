@@ -1783,13 +1783,13 @@
         }, {
           "name" : "start",
           "in" : "query",
-          "description" : "Y-mm-dd",
+          "description" : "Y-mm-dd，必須與 end 一起使用",
           "required" : false,
           "type" : "string"
         }, {
           "name" : "end",
           "in" : "query",
-          "description" : "Y-mm-dd",
+          "description" : "Y-mm-dd，必須與 start 一起使用",
           "required" : false,
           "type" : "string"
         } ],
