@@ -1780,6 +1780,18 @@
           "description" : "Y-mm-dd",
           "required" : false,
           "type" : "string"
+        }, {
+          "name" : "start",
+          "in" : "query",
+          "description" : "Y-mm-dd",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "end",
+          "in" : "query",
+          "description" : "Y-mm-dd",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
