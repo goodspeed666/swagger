@@ -2609,16 +2609,9 @@
       }
     },
     "GetAppointmentClassSchedule" : {
-      "type" : "object",
-      "properties" : {
-        "class" : {
-          "type" : "string",
-          "example" : "早班"
-        },
-        "cs_list" : {
-          "type" : "string",
-          "example" : "Amber, Emma"
-        }
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetAppointmentClassSchedule_inner"
       }
     },
     "AppointmentRequest" : {
@@ -3353,6 +3346,18 @@
         "appointment_at" : {
           "type" : "string",
           "example" : "YYYY-mm-dd H:i:s"
+        }
+      }
+    },
+    "GetAppointmentClassSchedule_inner" : {
+      "properties" : {
+        "class" : {
+          "type" : "string",
+          "example" : "早班"
+        },
+        "cs_list" : {
+          "type" : "string",
+          "example" : "Amber, Emma"
         }
       }
     }
