@@ -297,13 +297,6 @@
           "required" : true,
           "type" : "string"
         }, {
-          "in" : "body",
-          "name" : "body",
-          "required" : false,
-          "schema" : {
-            "$ref" : "#/definitions/GetCustomers"
-          }
-        }, {
           "name" : "page",
           "in" : "query",
           "required" : false,
@@ -356,6 +349,13 @@
           "description" : "80:潛在客戶, 81:已預約未入住, 83:已離館, 91:待處理, 92:退訂",
           "required" : false,
           "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/GetCustomers"
+          }
         } ],
         "responses" : {
           "200" : {
