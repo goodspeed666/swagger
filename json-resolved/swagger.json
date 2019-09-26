@@ -3290,6 +3290,16 @@
         }
       }
     },
+    "GetLifeLogInfo_inner_items" : {
+      "properties" : {
+        "key" : {
+          "type" : "string"
+        },
+        "values" : {
+          "type" : "string"
+        }
+      }
+    },
     "GetLifeLogInfo_inner_details" : {
       "properties" : {
         "id" : {
@@ -3320,8 +3330,12 @@
         "items" : {
           "type" : "array",
           "items" : {
-            "$ref" : "#/definitions/GetCareInfo_inner_items"
+            "$ref" : "#/definitions/GetLifeLogInfo_inner_items"
           }
+        },
+        "something" : {
+          "type" : "string",
+          "description" : "爸媽交托物品"
         },
         "details" : {
           "type" : "array",
