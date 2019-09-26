@@ -3322,13 +3322,6 @@
     },
     "GetLifeLogInfo_inner" : {
       "properties" : {
-        "id" : {
-          "type" : "integer"
-        },
-        "time" : {
-          "type" : "string",
-          "example" : "YY-mm-dd H:i:s"
-        },
         "items" : {
           "type" : "array",
           "items" : {
