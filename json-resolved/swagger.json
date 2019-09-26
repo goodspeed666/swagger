@@ -2483,7 +2483,7 @@
     "GetLifeLogInfo" : {
       "type" : "array",
       "items" : {
-        "$ref" : "#/definitions/GetCareInfo_inner"
+        "$ref" : "#/definitions/GetLifeLogInfo_inner"
       }
     },
     "GetCareDiff" : {
@@ -3287,6 +3287,47 @@
         "warning" : {
           "type" : "boolean",
           "description" : "如果是 1 則 ddp_desc 要用紅色顯示"
+        }
+      }
+    },
+    "GetLifeLogInfo_inner_details" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "info" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
+        },
+        "editable" : {
+          "type" : "boolean",
+          "description" : "是否可刪除, 0: 不行, 1:可"
+        }
+      }
+    },
+    "GetLifeLogInfo_inner" : {
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "time" : {
+          "type" : "string",
+          "example" : "YY-mm-dd H:i:s"
+        },
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetCareInfo_inner_items"
+          }
+        },
+        "details" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetLifeLogInfo_inner_details"
+          }
         }
       }
     },
