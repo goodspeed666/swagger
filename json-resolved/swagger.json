@@ -3314,6 +3314,10 @@
           "type" : "string",
           "example" : "YYYY-mm-dd H:i:s"
         },
+        "from" : {
+          "type" : "string",
+          "description" : "資料來源"
+        },
         "editable" : {
           "type" : "boolean",
           "description" : "是否可刪除, 0: 不行, 1:可"
