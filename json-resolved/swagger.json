@@ -3293,10 +3293,12 @@
     "GetLifeLogInfo_inner_items" : {
       "properties" : {
         "key" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "小便"
         },
         "values" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "5 次"
         }
       }
     },
