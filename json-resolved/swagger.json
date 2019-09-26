@@ -1132,6 +1132,48 @@
         }
       }
     },
+    "/customers/{customer_id}/care/lifelog" : {
+      "get" : {
+        "tags" : [ "care" ],
+        "summary" : "取得生活日誌",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "the_date",
+          "in" : "query",
+          "description" : "YYYY-mm-dd",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "baby_id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCareInfo"
+            }
+          }
+        }
+      }
+    },
     "/care/all_day" : {
       "get" : {
         "tags" : [ "care" ],
