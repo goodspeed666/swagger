@@ -3299,6 +3299,9 @@
         "values" : {
           "type" : "string",
           "example" : "5 次"
+        },
+        "group" : {
+          "type" : "integer"
         }
       }
     },
