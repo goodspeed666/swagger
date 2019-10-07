@@ -1898,6 +1898,37 @@
             }
           }
         }
+      },
+      "post" : {
+        "tags" : [ "appointment" ],
+        "summary" : "更新appointment",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/AppointmentRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/InsertReturn"
+            }
+          }
+        }
       }
     },
     "/appointment/class_schedule" : {
@@ -2724,10 +2755,6 @@
         },
         "other_appointment" : {
           "type" : "string"
-        },
-        "created_at" : {
-          "type" : "string",
-          "example" : "YYYY-mm-dd H:i:s"
         },
         "appointment_at" : {
           "type" : "string",
