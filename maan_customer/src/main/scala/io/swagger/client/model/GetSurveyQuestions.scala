@@ -22,7 +22,9 @@ case class GetSurveyQuestions (
   other: Option[Boolean] = None,
   options: Option[String] = None,
   weight: Option[Int] = None,
-  required: Option[Boolean] = None
+  required: Option[Boolean] = None,
+  /* 如果 kind 是 74，則在呼叫 /common/search?role= 帶入此值 */
+  parms: Option[String] = None
 ) extends ApiModel
 
 
