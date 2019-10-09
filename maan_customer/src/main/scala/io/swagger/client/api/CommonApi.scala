@@ -86,7 +86,7 @@ object CommonApi {
    *   code 200 : SearchRole (successful operation)
    * 
    * @param token 
-   * @param role CS,BR 可支援多重部門
+   * @param role CS,BR,MR 可支援多重部門
    * @param keyword 請輸入要搜尋的姓名或帳號關鍵字
    * @param status 狀態(不輸入為不過濾狀態, 0:關閉, 1:開啟)
    */
