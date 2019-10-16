@@ -1688,6 +1688,30 @@
         }
       }
     },
+    "/common/get_from_app" : {
+      "get" : {
+        "tags" : [ "common" ],
+        "summary" : "取得沁小月中寶寶日誌的品項",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCommonType"
+            }
+          },
+          "404" : {
+            "description" : "The type is empty or does not exist"
+          }
+        }
+      }
+    },
     "/care/type/{type_id}" : {
       "get" : {
         "tags" : [ "care" ],
