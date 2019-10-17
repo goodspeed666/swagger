@@ -3202,7 +3202,8 @@
           "type" : "string"
         },
         "keys" : {
-          "type" : "array"
+          "type" : "string",
+          "example" : "array('test1', 'test2', 'test3')"
         }
       }
     },
