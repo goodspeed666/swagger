@@ -1190,6 +1190,18 @@
           "required" : true,
           "type" : "string"
         }, {
+          "name" : "start",
+          "in" : "query",
+          "description" : "需跟end一起使用",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "end",
+          "in" : "query",
+          "description" : "需跟start一起使用",
+          "required" : true,
+          "type" : "string"
+        }, {
           "name" : "type_id",
           "in" : "query",
           "description" : "mon 產婦, baby 嬰兒, dps 產憂, apgar 家庭功能, lsns 社會支持, guide 指導紀錄單, wash 嬰兒盥洗",
@@ -2874,6 +2886,7 @@
       }
     },
     "GetCustomers_inner" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -2936,6 +2949,7 @@
       }
     },
     "CustomerConnectList_inner" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -2964,6 +2978,7 @@
       }
     },
     "GetCustomerBirth_inner_give_birth_area" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -2974,6 +2989,7 @@
       }
     },
     "GetCustomerBirth_inner_contractor_relation" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -2985,6 +3001,7 @@
       "description" : "簽約者關係"
     },
     "GetCustomerBirth_inner" : {
+      "type" : "object",
       "properties" : {
         "due_date" : {
           "type" : "string",
@@ -3087,6 +3104,7 @@
       }
     },
     "CustomerMessageList_inner" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -3150,6 +3168,7 @@
       }
     },
     "CustomerCourseList_inner_form_id" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "string"
@@ -3160,6 +3179,7 @@
       }
     },
     "CustomerCourseList_inner" : {
+      "type" : "object",
       "properties" : {
         "title" : {
           "type" : "string"
@@ -3186,6 +3206,7 @@
       }
     },
     "GetHospitals_inner_hospitals" : {
+      "type" : "object",
       "properties" : {
         "hospital_id" : {
           "type" : "integer"
@@ -3196,6 +3217,7 @@
       }
     },
     "GetHospitals_inner" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer",
@@ -3213,6 +3235,7 @@
       }
     },
     "GetCommonType_inner" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer",
@@ -3224,6 +3247,7 @@
       }
     },
     "GetAppointmentType_inner" : {
+      "type" : "object",
       "properties" : {
         "item" : {
           "type" : "string"
@@ -3231,6 +3255,7 @@
       }
     },
     "GetMixItems_inner" : {
+      "type" : "object",
       "properties" : {
         "title" : {
           "type" : "string"
@@ -3242,6 +3267,7 @@
       }
     },
     "SearchRole_inner" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "string"
@@ -3256,6 +3282,7 @@
       }
     },
     "GetCareType_inner" : {
+      "type" : "object",
       "properties" : {
         "key" : {
           "type" : "string"
@@ -3296,6 +3323,7 @@
       }
     },
     "GetCareInfo_inner_items" : {
+      "type" : "object",
       "properties" : {
         "key" : {
           "type" : "string"
@@ -3331,6 +3359,7 @@
       }
     },
     "GetCareInfo_inner_items2" : {
+      "type" : "object",
       "properties" : {
         "key" : {
           "type" : "string"
@@ -3356,6 +3385,7 @@
       }
     },
     "GetCareInfo_inner" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -3425,6 +3455,7 @@
       }
     },
     "GetLifeLogInfo_inner_items" : {
+      "type" : "object",
       "properties" : {
         "key" : {
           "type" : "string",
@@ -3440,6 +3471,7 @@
       }
     },
     "GetLifeLogInfo_inner_details" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -3462,6 +3494,7 @@
       }
     },
     "GetLifeLogInfo_inner" : {
+      "type" : "object",
       "properties" : {
         "items" : {
           "type" : "array",
@@ -3482,6 +3515,7 @@
       }
     },
     "GetCareDiff_inner" : {
+      "type" : "object",
       "properties" : {
         "version" : {
           "type" : "integer"
@@ -3497,6 +3531,7 @@
       }
     },
     "CustomerCareRequest_macro" : {
+      "type" : "object",
       "properties" : {
         "key" : {
           "type" : "string"
@@ -3530,6 +3565,7 @@
       }
     },
     "CustomerCareRequest_macro2" : {
+      "type" : "object",
       "properties" : {
         "cid" : {
           "type" : "integer"
@@ -3549,6 +3585,7 @@
       }
     },
     "GetAppointmentList_inner" : {
+      "type" : "object",
       "properties" : {
         "id" : {
           "type" : "integer"
@@ -3596,6 +3633,7 @@
       }
     },
     "GetAppointmentClassSchedule_inner" : {
+      "type" : "object",
       "properties" : {
         "class" : {
           "type" : "string",
