@@ -2422,6 +2422,10 @@
         "contractor_in_person" : {
           "type" : "integer",
           "description" : "是否為本人"
+        },
+        "pre_check" : {
+          "type" : "boolean",
+          "description" : "僅檢查欄位的正確性"
         }
       }
     },
