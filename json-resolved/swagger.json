@@ -2862,10 +2862,10 @@
           "type" : "string"
         },
         "today_appointment" : {
-          "type" : "integer"
+          "type" : "string"
         },
         "unexpected_visit" : {
-          "type" : "integer"
+          "type" : "string"
         },
         "dad_name" : {
           "type" : "string"
