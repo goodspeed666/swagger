@@ -1665,7 +1665,7 @@
         }, {
           "name" : "keyword",
           "in" : "query",
-          "description" : "請輸入要搜尋的姓名或帳號關鍵字",
+          "description" : "請輸入要搜尋的姓名或關鍵字",
           "required" : true,
           "type" : "string"
         } ],
