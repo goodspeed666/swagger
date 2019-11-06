@@ -1652,6 +1652,33 @@
         }
       }
     },
+    "/common/search/customer" : {
+      "get" : {
+        "tags" : [ "common" ],
+        "summary" : "搜尋客戶",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "keyword",
+          "in" : "query",
+          "description" : "請輸入要搜尋的姓名或帳號關鍵字",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/SearchCustomer"
+            }
+          }
+        }
+      }
+    },
     "/common/type/customer_status" : {
       "get" : {
         "tags" : [ "common" ],
@@ -2225,12 +2252,13 @@
         },
         "status" : {
           "type" : "object",
-          "example" : "{ ['id' => 0, 'name' => 'XXX'] }",
+          "example" : "[ {'id' => 0, 'name' => 'XXX'} ]",
           "properties" : { }
         },
         "babies" : {
-          "type" : "string",
-          "example" : "{ ['baby_id' => 0, 'name' => 'XXX'] }"
+          "type" : "object",
+          "example" : "[ {'baby_id' => 0, 'name' => 'XXX'} ]",
+          "properties" : { }
         }
       }
     },
@@ -2594,6 +2622,12 @@
       "type" : "array",
       "items" : {
         "$ref" : "#/definitions/SearchRole_inner"
+      }
+    },
+    "SearchCustomer" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/SearchCustomer_inner"
       }
     },
     "GetCareType" : {
@@ -3282,6 +3316,53 @@
         "status" : {
           "type" : "integer",
           "example" : "0 is out, 1 is in"
+        }
+      }
+    },
+    "SearchCustomer_inner" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "check_out" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "cid" : {
+          "type" : "string"
+        },
+        "due_date" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "introducer" : {
+          "type" : "string"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "room_no" : {
+          "type" : "string"
+        },
+        "need_review" : {
+          "type" : "integer"
+        },
+        "status" : {
+          "type" : "string",
+          "example" : "{ ['id' => 0, 'name' => 'XXX'] }"
+        },
+        "babies" : {
+          "type" : "object",
+          "example" : "{ ['baby_id' => 0, 'name' => 'XXX'] }",
+          "properties" : { }
         }
       }
     },
