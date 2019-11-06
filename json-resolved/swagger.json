@@ -2889,7 +2889,7 @@
         },
         "appointment_at" : {
           "type" : "string",
-          "example" : "YYYY-mm-dd H:i:s"
+          "example" : "YYYY-mm-dd H:i"
         },
         "end_time" : {
           "type" : "string",
