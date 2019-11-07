@@ -3536,6 +3536,10 @@
         "warning" : {
           "type" : "boolean",
           "description" : "如果是 1 則 ddp_desc 要用紅色顯示"
+        },
+        "created_user" : {
+          "type" : "string",
+          "description" : "建立者"
         }
       }
     },
