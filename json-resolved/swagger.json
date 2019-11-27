@@ -1526,6 +1526,61 @@
         }
       }
     },
+    "/v1/customers/{customer_id}/care/history" : {
+      "get" : {
+        "tags" : [ "care" ],
+        "summary" : "取得寶寶日誌中特定區間的數值",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "item",
+          "in" : "query",
+          "description" : "weight / height",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "type_id",
+          "in" : "query",
+          "description" : "babydaily",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "baby_id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
+        }, {
+          "name" : "start",
+          "in" : "query",
+          "description" : "YYYY-mm-dd",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "end",
+          "in" : "query",
+          "description" : "YYYY-mm-dd",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCareHistory"
+            }
+          }
+        }
+      }
+    },
     "/common/type/hospital" : {
       "get" : {
         "tags" : [ "common" ],
@@ -2478,6 +2533,12 @@
         }
       }
     },
+    "GetCareHistory" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCareHistory_inner"
+      }
+    },
     "CustomerForgotPassword" : {
       "type" : "object",
       "properties" : {
@@ -2983,6 +3044,18 @@
           "type" : "object",
           "example" : [ "今日入住", "即將離館" ],
           "properties" : { }
+        }
+      }
+    },
+    "GetCareHistory_inner" : {
+      "type" : "object",
+      "properties" : {
+        "created_at" : {
+          "type" : "string",
+          "example" : "YY-mm-dd H:i:s"
+        },
+        "values" : {
+          "type" : "integer"
         }
       }
     },
