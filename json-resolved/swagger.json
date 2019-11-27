@@ -3764,6 +3764,10 @@
         "visit_id" : {
           "type" : "integer"
         },
+        "old" : {
+          "type" : "boolean",
+          "description" : "是否為沁二胎"
+        },
         "name" : {
           "type" : "string"
         },
