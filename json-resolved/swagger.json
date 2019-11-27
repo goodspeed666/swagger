@@ -1545,13 +1545,13 @@
         }, {
           "name" : "item",
           "in" : "query",
-          "description" : "weight / height",
+          "description" : "temperature / weight / height",
           "required" : true,
           "type" : "string"
         }, {
           "name" : "type_id",
           "in" : "query",
-          "description" : "babydaily",
+          "description" : "babydaily / baby(temperature)",
           "required" : false,
           "type" : "string"
         }, {
