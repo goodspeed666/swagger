@@ -2003,6 +2003,12 @@
           "description" : "Y-mm-dd，必須與 start 一起使用",
           "required" : false,
           "type" : "string"
+        }, {
+          "name" : "name",
+          "in" : "query",
+          "description" : "搜尋用，可搜尋十個月內的參觀單",
+          "required" : false,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
