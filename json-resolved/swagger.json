@@ -1526,7 +1526,7 @@
         }
       }
     },
-    "/v1/customers/{customer_id}/care/history" : {
+    "/customers/{customer_id}/care/history" : {
       "get" : {
         "tags" : [ "care" ],
         "summary" : "取得寶寶日誌中特定區間的數值",
