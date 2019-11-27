@@ -1537,6 +1537,12 @@
           "required" : true,
           "type" : "string"
         }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "string"
+        }, {
           "name" : "item",
           "in" : "query",
           "description" : "weight / height",
