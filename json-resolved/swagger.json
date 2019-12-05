@@ -2158,13 +2158,13 @@
         }, {
           "name" : "start_date",
           "in" : "query",
-          "description" : "Y-mm-dd，必須與 end 一起使用",
+          "description" : "Y-mm-dd，必須與 end_date 一起使用",
           "required" : false,
           "type" : "string"
         }, {
           "name" : "end_date",
           "in" : "query",
-          "description" : "Y-mm-dd，必須與 start 一起使用",
+          "description" : "Y-mm-dd，必須與 start_date 一起使用",
           "required" : false,
           "type" : "string"
         } ],
