@@ -25,6 +25,9 @@
   }, {
     "name" : "appointment",
     "description" : "Operations about appointment service"
+  }, {
+    "name" : "remind",
+    "description" : "Operations about remind service"
   } ],
   "schemes" : [ "https" ],
   "paths" : {
@@ -2141,6 +2144,42 @@
           }
         }
       }
+    },
+    "/remind_room" : {
+      "get" : {
+        "tags" : [ "remind" ],
+        "summary" : "取得提醒入住離館列表",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "start_date",
+          "in" : "query",
+          "description" : "Y-mm-dd，必須與 end 一起使用",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "end_date",
+          "in" : "query",
+          "description" : "Y-mm-dd，必須與 start 一起使用",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetRemindRoomList"
+            }
+          },
+          "404" : {
+            "description" : "No data"
+          }
+        }
+      }
     }
   },
   "definitions" : {
@@ -2968,6 +3007,12 @@
           "type" : "string",
           "example" : "YYYY-mm-dd H:i:s"
         }
+      }
+    },
+    "GetRemindRoomList" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetRemindRoomList_inner"
       }
     },
     "InsertReturn" : {
@@ -3820,6 +3865,39 @@
         "cs_list" : {
           "type" : "string",
           "example" : "Amber, Emma"
+        }
+      }
+    },
+    "GetRemindRoomList_inner" : {
+      "type" : "object",
+      "properties" : {
+        "cid" : {
+          "type" : "integer"
+        },
+        "birth_id" : {
+          "type" : "integer"
+        },
+        "customer_name" : {
+          "type" : "string"
+        },
+        "room_name" : {
+          "type" : "string"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "check_out" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "type" : {
+          "type" : "string",
+          "example" : "check_in, check_out"
+        },
+        "status" : {
+          "type" : "boolean",
+          "description" : "是否完成"
         }
       }
     }
