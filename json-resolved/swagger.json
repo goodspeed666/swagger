@@ -1529,6 +1529,27 @@
         }
       }
     },
+    "/customers_for_homepage" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得首頁入住列表",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCustomersForHomepage"
+            }
+          }
+        }
+      }
+    },
     "/customers/{customer_id}/care/history" : {
       "get" : {
         "tags" : [ "care" ],
@@ -2279,6 +2300,12 @@
           "type" : "string",
           "description" : "The password for login in clear text"
         }
+      }
+    },
+    "GetCustomersForHomepage" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCustomersForHomepage_inner"
       }
     },
     "GetCustomers" : {
@@ -3080,6 +3107,58 @@
       "properties" : {
         "token" : {
           "type" : "string"
+        }
+      }
+    },
+    "GetCustomersForHomepage_inner" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "cid" : {
+          "type" : "string",
+          "description" : "客戶編號"
+        },
+        "mobile_phone" : {
+          "type" : "string"
+        },
+        "room_no" : {
+          "type" : "string"
+        },
+        "babies" : {
+          "type" : "string",
+          "example" : "{ ['baby_id' => 0, 'name' => 'XXX'] }"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "check_out" : {
+          "type" : "string"
+        },
+        "your_cs" : {
+          "type" : "string",
+          "example" : "{\"id\": 0, \"name\": \"XXX\"}"
+        },
+        "stay_with" : {
+          "type" : "string"
+        },
+        "bring_children" : {
+          "type" : "string"
+        },
+        "birth_note" : {
+          "type" : "string"
+        },
+        "room_account_settle" : {
+          "type" : "boolean"
+        },
+        "status" : {
+          "type" : "string",
+          "example" : "{ ['id' => 0, 'name' => 'XXX'] }"
         }
       }
     },
