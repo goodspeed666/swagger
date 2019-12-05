@@ -2180,6 +2180,39 @@
           }
         }
       }
+    },
+    "/remind_room/{birth_id}" : {
+      "post" : {
+        "tags" : [ "remind" ],
+        "summary" : "完成入住離館提醒",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "birth_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/RemindRoomRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/InsertReturn"
+            }
+          }
+        }
+      }
     }
   },
   "definitions" : {
@@ -3013,6 +3046,15 @@
       "type" : "array",
       "items" : {
         "$ref" : "#/definitions/GetRemindRoomList_inner"
+      }
+    },
+    "RemindRoomRequest" : {
+      "type" : "object",
+      "required" : [ "type" ],
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        }
       }
     },
     "InsertReturn" : {
