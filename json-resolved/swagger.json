@@ -3151,10 +3151,12 @@
           "type" : "string"
         },
         "birth_note" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "借充電線"
         },
         "room_account_settle" : {
-          "type" : "boolean"
+          "type" : "boolean",
+          "example" : false
         },
         "status" : {
           "type" : "string",
