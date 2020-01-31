@@ -89,33 +89,6 @@
         }
       }
     },
-    "/users/me" : {
-      "get" : {
-        "tags" : [ "user" ],
-        "summary" : "Get myself information",
-        "produces" : [ "application/json" ],
-        "parameters" : [ {
-          "name" : "token",
-          "in" : "header",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "schema" : {
-              "$ref" : "#/definitions/User"
-            }
-          },
-          "400" : {
-            "description" : "An error while decoding token."
-          },
-          "401" : {
-            "description" : "Provided token is expired."
-          }
-        }
-      }
-    },
     "/users/logout" : {
       "post" : {
         "tags" : [ "user" ],
@@ -196,8 +169,7 @@
     "/users/{userid}" : {
       "get" : {
         "tags" : [ "user" ],
-        "summary" : "Get user by userid",
-        "description" : "還沒做",
+        "summary" : "Get myself information",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
@@ -207,6 +179,7 @@
         }, {
           "name" : "userid",
           "in" : "path",
+          "description" : "可帶入userid或是me",
           "required" : true,
           "type" : "string"
         } ],
@@ -218,10 +191,10 @@
             }
           },
           "400" : {
-            "description" : "Invalid userid supplied"
+            "description" : "An error while decoding token."
           },
-          "404" : {
-            "description" : "User not found"
+          "401" : {
+            "description" : "Provided token is expired."
           }
         }
       },
