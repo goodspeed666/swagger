@@ -169,7 +169,7 @@
     "/users/{userid}" : {
       "get" : {
         "tags" : [ "user" ],
-        "summary" : "Get myself information",
+        "summary" : "Get user information",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "token",
