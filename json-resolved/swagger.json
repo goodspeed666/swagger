@@ -3826,6 +3826,10 @@
           "type" : "boolean",
           "description" : "是否可刪除, 0: 不行, 1:可"
         },
+        "show" : {
+          "type" : "boolean",
+          "description" : "是否顯示 from, 0:不顯示, 1:顯示"
+        },
         "created_at" : {
           "type" : "string",
           "example" : "YYYY-mm-dd H:i:s"
