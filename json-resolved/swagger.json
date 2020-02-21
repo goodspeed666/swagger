@@ -3903,6 +3903,10 @@
           "type" : "string",
           "description" : "爸媽交托物品"
         },
+        "formula" : {
+          "type" : "string",
+          "description" : "餵食模式(配方奶)"
+        },
         "details" : {
           "type" : "array",
           "items" : {
