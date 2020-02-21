@@ -1166,7 +1166,13 @@
           "required" : true,
           "type" : "integer"
         }, {
-          "name" : "the_date",
+          "name" : "start",
+          "in" : "query",
+          "description" : "YYYY-mm-dd",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "end",
           "in" : "query",
           "description" : "YYYY-mm-dd",
           "required" : true,
@@ -1174,12 +1180,12 @@
         }, {
           "name" : "baby_id",
           "in" : "query",
-          "required" : false,
+          "required" : true,
           "type" : "integer"
         }, {
           "name" : "birth_id",
           "in" : "query",
-          "required" : false,
+          "required" : true,
           "type" : "integer"
         } ],
         "responses" : {
