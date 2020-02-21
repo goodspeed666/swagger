@@ -1186,7 +1186,7 @@
           "default" : {
             "description" : "successful operation",
             "schema" : {
-              "$ref" : "#/definitions/GetLifeLogInfo"
+              "$ref" : "#/definitions/GetTemperatureInfo"
             }
           }
         }
@@ -2859,6 +2859,12 @@
         "$ref" : "#/definitions/GetLifeLogInfo_inner"
       }
     },
+    "GetTemperatureInfo" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetTemperatureInfo_inner"
+      }
+    },
     "GetCareDiff" : {
       "type" : "array",
       "items" : {
@@ -3895,6 +3901,52 @@
           "type" : "array",
           "items" : {
             "$ref" : "#/definitions/GetLifeLogInfo_inner_details"
+          }
+        }
+      }
+    },
+    "GetTemperatureInfo_inner_items" : {
+      "type" : "object",
+      "properties" : {
+        "key" : {
+          "type" : "string",
+          "example" : "小便"
+        },
+        "values" : {
+          "type" : "string",
+          "example" : "5"
+        }
+      }
+    },
+    "GetTemperatureInfo_inner_details" : {
+      "type" : "object",
+      "properties" : {
+        "info" : {
+          "type" : "string"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd H:i:s"
+        }
+      }
+    },
+    "GetTemperatureInfo_inner" : {
+      "type" : "object",
+      "properties" : {
+        "the_date" : {
+          "type" : "string",
+          "example" : "YYYY-mm-dd"
+        },
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetTemperatureInfo_inner_items"
+          }
+        },
+        "details" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetTemperatureInfo_inner_details"
           }
         }
       }
