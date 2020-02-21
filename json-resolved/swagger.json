@@ -3927,7 +3927,7 @@
     "GetTemperatureInfo_inner_details" : {
       "type" : "object",
       "properties" : {
-        "info" : {
+        "values" : {
           "type" : "string"
         },
         "created_at" : {
