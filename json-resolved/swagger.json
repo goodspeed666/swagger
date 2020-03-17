@@ -1516,6 +1516,40 @@
         }
       }
     },
+    "/customers/{customer_id}/pdf_care_temp/{birth_id}" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得統計表(體溫記錄單)PDF",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "baby_id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "PDF URL"
+          }
+        }
+      }
+    },
     "/customers/{customer_id}/cord" : {
       "post" : {
         "tags" : [ "customer" ],
