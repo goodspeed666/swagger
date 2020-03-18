@@ -2714,52 +2714,54 @@
       "required" : [ "file1" ],
       "properties" : {
         "file1" : {
-          "type" : "file",
+          "type" : "string",
+          "format" : "binary",
           "description" : "檔案1"
         },
         "file2" : {
-          "type" : "file",
+          "type" : "string",
+          "format" : "binary",
           "description" : "檔案2"
         },
         "file3" : {
-          "type" : "object",
-          "description" : "檔案3",
-          "properties" : { }
+          "type" : "string",
+          "format" : "binary",
+          "description" : "檔案3"
         },
         "file4" : {
-          "type" : "object",
-          "description" : "檔案4",
-          "properties" : { }
+          "type" : "string",
+          "format" : "binary",
+          "description" : "檔案4"
         },
         "file5" : {
-          "type" : "object",
-          "description" : "檔案5",
-          "properties" : { }
+          "type" : "string",
+          "format" : "binary",
+          "description" : "檔案5"
         },
         "file6" : {
-          "type" : "object",
-          "description" : "檔案6",
-          "properties" : { }
+          "type" : "string",
+          "format" : "binary",
+          "description" : "檔案6"
         },
         "file7" : {
-          "type" : "object",
-          "description" : "檔案7",
-          "properties" : { }
+          "type" : "string",
+          "format" : "binary",
+          "description" : "檔案7"
         },
         "file8" : {
-          "type" : "object",
-          "description" : "檔案8",
-          "properties" : { }
+          "type" : "string",
+          "format" : "binary",
+          "description" : "檔案8"
         },
         "file9" : {
-          "type" : "object",
-          "description" : "檔案9",
-          "properties" : { }
+          "type" : "string",
+          "format" : "binary",
+          "description" : "檔案9"
         },
         "file10" : {
-          "type" : "object",
-          "description" : "檔案10",
-          "properties" : { }
+          "type" : "string",
+          "format" : "binary",
+          "description" : "檔案10"
         }
       }
     },
