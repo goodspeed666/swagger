@@ -1517,7 +1517,7 @@
       }
     },
     "/customers/{customer_id}/pdf_care_temp/{birth_id}" : {
-      "get" : {
+      "post" : {
         "tags" : [ "customer" ],
         "summary" : "取得統計表(體溫記錄單)PDF",
         "produces" : [ "application/json" ],
@@ -1542,6 +1542,13 @@
           "in" : "query",
           "required" : false,
           "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/PdfCareTempRequest"
+          }
         } ],
         "responses" : {
           "200" : {
@@ -2699,6 +2706,27 @@
         "pre_check" : {
           "type" : "boolean",
           "description" : "僅檢查欄位的正確性"
+        }
+      }
+    },
+    "PdfCareTempRequest" : {
+      "type" : "object",
+      "required" : [ "file1" ],
+      "properties" : {
+        "file1" : {
+          "type" : "object",
+          "description" : "檔案1",
+          "properties" : { }
+        },
+        "file2" : {
+          "type" : "object",
+          "description" : "檔案2",
+          "properties" : { }
+        },
+        "file3" : {
+          "type" : "object",
+          "description" : "檔案3",
+          "properties" : { }
         }
       }
     },
