@@ -1551,7 +1551,7 @@
           }
         } ],
         "responses" : {
-          "200" : {
+          "201" : {
             "description" : "PDF URL"
           }
         }
@@ -2714,14 +2714,12 @@
       "required" : [ "file1" ],
       "properties" : {
         "file1" : {
-          "type" : "object",
-          "description" : "檔案1",
-          "properties" : { }
+          "type" : "file",
+          "description" : "檔案1"
         },
         "file2" : {
-          "type" : "object",
-          "description" : "檔案2",
-          "properties" : { }
+          "type" : "file",
+          "description" : "檔案2"
         },
         "file3" : {
           "type" : "object",
