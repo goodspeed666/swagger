@@ -2727,6 +2727,41 @@
           "type" : "object",
           "description" : "檔案3",
           "properties" : { }
+        },
+        "file4" : {
+          "type" : "object",
+          "description" : "檔案4",
+          "properties" : { }
+        },
+        "file5" : {
+          "type" : "object",
+          "description" : "檔案5",
+          "properties" : { }
+        },
+        "file6" : {
+          "type" : "object",
+          "description" : "檔案6",
+          "properties" : { }
+        },
+        "file7" : {
+          "type" : "object",
+          "description" : "檔案7",
+          "properties" : { }
+        },
+        "file8" : {
+          "type" : "object",
+          "description" : "檔案8",
+          "properties" : { }
+        },
+        "file9" : {
+          "type" : "object",
+          "description" : "檔案9",
+          "properties" : { }
+        },
+        "file10" : {
+          "type" : "object",
+          "description" : "檔案10",
+          "properties" : { }
         }
       }
     },
