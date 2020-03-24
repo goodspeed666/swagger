@@ -113,6 +113,7 @@ Class | Method | HTTP request | Description
 *MailApi* | **emailPost** | **POST** /email | Store email
 *NotificationApi* | **notificationsGet** | **GET** /notifications | Get notification list
 *NotificationApi* | **notificationsIdDelete** | **DELETE** /notifications/{id} | Destroy notification
+*NotificationApi* | **notificationsIdGet** | **GET** /notifications/{id} | Get notification
 *NotificationApi* | **notificationsIdPost** | **POST** /notifications/{id} | Store notification
 *NotificationApi* | **notificationsPost** | **POST** /notifications | Store notification
 *OrganizationApi* | **organizationBatchPost** | **POST** /organization/batch | Batch update organization
