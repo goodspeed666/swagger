@@ -54,9 +54,11 @@ object NotificationApi {
    *   code 200 : NotificationList (successful operation)
    * 
    * @param token 
+   * @param id 
    */
-  def notificationsIdGet(token: String): ApiRequest[NotificationList] =
+  def notificationsIdGet(token: String, id: Int): ApiRequest[NotificationList] =
     ApiRequest[NotificationList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/notifications/{id}", "application/json")
+      .withPathParam("id", id)
       .withHeaderParam("token", token)
       .withSuccessResponse[NotificationList](200)
         /**
