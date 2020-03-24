@@ -12,6 +12,7 @@
 package io.swagger.client.api
 
 import io.swagger.client.model.InsertReturn
+import io.swagger.client.model.NotificationId
 import io.swagger.client.model.NotificationList
 import io.swagger.client.model.NotificationRequest
 import io.swagger.client.model.NotificationUpdateRequest
@@ -51,16 +52,16 @@ object NotificationApi {
    * 
    * 
    * Expected answers:
-   *   code 200 : NotificationList (successful operation)
+   *   code 200 : NotificationId (successful operation)
    * 
    * @param token 
    * @param id 
    */
-  def notificationsIdGet(token: String, id: Int): ApiRequest[NotificationList] =
-    ApiRequest[NotificationList](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/notifications/{id}", "application/json")
+  def notificationsIdGet(token: String, id: Int): ApiRequest[NotificationId] =
+    ApiRequest[NotificationId](ApiMethods.GET, "https://virtserver.swaggerhub.com/goodspeed666/maan_customer/1.0.0", "/notifications/{id}", "application/json")
       .withPathParam("id", id)
       .withHeaderParam("token", token)
-      .withSuccessResponse[NotificationList](200)
+      .withSuccessResponse[NotificationId](200)
         /**
    * 
    * 

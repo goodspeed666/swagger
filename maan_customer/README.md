@@ -208,6 +208,8 @@ Class | Method | HTTP request | Description
  - [JourneyInsertRequest](JourneyInsertRequest.md)
  - [JourneyRequest](JourneyRequest.md)
  - [NoticeDataRequest](NoticeDataRequest.md)
+ - [NotificationId](NotificationId.md)
+ - [NotificationIdInner](NotificationIdInner.md)
  - [NotificationList](NotificationList.md)
  - [NotificationListInner](NotificationListInner.md)
  - [NotificationListInnerTargetList](NotificationListInnerTargetList.md)
