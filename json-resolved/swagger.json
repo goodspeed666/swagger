@@ -973,6 +973,37 @@
         }
       }
     },
+    "/customers/{customer_id}/care/info" : {
+      "get" : {
+        "tags" : [ "care" ],
+        "summary" : "取得媽媽哺餵資訊",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCareMonInfo"
+            }
+          }
+        }
+      }
+    },
     "/customers/{customer_id}/care/{type_id}" : {
       "post" : {
         "tags" : [ "care" ],
@@ -2972,6 +3003,22 @@
       "type" : "array",
       "items" : {
         "$ref" : "#/definitions/GetCareDiff_inner"
+      }
+    },
+    "GetCareMonInfo" : {
+      "type" : "object",
+      "properties" : {
+        "version" : {
+          "type" : "integer"
+        },
+        "diff" : {
+          "type" : "string",
+          "example" : "跟上一版的差異"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "YY-mm-dd H:i:s"
+        }
       }
     },
     "CustomerCareRequest" : {
