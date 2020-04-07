@@ -3006,28 +3006,9 @@
       }
     },
     "GetCareMonInfo" : {
-      "type" : "object",
-      "properties" : {
-        "method" : {
-          "type" : "string",
-          "description" : "生產方式"
-        },
-        "contraction_height" : {
-          "type" : "string",
-          "description" : "宮底"
-        },
-        "created_at" : {
-          "type" : "string",
-          "description" : "哺餵奶品"
-        },
-        "bottle_feeding" : {
-          "type" : "string",
-          "description" : "泌乳量"
-        },
-        "breast_status" : {
-          "type" : "string",
-          "description" : "乳房狀態"
-        }
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCareMonInfo_inner"
       }
     },
     "CustomerCareRequest" : {
@@ -4131,6 +4112,17 @@
         "created_at" : {
           "type" : "string",
           "example" : "YY-mm-dd H:i:s"
+        }
+      }
+    },
+    "GetCareMonInfo_inner" : {
+      "type" : "object",
+      "properties" : {
+        "key" : {
+          "type" : "string"
+        },
+        "value" : {
+          "type" : "string"
         }
       }
     },
