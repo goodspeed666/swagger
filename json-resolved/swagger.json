@@ -3008,16 +3008,25 @@
     "GetCareMonInfo" : {
       "type" : "object",
       "properties" : {
-        "version" : {
-          "type" : "integer"
-        },
-        "diff" : {
+        "method" : {
           "type" : "string",
-          "example" : "跟上一版的差異"
+          "description" : "生產方式"
+        },
+        "contraction_height" : {
+          "type" : "string",
+          "description" : "宮底"
         },
         "created_at" : {
           "type" : "string",
-          "example" : "YY-mm-dd H:i:s"
+          "description" : "哺餵奶品"
+        },
+        "bottle_feeding" : {
+          "type" : "string",
+          "description" : "泌乳量"
+        },
+        "breast_status" : {
+          "type" : "string",
+          "description" : "乳房狀態"
         }
       }
     },
