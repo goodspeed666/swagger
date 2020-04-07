@@ -4119,10 +4119,12 @@
       "type" : "object",
       "properties" : {
         "key" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "生產方式"
         },
         "value" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "自然產"
         }
       }
     },
