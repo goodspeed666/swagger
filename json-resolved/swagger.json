@@ -925,7 +925,7 @@
           "name" : "baby_id",
           "in" : "query",
           "required" : true,
-          "type" : "string"
+          "type" : "integer"
         } ],
         "responses" : {
           "200" : {
@@ -3639,6 +3639,9 @@
         },
         "room_name" : {
           "type" : "string"
+        },
+        "days" : {
+          "type" : "integer"
         },
         "check_in" : {
           "type" : "string",
