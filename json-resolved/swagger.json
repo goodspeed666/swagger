@@ -900,6 +900,33 @@
         }
       }
     },
+    "/customers/{customer_id}/room_baby" : {
+      "get" : {
+        "tags" : [ "customer" ],
+        "summary" : "取得嬰兒入住資訊",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetCustomerRoomBaby"
+            }
+          }
+        }
+      }
+    },
     "/customers/{customer_id}/care" : {
       "get" : {
         "tags" : [ "care" ],
@@ -2901,6 +2928,12 @@
         "$ref" : "#/definitions/GetCustomerBirth_inner"
       }
     },
+    "GetCustomerRoombaby" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/GetCustomerRoombaby_inner"
+      }
+    },
     "CustomerMessageList" : {
       "type" : "array",
       "items" : {
@@ -3576,6 +3609,38 @@
         "contractor_in_person" : {
           "type" : "integer",
           "description" : "是否為本人"
+        }
+      }
+    },
+    "GetCustomerRoombaby_inner" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "birth_id" : {
+          "type" : "integer"
+        },
+        "baby_id" : {
+          "type" : "integer"
+        },
+        "room_id" : {
+          "type" : "integer"
+        },
+        "room_name" : {
+          "type" : "string"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i:s"
+        },
+        "check_out" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i:s"
+        },
+        "created_at" : {
+          "type" : "string",
+          "example" : "Y-m-d H:i:s"
         }
       }
     },
