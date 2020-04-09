@@ -893,9 +893,6 @@
         "responses" : {
           "200" : {
             "description" : "successful operation"
-          },
-          "404" : {
-            "description" : "No record found"
           }
         }
       }
@@ -933,6 +930,47 @@
             "schema" : {
               "$ref" : "#/definitions/GetCustomerRoomBaby"
             }
+          }
+        }
+      }
+    },
+    "/customers/{customer_id}/room_baby/{birth_id}" : {
+      "post" : {
+        "tags" : [ "customer" ],
+        "summary" : "修改嬰兒入住資訊",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "baby_id",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/CustomerRoomBabyRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation"
           }
         }
       }
@@ -2944,6 +2982,12 @@
         "$ref" : "#/definitions/GetCustomerRoomBaby_inner"
       }
     },
+    "CustomerRoomBabyRequest" : {
+      "type" : "array",
+      "items" : {
+        "$ref" : "#/definitions/CustomerRoomBabyRequest_inner"
+      }
+    },
     "CustomerMessageList" : {
       "type" : "array",
       "items" : {
@@ -3654,6 +3698,31 @@
         "created_at" : {
           "type" : "string",
           "example" : "Y-m-d H:i:s"
+        }
+      }
+    },
+    "CustomerRoomBabyRequest_inner" : {
+      "type" : "object",
+      "properties" : {
+        "cid" : {
+          "type" : "integer"
+        },
+        "birth_id" : {
+          "type" : "integer"
+        },
+        "baby_id" : {
+          "type" : "integer"
+        },
+        "room_id" : {
+          "type" : "integer"
+        },
+        "check_in" : {
+          "type" : "string",
+          "example" : "Y-m-d"
+        },
+        "check_out" : {
+          "type" : "string",
+          "example" : "Y-m-d"
         }
       }
     },
