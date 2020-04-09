@@ -969,6 +969,38 @@
           }
         } ],
         "responses" : {
+          "201" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "customer" ],
+        "summary" : "刪除嬰兒入住資訊",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "token",
+          "in" : "header",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "name" : "customer_id",
+          "in" : "path",
+          "description" : "Customer ID",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "birth_id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "baby_id",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer"
+        } ],
+        "responses" : {
           "200" : {
             "description" : "successful operation"
           }
