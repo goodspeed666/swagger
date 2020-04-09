@@ -916,6 +916,16 @@
           "description" : "Customer ID",
           "required" : true,
           "type" : "string"
+        }, {
+          "name" : "birth_id",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer"
+        }, {
+          "name" : "baby_id",
+          "in" : "query",
+          "required" : true,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -2928,10 +2938,10 @@
         "$ref" : "#/definitions/GetCustomerBirth_inner"
       }
     },
-    "GetCustomerRoombaby" : {
+    "GetCustomerRoomBaby" : {
       "type" : "array",
       "items" : {
-        "$ref" : "#/definitions/GetCustomerRoombaby_inner"
+        "$ref" : "#/definitions/GetCustomerRoomBaby_inner"
       }
     },
     "CustomerMessageList" : {
@@ -3612,7 +3622,7 @@
         }
       }
     },
-    "GetCustomerRoombaby_inner" : {
+    "GetCustomerRoomBaby_inner" : {
       "type" : "object",
       "properties" : {
         "id" : {
