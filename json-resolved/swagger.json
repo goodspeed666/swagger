@@ -3704,13 +3704,7 @@
     "CustomerRoomBabyRequest_inner" : {
       "type" : "object",
       "properties" : {
-        "cid" : {
-          "type" : "integer"
-        },
         "birth_id" : {
-          "type" : "integer"
-        },
-        "baby_id" : {
           "type" : "integer"
         },
         "room_id" : {
