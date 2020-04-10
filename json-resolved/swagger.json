@@ -4311,8 +4311,8 @@
           "example" : "YYYY-mm-dd"
         },
         "days" : {
-          "type" : "integer",
-          "description" : "入住第幾天"
+          "type" : "string",
+          "description" : "入住第幾天或顯示其他狀態"
         },
         "items" : {
           "type" : "array",
