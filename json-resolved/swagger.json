@@ -3583,6 +3583,43 @@
         }
       }
     },
+    "GetCustomerBirth_inner_section" : {
+      "type" : "object",
+      "properties" : {
+        "room" : {
+          "type" : "string"
+        },
+        "check_in" : {
+          "type" : "string"
+        },
+        "check_out" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetCustomerBirth_inner_baby_info" : {
+      "type" : "object",
+      "properties" : {
+        "bcid" : {
+          "type" : "string"
+        },
+        "gender" : {
+          "type" : "integer"
+        },
+        "height" : {
+          "type" : "integer"
+        },
+        "weight" : {
+          "type" : "integer"
+        },
+        "section" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetCustomerBirth_inner_section"
+          }
+        }
+      }
+    },
     "GetCustomerBirth_inner_contractor_relation" : {
       "type" : "object",
       "properties" : {
@@ -3643,9 +3680,10 @@
           "type" : "integer"
         },
         "baby_info" : {
-          "type" : "string",
-          "example" : "{ [\"bcid\": \"XXX\", \"gender\": 1, \"height\": 80, \"weight\": 3000, \"section\": {[\"check_in\": 0000-00-00, \"check_out\": 0000-00-00]} }",
-          "description" : "baby資料"
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/GetCustomerBirth_inner_baby_info"
+          }
         },
         "stay_with" : {
           "type" : "string"
