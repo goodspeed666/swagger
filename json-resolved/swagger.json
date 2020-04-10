@@ -3644,7 +3644,7 @@
         },
         "baby_info" : {
           "type" : "string",
-          "example" : "{ [\"bcid\": \"XXX\", \"gender\": 1, \"height\": 80, \"weight\": 3000] }",
+          "example" : "{ [\"bcid\": \"XXX\", \"gender\": 1, \"height\": 80, \"weight\": 3000, \"section\": {[\"check_in\": 0000-00-00, \"check_out\": 0000-00-00]} }",
           "description" : "baby資料"
         },
         "stay_with" : {
