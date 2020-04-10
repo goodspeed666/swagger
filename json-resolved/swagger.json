@@ -3598,6 +3598,21 @@
     "GetCustomerBirth_inner" : {
       "type" : "object",
       "properties" : {
+        "id" : {
+          "type" : "integer"
+        },
+        "cid" : {
+          "type" : "string"
+        },
+        "canceled" : {
+          "type" : "integer"
+        },
+        "canceled_reason_type" : {
+          "type" : "integer"
+        },
+        "canceled_reson" : {
+          "type" : "string"
+        },
         "due_date" : {
           "type" : "string",
           "example" : "Y-m-d"
