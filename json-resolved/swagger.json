@@ -3587,13 +3587,15 @@
       "type" : "object",
       "properties" : {
         "room" : {
-          "type" : "string"
+          "$ref" : "#/definitions/GetCustomerBirth_inner_give_birth_area"
         },
         "check_in" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-mm-dd"
         },
         "check_out" : {
-          "type" : "string"
+          "type" : "string",
+          "example" : "YYYY-mm-dd"
         }
       }
     },
