@@ -4349,6 +4349,10 @@
       "properties" : {
         "key" : {
           "type" : "string",
+          "example" : "production_method"
+        },
+        "name" : {
+          "type" : "string",
           "example" : "生產方式"
         },
         "value" : {
