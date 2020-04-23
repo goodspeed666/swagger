@@ -20,7 +20,8 @@ case class CourseRollcallResponseInner (
   name: Option[String] = None,
   dueDate: Option[String] = None,
   mobilePhone: Option[String] = None,
-  enrolled: Option[Boolean] = None
+  enrolled: Option[Boolean] = None,
+  createdAt: Option[String] = None
 ) extends ApiModel
 
 

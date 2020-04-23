@@ -20,9 +20,9 @@ case class NotificationIdInner (
   `type`: Option[Int] = None,
   message: Option[String] = None,
   landing: Option[Any] = None,
-  target: Option[Int] = None,
   targetDueStart: Option[String] = None,
   targetDueEnd: Option[String] = None,
+  target: Option[Int] = None,
   targetList: Option[Seq[NotificationListInnerTargetList]] = None,
   sendTime: Option[String] = None
 ) extends ApiModel
